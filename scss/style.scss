@@ -1,0 +1,33 @@
+// 1. Abstracts
+@use 'abstracts/variables';
+
+// 2. Normalize and Resets
+@use 'vendors/normalize';
+@use 'base/reset';
+
+// 3. Base
+@use 'base/base';
+@use 'base/fonts';
+@use 'base/typography';
+@use 'base/utilities';
+@use 'base/sitewide';
+
+// 4. Vendors 
+// (jQuery | Bootstrap | etc)
+
+// 5. Layout
+@use 'layout/grid';
+@use 'layout/header';
+@use 'layout/navigation';
+@use 'layout/main';
+@use 'layout/article';
+@use 'layout/footer';
+@use 'layout/sidebar';
+@use 'layout/forms';
+
+// 6. Themes
+@use 'themes/default';
+
+// 7. Page-specific styles
+@use 'pages/home';
+@use 'pages/thank-you';

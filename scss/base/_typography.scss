@@ -1,0 +1,157 @@
+/* || Base - Typography
+   ========================================================================== */
+@use '../abstracts/variables' as var;
+
+// In the below font category the first word indicate its color then size (l-large 
+// denotes h1 and xl or xxl indicate size for design purpose)
+// font sizes: large(h1), medium(h2), small(h3), x-small(h4)(optional: x-large, 
+// xx-large, xx-small)
+
+// || Placeholders
+// -----------------------------------------------------------------------------
+
+%base-spacing {
+	word-spacing: 0.8px;
+	letter-spacing: 0.4px;
+}
+
+%primary-l-font {
+	font-size: var.$fs-l;
+	color: var.$c-primary;
+	font-family: var.$ff-primary;
+
+	@media screen and (min-width: var.$mobile-view-landscape) {
+		font-size: (var.$fs-l * 1.14);
+	}
+}
+
+%secondary-l-font {
+	font-size: var.$fs-l;
+	color: var.$c-secondary;
+	font-family: var.$ff-primary;
+}
+
+%secondary-m-font {
+	font-size: var.$fs-m;
+	color: var.$c-secondary;
+	font-family: var.$ff-primary;
+}
+
+%secondary-s-font {
+	font-size: var.$fs-s;
+	color: var.$c-secondary;
+	font-family: var.$ff-primary;
+}
+
+// || mixins
+// -----------------------------------------------------------------------------
+
+// In the below content category the first word indicate its color then size 
+// (l-large denotes h1 and xl or xxl indicate size for design purpose)
+// Font sizes: large(h1), medium(h2), small(h3), x-small(h4)(optional: x-large, 
+// xx-large, xx-small)
+
+// consider this type of mixin in the future
+@mixin primary-l-content($line-height: var.$lh-base,
+	$font-weight: 700,
+	$text-transform: capitalize) {
+
+	@extend %primary-l-font;
+
+	@if $line-height {
+		line-height: $line-height;
+	}
+
+	@if $font-weight {
+		font-weight: $font-weight;
+	}
+
+	@if $text-transform {
+		text-transform: $text-transform;
+	}
+}
+
+@mixin secondary-l-content($line-height: var.$lh-base,
+	$font-weight: 700,
+	$text-transform: capitalize) {
+
+	@extend %secondary-l-font;
+
+	@if $line-height {
+		line-height: $line-height;
+	}
+
+	@if $font-weight {
+		font-weight: $font-weight;
+	}
+
+	@if $text-transform {
+		text-transform: $text-transform;
+	}
+}
+
+@mixin secondary-m-content($line-height: var.$lh-base,
+	$font-weight: 700,
+	$text-transform: capitalize) {
+
+	@extend %secondary-m-font;
+
+	@if $line-height {
+		line-height: $line-height;
+	}
+
+	@if $font-weight {
+		font-weight: $font-weight;
+	}
+
+	@if $text-transform {
+		text-transform: $text-transform;
+	}
+}
+
+@mixin secondary-s-content($line-height: var.$lh-base,
+	$font-weight: 700,
+	$text-transform: capitalize) {
+
+	@extend %secondary-s-font;
+
+	@if $line-height {
+		line-height: $line-height;
+	}
+
+	@if $font-weight {
+		font-weight: $font-weight;
+	}
+}
+
+// || styles
+// -----------------------------------------------------------------------------
+
+body {
+	font-family: 'Inter', sans-serif;
+	font-size: 10px
+}
+
+h2 {
+	@include primary-l-content($text-transform: null);
+}
+
+h3 {
+	@include secondary-m-content($text-transform: null);
+}
+
+p {
+	@include secondary-m-content($line-height: var.$lh-normal,
+		$font-weight: 400,
+		$text-transform: null);
+}
+
+label {
+	@include secondary-m-content($font-weight: 400,
+		$text-transform: null);
+}
+
+button {
+	@include secondary-m-content($font-weight: 400,
+		$text-transform: uppercase);
+}

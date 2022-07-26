@@ -1,0 +1,59 @@
+/* || Abstracts - Sitewide
+   ========================================================================== */
+
+@use '../abstracts/variables' as var;
+@use 'sass:color';
+
+// Flexible vertically center(vc) and horizontally space between(hsb)
+%flex-vc-hsb {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+// Flexible vertical and horizontal centered
+%flex-vh-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+// Fixed horizontally centered
+%fixed-h-center {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Flexible direction column aligned centerd 
+%flex-dc-a-center {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+%block {
+	display: block;
+}
+
+// Footer link default style
+%link-footer {
+	outline: none;
+	text-decoration: none;
+
+	&:link {
+		color: var.$bc-primary;
+	}
+
+	&:visited {
+		color: color.adjust(var.$bc-primary, $lightness: -10%);
+	}
+
+	&:focus,
+	&:hover {
+		color: var.$c-primary;
+	}
+
+	&:active {
+		color: var.$c-secondary;
+	}
+}

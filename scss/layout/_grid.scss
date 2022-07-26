@@ -1,0 +1,12 @@
+/* || Layout - Grid
+   ========================================================================== */
+@use '../abstracts/variables' as var;
+
+.layout-margin {
+	margin-right: 23px;
+	margin-left: 23px;
+}
+
+.fixed-centered {
+	max-width: 415px;
+}

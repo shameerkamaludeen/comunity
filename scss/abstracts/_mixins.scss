@@ -1,0 +1,9 @@
+// Abstracts - mixins
+// =============================================================================
+
+@use '../abstracts/variables' as var;
+
+@mixin fixed-h-centered {
+	margin-left: auto;
+	margin-right: auto;
+}

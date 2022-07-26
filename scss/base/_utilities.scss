@@ -1,0 +1,23 @@
+/* || Abstracts - Utilities
+   ========================================================================== */
+
+// This will hide an element or block visually and still be able available for 
+// for screen readers 
+%hide-visually {
+	font-size: 0;
+	width: 1px;
+	height: 1px;
+	display: inline-block;
+	overflow: hidden;
+	position: absolute !important;
+	border: 0 !important;
+	padding: 0 !important;
+	margin: 0 !important;
+	clip: rect(1px, 1px, 1px, 1px);
+}
+
+// Remve unordered list default style
+%ul-no-style {
+	padding: 0;
+	list-style-type: none;
+}

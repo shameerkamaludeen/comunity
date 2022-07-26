@@ -1,0 +1,8 @@
+/* || Layout - Main
+   ========================================================================== */
+
+@use '../base/utilities';
+
+.mh-hide-visually {
+	@extend %hide-visually;
+}

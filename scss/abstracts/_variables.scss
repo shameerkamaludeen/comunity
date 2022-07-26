@@ -1,0 +1,39 @@
+/* Abstracts - Variables
+   ========================================================================== */
+
+@use 'sass:color';
+
+// Background colors
+$bc-primary: hsl(25, 97%, 53%);
+$bc-secondary: hsl(213, 19%, 18%);
+$bc-secondary-dark: hsl(216, 12%, 8%);
+$bc-ternary: hsl(216, 12%, 54%);
+
+// Font colors
+$c-primary: hsl(0, 0%, 100%);
+$c-secondary: hsl(217, 12%, 63%);
+
+// Font family 
+$ff-primary: 'Overpass', sans-serif;
+
+// Viewports
+$mobile-view-portrait: 27.5em;
+$mobile-view-landscape: 37em;
+$tablet-view: 53em;
+$laptop-view: 71em;
+$desktop-view-: 37em;
+
+// Typography
+$word-spacing: 0.8px;
+$lettter-spacing: 0.4px;
+
+$fs-xxl: 2rem;
+$fs-xl: 1.75rem;
+$fs-l: 1.5rem;
+$fs-m: 0.9375rem;
+$fs-s: 0.75rem;
+$fs-xs: 0.625rem;
+
+$lh-base: 1.15;
+$lh-normal: 1.5;
+$lh-wide: 2;

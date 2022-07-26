@@ -1,0 +1,21 @@
+/* || Components - Validation error 
+   ========================================================================== */
+@use '../../abstracts/variables' as var;
+
+$font-size: var.$fs-m  !default;
+$line-height: var.$lh-base  !default;
+$font-weight: 400 !default;
+$display: block !default;
+$color: hsl(354, 77%, 53%) !default;
+
+.validation-error {
+	font-size: $font-size;
+	line-height: $line-height;
+	font-weight: $font-weight;
+	color: $color;
+	display: none;
+
+	&.active {
+		display: $display;
+	}
+}

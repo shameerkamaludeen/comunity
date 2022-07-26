@@ -1,0 +1,43 @@
+  /* -----------------------------------------------------------------------------
+   || Components - Toggle switch
+   ========================================================================== */
+
+@use '../abstracts/variables' as var;
+
+// toggle switch component outer style
+.toggle-switch {
+    -webkit-apprearance: none;
+    appearance: none;
+    width: 50px;
+    height: 25px;
+    border-radius: 12.5px;
+    background-color: var.$c-secondary;
+    position: relative;
+		cursor: pointer;
+}
+
+.toggle-switch:hover {
+    background: var.$bc-toggle-hover;
+}
+
+// toggle switch component inner style
+.toggle-switch::before {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: var.$bc-neutral;
+    content: "";
+    position: absolute;
+    top: 2.5px;
+    left: 5%;
+    transition: left 0.4s ease;
+}
+
+// checked changes
+.toggle-switch:checked {
+    background: var.$bc-toggle-hover;
+}
+
+.toggle-switch:checked::before {
+    left: 54%;
+}
