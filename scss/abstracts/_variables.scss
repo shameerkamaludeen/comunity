@@ -4,35 +4,38 @@
 @use 'sass:color';
 
 // Background colors
-$bc-primary: hsl(25, 97%, 53%);
-$bc-secondary: hsl(213, 19%, 18%);
-$bc-secondary-dark: hsl(216, 12%, 8%);
-$bc-ternary: hsl(216, 12%, 54%);
+$bc-primary: hsl(0, 0%, 100%);
+$bc-secondary: hsl(228, 61%, 53%);
+$bc-ternary: hsl(208, 100%, 96%);
+$bc-ternary-lighter: hsl(207, 100%, 98%);
 
 // Font colors
-$c-primary: hsl(0, 0%, 100%);
-$c-secondary: hsl(217, 12%, 63%);
+$c-primary: hsl(226, 13%, 19%);
+$c-secondary: hsl(0, 0%, 47%);
+$c-ternary: hsl(236, 7%, 57%);
 
 // Font family 
-$ff-primary: 'Overpass', sans-serif;
+$ff-primary: 'Poppins', sans-serif;
+$ff-secondary: 'Montserrat', sans-serif;
 
 // Viewports
-$mobile-view-portrait: 27.5em;
-$mobile-view-landscape: 37em;
-$tablet-view: 53em;
-$laptop-view: 71em;
-$desktop-view-: 37em;
+$mobile-view-small: 20em; // 320px standard
+$mobile-view-portrait: 30em; // 480px standard
+$mobile-view-landscape: 40em; // 640px standard
+$tablet-view: 48em; // 768px standard
+$laptop-view: 64em; // 1024px standard
+$desktop-view-: 75em; // 1200px standard
 
 // Typography
 $word-spacing: 0.8px;
 $lettter-spacing: 0.4px;
 
-$fs-xxl: 2rem;
-$fs-xl: 1.75rem;
-$fs-l: 1.5rem;
-$fs-m: 0.9375rem;
-$fs-s: 0.75rem;
-$fs-xs: 0.625rem;
+$fs-xxl: 2.2rem;
+$fs-xl: 1.875rem;
+$fs-l: 1.125rem;
+$fs-m: 1rem;
+$fs-s: 0.875rem;
+$fs-xs: 0.75rem;
 
 $lh-base: 1.15;
 $lh-normal: 1.5;

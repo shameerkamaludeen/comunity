@@ -1,0 +1,7 @@
+/* || Block - Nav menu fixed side
+   -------------------------------------------------------------------------- */
+// The design is horizontal on larger screens and horizontal on small devices 
+// fixed to either right or left with the dark transparent background
+
+@use '../control/hamburger-close-btns';
+@use '../menu/menu-row-column';

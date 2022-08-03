@@ -1,0 +1,16 @@
+/* || Block - Navigation tablet centered(tc) and mobile side menu(msm)
+   ========================================================================== */
+
+@use '../../base/utilities';
+@use '../../abstracts/variables' as var;
+@use '../nav-menu/nav-menu-fixed-side';
+
+.navbar-tc-msm-ul {
+	@media screen and (min-width: var.$tablet-view) {
+		
+	}
+}
+
+.navbar-tc-msm-ul-no-style {
+	@extend %ul-no-style;
+}

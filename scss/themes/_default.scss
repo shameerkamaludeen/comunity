@@ -1,4 +1,4 @@
-/* || Abstracts - Default theme
+/* || Themes - Default theme
    ========================================================================== */
 
 // When having several themes, this file contains everything related to the
@@ -6,10 +6,28 @@
 
 @use '../abstracts/variables' as var;
 
-// || General styles
+/* || General styles */
 
-body {
-	background-color: var.$bc-primary;
+/* || Typography */
+
+/* || Header and Main Navigation */
+
+/* || Utilitites */
+
+/* || Sitewiede */
+
+/* || Store Pages */
+// Specific things, broken down by the context, page, or even component in 
+// which they are used.
+
+// || Footer
+
+.attr-sl-background {
+	padding: 13px 0;
 }
 
-// || Pages
+.attr-sl-bg-cnt {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}

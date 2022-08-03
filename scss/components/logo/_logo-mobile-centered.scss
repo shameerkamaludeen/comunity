@@ -1,0 +1,34 @@
+/* || Component - Logo mobile centered
+   ========================================================================== */
+@use '../../abstracts/variables' as var;
+
+$logo-center-break: var.$tablet-view  !default;
+$font-size: var.$fs-xl !default;
+
+.logo-mobile-centered {
+	text-align: center;
+
+	@media screen and (min-width: $logo-center-break) {
+		text-align: left;
+	}
+}
+
+.logo-mc-wr {
+	display: inline-block;
+}
+
+.logo-mc-link {
+	cursor: pointer;
+	outline: none;
+	text-decoration: none;
+	line-height: 1;
+	font-size: $font-size;
+
+	&:link,
+	&:visited,
+	&:hover,
+	&:active,
+	&:focus {
+		color: var.$c-primary;
+	}
+}

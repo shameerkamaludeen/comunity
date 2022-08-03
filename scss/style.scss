@@ -25,9 +25,8 @@
 @use 'layout/sidebar';
 @use 'layout/forms';
 
-// 6. Themes
-@use 'themes/default';
-
 // 7. Page-specific styles
 @use 'pages/home';
-@use 'pages/thank-you';
+
+// 8. Themes
+@use 'themes/default';

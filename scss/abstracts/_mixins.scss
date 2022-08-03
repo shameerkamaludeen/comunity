@@ -2,8 +2,251 @@
 // =============================================================================
 
 @use '../abstracts/variables' as var;
+@use 'sass:color';
+
+// || Utilities
+
+@mixin after-underline($underline-height: 1.5px,
+	$width: 100%,
+	$left: 0,
+	$right: auto,
+	$bottom: -2px,
+	$top: auto,
+	$border-radius: 5px,
+	$underline-color: var.$bc-secondary) {
+
+	position: relative;
+
+	&::after {
+		content: '';
+		position: absolute;
+		height: $underline-height;
+		background-color: $underline-color;
+
+		@if $width {
+			width: $width;
+		}
+
+		@if $right  !=auto {
+			right: $right;
+		}
+
+		@if $left  !=auto {
+			left: $left;
+		}
+
+		@if $bottom  !=auto {
+			bottom: $bottom;
+		}
+
+		@if $top  !=auto {
+			top: $top;
+		}
+
+		@if $border-radius {
+			border-radius: $border-radius;
+		}
+	}
+}
+
+// || Layouts
 
 @mixin fixed-h-centered {
 	margin-left: auto;
 	margin-right: auto;
+}
+
+// || Links
+
+@mixin link-border-underline($outline: none,
+	$color: var.$bc-primary,
+	$border-bottom-width: 1.5px,
+	$border-bottom-style: solid,
+	$visited-color: color.adjust(var.$bc-primary, $lightness: -20%),
+	$focus-hover-color: var.$bc-ternary-lighter,
+	$active-color: var.$bc-secondary,
+	$transition: (color 0.3s ease, border-bottom-color 0.3s ease)) {
+
+	text-decoration: none;
+	border-bottom: #{$border-bottom-width} #{$border-bottom-style};
+	transition: $transition;
+
+	@if $outline {
+		outline: none;
+	}
+
+	&:link {
+		color: $color;
+		border-bottom-color: $color;
+	}
+
+	&:visited {
+		color: $visited-color;
+		border-bottom-color: $visited-color;
+	}
+
+	&:focus,
+	&:hover {
+		color: $focus-hover-color;
+		border-bottom-color: $focus-hover-color;
+	}
+
+	&:active {
+		color: $active-color;
+		border-bottom-color: $active-color;
+	}
+}
+
+@mixin link-no-underline ($outline: none,
+	$color: var.$bc-primary,
+	$visited-color: color.adjust(var.$bc-primary, $lightness: -10%),
+	$focus-hover-color: var.$c-primary,
+	$active-color: var.$c-secondary,
+	$transition: color 0.3s ease) {
+
+	text-decoration: none;
+	transition: $transition;
+
+	@if $outline {
+		outline: $outline;
+	}
+
+	&:link {
+		color: $color;
+	}
+
+	&:visited {
+		color: $visited-color;
+	}
+
+	&:focus,
+	&:hover {
+		color: $focus-hover-color;
+	}
+
+	&:active {
+		color: $active-color;
+	}
+}
+
+// Use this with any other normal link, cause this only deal with the underline
+@mixin link-after-underline ($underline-height: 1.5px,
+	$width: 100%,
+	$left: 0,
+	$right: auto,
+	$bottom: -2px,
+	$top: auto,
+	$border-radius: 5px,
+	$outline: none,
+	$transition: opacity 0.3s ease,
+	$underline-color: var.$bc-primary,
+	$underline-visited-color: color.adjust(var.$bc-primary, $lightness: -10%),
+	$underline-focus-hover-color: var.$c-primary,
+	$underline-active-color: var.$c-secondary,
+	$is-underline-color-unique: true) {
+
+	@include after-underline($underline-height: $underline-height,
+		$width: $width,
+		$left: $left,
+		$right: $right,
+		$bottom: $bottom,
+		$top: $top,
+		$underline-color: $underline-color, // underline background color
+		$border-radius: $border-radius);
+
+	text-decoration: none;
+
+	@if $outline {
+		outline: $outline;
+	}
+
+	&::after {
+		opacity: 0;
+		transition: $transition;
+	}
+
+	@if $is-underline-color-unique {
+
+		&:hover::after,
+		&:focus::after {
+			opacity: 1;
+			background-color: $underline-color;
+		}
+	}
+
+	@else {
+		&:visited::after {
+			background-color: $underline-visited-color;
+		}
+
+		&:hover::after,
+		&:focus::after {
+			opacity: 1;
+			background-color: $underline-focus-hover-color;
+		}
+
+		&:active::after {
+			background-color: $underline-active-color;
+		}
+	}
+}
+
+// use this along with '%link-no-decor-outline' if required
+@mixin link-basic-modifiers($color: var.$bc-primary,
+	$visited-color: color.adjust(var.$bc-primary, $lightness: -10%),
+	$focus-hover-color: var.$c-primary,
+	$active-color: var.$c-secondary,
+	$transition: color 0.3s ease) {
+
+	transition: $transition;
+
+	@if $color {
+		&:link {
+			color: $color;
+		}
+	}
+
+	@if $visited-color {
+		&:visited {
+			color: $visited-color;
+		}
+	}
+
+	@if $focus-hover-color {
+
+		&:focus,
+		&:hover {
+			color: $focus-hover-color;
+		}
+	}
+
+	@if $active-color {
+		&:active {
+			color: $active-color;
+		}
+	}
+}
+
+// || SVG's
+
+@mixin svg-fixed-size ($icon-color: var.$bc-primary,
+	$icon-width: 10px,
+	$icon-height: 10px,
+	$stroke: var.$bc-primary,
+	$fill: var.$bc-primary) {
+
+	width: $icon-width;
+	height: $icon-height;
+
+	@if $icon-color {
+		color: $icon-color;
+	}
+
+	@if $stroke {
+		stroke: $stroke;
+	}
+
+	@if $fill {
+		fill: $fill;
+	}
 }

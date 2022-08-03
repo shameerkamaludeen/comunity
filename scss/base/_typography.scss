@@ -15,6 +15,18 @@
 	letter-spacing: 0.4px;
 }
 
+// || PP Fonts (primary-color primary-font font sizes)
+
+%primary-xl-font {
+	font-size: var.$fs-xl;
+	color: var.$c-primary;
+	font-family: var.$ff-primary;
+
+	@media screen and (min-width: var.$mobile-view-landscape) {
+		font-size: (var.$fs-l * 1.14);
+	}
+}
+
 %primary-l-font {
 	font-size: var.$fs-l;
 	color: var.$c-primary;
@@ -24,6 +36,8 @@
 		font-size: (var.$fs-l * 1.14);
 	}
 }
+
+// || SP fonts (Secondary-color primary-font font sizes)
 
 %secondary-l-font {
 	font-size: var.$fs-l;
@@ -43,115 +57,94 @@
 	font-family: var.$ff-primary;
 }
 
+// || LH-FW (Line height with font weight)
+
+%base-400 {
+	line-height: var.$lh-base;
+	font-weight: 400;
+}
+
+%base-500 {
+	line-height: var.$lh-base;
+	font-weight: 500;
+}
+
+%base-700 {
+	line-height: var.$lh-base;
+	font-weight: 700;
+}
+
+%normal-400 {
+	line-height: var.$lh-normal;
+	font-weight: 400;
+}
+
+%normal-500 {
+	line-height: var.$lh-normal;
+	font-weight: 500;
+}
+
+%normal-700 {
+	line-height: var.$lh-normal;
+	font-weight: 700;
+}
+
+%wide-400 {
+	line-height: var.$lh-wide;
+	font-weight: 400;
+}
+
+%wide-500 {
+	line-height: var.$lh-wide;
+	font-weight: 500;
+}
+
+%wide-700 {
+	line-height: var.$lh-wide;
+	font-weight: 700;
+}
+
 // || mixins
 // -----------------------------------------------------------------------------
-
-// In the below content category the first word indicate its color then size 
-// (l-large denotes h1 and xl or xxl indicate size for design purpose)
-// Font sizes: large(h1), medium(h2), small(h3), x-small(h4)(optional: x-large, 
-// xx-large, xx-small)
-
-// consider this type of mixin in the future
-@mixin primary-l-content($line-height: var.$lh-base,
-	$font-weight: 700,
-	$text-transform: capitalize) {
-
-	@extend %primary-l-font;
-
-	@if $line-height {
-		line-height: $line-height;
-	}
-
-	@if $font-weight {
-		font-weight: $font-weight;
-	}
-
-	@if $text-transform {
-		text-transform: $text-transform;
-	}
-}
-
-@mixin secondary-l-content($line-height: var.$lh-base,
-	$font-weight: 700,
-	$text-transform: capitalize) {
-
-	@extend %secondary-l-font;
-
-	@if $line-height {
-		line-height: $line-height;
-	}
-
-	@if $font-weight {
-		font-weight: $font-weight;
-	}
-
-	@if $text-transform {
-		text-transform: $text-transform;
-	}
-}
-
-@mixin secondary-m-content($line-height: var.$lh-base,
-	$font-weight: 700,
-	$text-transform: capitalize) {
-
-	@extend %secondary-m-font;
-
-	@if $line-height {
-		line-height: $line-height;
-	}
-
-	@if $font-weight {
-		font-weight: $font-weight;
-	}
-
-	@if $text-transform {
-		text-transform: $text-transform;
-	}
-}
-
-@mixin secondary-s-content($line-height: var.$lh-base,
-	$font-weight: 700,
-	$text-transform: capitalize) {
-
-	@extend %secondary-s-font;
-
-	@if $line-height {
-		line-height: $line-height;
-	}
-
-	@if $font-weight {
-		font-weight: $font-weight;
-	}
-}
 
 // || styles
 // -----------------------------------------------------------------------------
 
 body {
-	font-family: 'Inter', sans-serif;
-	font-size: 10px
+	font-size: 15px;
+	font-family: var.$ff-primary;
+	color: var.$c-primary;
+	line-height: var.$lh-normal;
+	font-weight: 400;
+}
+
+h1 {
+	@extend %primary-xl-font;
+	@extend %base-700
 }
 
 h2 {
-	@include primary-l-content($text-transform: null);
+	@extend %primary-l-font;
+	@extend %base-700
 }
 
 h3 {
-	@include secondary-m-content($text-transform: null);
+	@extend %secondary-m-font;
+	@extend %base-700
 }
 
 p {
-	@include secondary-m-content($line-height: var.$lh-normal,
-		$font-weight: 400,
-		$text-transform: null);
+	@extend %secondary-m-font;
+	@extend %normal-400;
 }
 
 label {
-	@include secondary-m-content($font-weight: 400,
-		$text-transform: null);
+	@extend %secondary-m-font;
+	font-weight: 400;
 }
 
 button {
-	@include secondary-m-content($font-weight: 400,
-		$text-transform: uppercase);
+	@extend %secondary-m-font;
+	font-weight: 400;
+	text-transform: uppercase;
 }

@@ -1,3 +1,14 @@
 /* || Pages - Home
    ========================================================================== */
-	 
+
+// common
+@use '../blocks/navbar/navbar-tc-msm';
+@use '../components/logo/logo-mobile-centered' with ($font-size: 27px);
+@use '../components/attribution/attr-sl-background';
+
+// home specific
+// ----- include home specific imports here------
+
+.lm-centered-home h1 {
+	font-size: initial;
+}

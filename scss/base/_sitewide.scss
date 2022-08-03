@@ -18,6 +18,13 @@
 	align-items: center;
 }
 
+// Flexible(inline) vertical and horizontal centered
+%inline-flex-vh-center {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+}
+
 // Fixed horizontally centered
 %fixed-h-center {
 	margin-left: auto;
@@ -31,29 +38,3 @@
 	align-items: center;
 }
 
-%block {
-	display: block;
-}
-
-// Footer link default style
-%link-footer {
-	outline: none;
-	text-decoration: none;
-
-	&:link {
-		color: var.$bc-primary;
-	}
-
-	&:visited {
-		color: color.adjust(var.$bc-primary, $lightness: -10%);
-	}
-
-	&:focus,
-	&:hover {
-		color: var.$c-primary;
-	}
-
-	&:active {
-		color: var.$c-secondary;
-	}
-}

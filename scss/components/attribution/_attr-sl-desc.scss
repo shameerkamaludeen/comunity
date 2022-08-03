@@ -3,14 +3,12 @@
 
 @use '../../abstracts/variables' as var;
 @use '../../base/sitewide';
+@use '../../abstracts/mixins' as mx;
 
 $font-size: var.$fs-s  !default;
 $color: var.$c-secondary  !default;
 $line-height: var.$lh-normal  !default;
 $font-weight: 400 !default;
-
-
-.attr-sl-desc {}
 
 .attr-sl-desc-cnt {
 	font-size: $font-size;
@@ -21,5 +19,5 @@ $font-weight: 400 !default;
 }
 
 .attr-sl-desc-a {
-	@extend %link-footer;
+	@include mx.link-no-underline;
 }

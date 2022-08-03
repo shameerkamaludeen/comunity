@@ -1,0 +1,10 @@
+/* || Block - Menu row column(tablet view row and mobile view column)
+   ========================================================================== */
+// Main menu styles only available, add styles for submenus also
+
+@use '../../components/menu-item/menu-item-hu';
+@use '../../base/utilities';
+
+.menu-rc-menu {
+	@extend %ul-no-style;
+}

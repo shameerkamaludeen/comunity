@@ -1,0 +1,13 @@
+/* || Component - Menu item hover underline
+   ========================================================================== */
+
+@use '../../abstracts/variables' as var;
+@use '../../abstracts/mixins' as mx;
+
+$underline-height: 2px !default;
+
+.mi-hu-link {
+	display: inline-block;
+
+	@include mx.link-after-underline($underline-color: var.$bc-secondary);
+}

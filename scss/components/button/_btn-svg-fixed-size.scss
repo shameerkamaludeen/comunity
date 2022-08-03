@@ -1,0 +1,57 @@
+/* || Component - Button SVG fixed size
+   -------------------------------------------------------------------------- */
+// The component support only svg code in the HTML
+// In the future make this component work with JS so we can dynamically add SVG 
+// code in the HTML so this won't clutter HTML, so don't need to care about 
+// HTML once adding the component
+
+@use 'sass:color';
+@use '../../abstracts/variables' as var;
+@use '../../abstracts/mixins' as mx;
+@use '../../base/sitewide';
+
+// icon properties
+$icon-color: var.$bc-primary  !default;
+$icon-width: 10px !default;
+$icon-height: 10px !default;
+$stroke: var.$bc-primary  !default;
+$fill: var.$bc-primary  !default;
+
+// button properties
+$background-color: var.$bc-secondary  !default;
+$border: none !default;
+$btn-width: 35px !default;
+$btn-height: 35px !default;
+$border-radius: 4px !default;
+$icon-center-placeholder: 'inline-flex-vh-center' !default;
+$outline: 2px solid var.$c-primary  !default;
+$outline-offset: -2px !default;
+
+
+.btn-svg-fixed-size {
+	background-color: $background-color;
+	border: $border;
+	width: $btn-width;
+	height: $btn-height;
+	border-radius: $border-radius;
+	outline-offset: $outline-offset;
+	transition: background-color 0.2s ease;
+	@extend %#{$icon-center-placeholder};
+
+	&:active {
+		background-color: color.adjust($background-color, $whiteness: 20%);
+	}
+
+	&:hover,
+	&:focus {
+		outline: $outline;
+	}
+}
+
+.btn-svg-fs-svg {
+	@include mx.svg-fixed-size($icon-color: $icon-color,
+		$icon-width: $icon-width,
+		$icon-height: $icon-height,
+		$stroke: $stroke,
+		$fill: $fill);
+}
