@@ -7,10 +7,13 @@
 
 .navbar-tc-msm-ul {
 	@media screen and (min-width: var.$tablet-view) {
-		
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 	}
 }
 
 .navbar-tc-msm-ul-no-style {
 	@extend %ul-no-style;
+	margin: 0;
 }

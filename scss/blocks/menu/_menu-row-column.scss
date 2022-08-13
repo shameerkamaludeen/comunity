@@ -2,9 +2,36 @@
    ========================================================================== */
 // Main menu styles only available, add styles for submenus also
 
-@use '../../components/menu-item/menu-item-hu';
+@use '../../abstracts/variables' as var;
 @use '../../base/utilities';
+@use '../../abstracts/mixins' as mx;
+@use '../../base/sitewide';
+@use '../../components/menu-item/menu-item-hu';
+
+.menu-row-column {
+	background-color: var.$bc-primary;
+	flex: 0;
+	overflow: hidden;
+	transition: flex 0.5s ease;
+}
+
+.menu-rc-active {
+	flex: 0 0 250px;
+
+	@media screen and (min-width: 25em) {
+		flex: 0 0 300px;
+	}
+}
 
 .menu-rc-menu {
 	@extend %ul-no-style;
+	overflow: hidden;
+	margin: 25px;
+
+	@media screen and (min-width: var.$mobile-view-landscape) {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		margin: 10px 0;
+	}
 }

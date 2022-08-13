@@ -12,7 +12,8 @@
 	<!-- Google Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@300;400;500;700&display=swap"
+	<link
+		href="https://fonts.googleapis.com/css2?family=Montserrat&family=PT+Sans+Caption&family=Poppins:wght@300;400;500;700&display=swap"
 		rel="stylesheet">
 
 	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
@@ -21,32 +22,30 @@
 </head>
 
 <body>
+	<h1 class="main-heading-hv">Comunity. - THEMESMID's Faster theme replica</h1>
 	<main class="fixed-centered">
-		<h1 class="main-heading-hv">Comunity. - THEMESMID's Faster theme replica</h1>
 		<header>
 			<nav class="navbar-tc-msm">
 				<ul class="navbar-tc-msm-ul navbar-tc-msm-ul-no-style">
 
 					<li class="nav-logo logo-mobile-centered lm-centered-home">
-						<h1 class="logo-mc-wr">
+						<div class="logo-mc-wr header-logo">
 							<a href="index.html" class="logo-mc-link">
 								<img src="images/logo.webp" alt="Comunity.">
 							</a>
-						</h1>
+						</div>
 					</li>
 
 					<li class="nav-menu-fixed-side">
-						<div class="hamburger-close-btns">
-							<button type="button" class="btn-svg-fixed-size">
-								<svg xmlns="http://www.w3.org/2000/svg" class="btn-svg-fs-svg" width="24" height="24"
+						<div class="nm-fs-transparent-bg">
+							<button type="button" class="hamburger-close-btn btn-svg-fixed-size" title="Menu" data-buttontype="menu">
+								<svg xmlns="http://www.w3.org/2000/svg" class="hc-btn-icon btn-svg-fs-svg" width="24" height="24"
 									viewBox="0 0 24 24">
 									<path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z" />
 								</svg>
-							</button>
 
-							<button type="button" class="btn-svg-fixed-size">
-								<svg xmlns="http://www.w3.org/2000/svg" class="btn-svg-fs-svg" width="24" height="24"
-									viewBox="0 0 24 24">
+								<svg xmlns="http://www.w3.org/2000/svg" class="hc-btn-icon hc-btn-icon-inactive btn-svg-fs-svg"
+									width="24" height="24" viewBox="0 0 24 24">
 									<path
 										d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z" />
 								</svg>
@@ -58,10 +57,33 @@
 
 								<li class="menu-item-hu">
 									<div class="mi-hu-link-wr">
-										<a href="index.html" class="mi-hu-link">Home</a>
+										<a href="index.html" class="mi-hu-link active"><span class="mi-hu-link-txt">Home</span></a>
 									</div>
 								</li>
 
+								<li class="menu-item-hu">
+									<div class="mi-hu-link-wr">
+										<a href="about.html" class="mi-hu-link"><span class="mi-hu-link-txt">About</span></a>
+									</div>
+								</li>
+
+								<li class="menu-item-hu">
+									<div class="mi-hu-link-wr">
+										<a href="services.html" class="mi-hu-link"><span class="mi-hu-link-txt">Services</span></a>
+									</div>
+								</li>
+
+								<li class="menu-item-hu">
+									<div class="mi-hu-link-wr">
+										<a href="projects.html" class="mi-hu-link"><span class="mi-hu-link-txt">Projects</span></a>
+									</div>
+								</li>
+
+								<li class="menu-item-hu">
+									<div class="mi-hu-link-wr">
+										<a href="contacts.html" class="mi-hu-link"><span class="mi-hu-link-txt">Contacts</span></a>
+									</div>
+								</li>
 							</ul>
 						</div>
 
@@ -71,19 +93,41 @@
 			</nav>
 		</header>
 
-		<section>
+		<article>
+			<div class="two-column-img-desc">
 
-		</section>
+				<div class="tc-id-column tc-id-desc-column layout-margin">
+
+					<h2 class="tc-id-heading"><span class="tc-id-heading-txt tc-id-heading-first-txt">360&deg; business
+						</span><span class="tc-id-heading-txt tc-id-heading-second-txt">consulting</span></h2>
+
+					<h3 class="tc-id-subheading">Can SMB afford us?</h3>
+
+					<p class="tc-id-para">Whether your company looks for a financial consulting, investment risks assessments or
+						an interim, HR management, we’re ready to provide that for you.</p>
+
+					<a href="pages/projects.html" class="tc-id-read-more btn-capsule-hover-wipe">
+						<span class="btn-chw-content btn-chw-first-content">Read More</span><span
+							class="btn-chw-content btn-chw-second-content">Read More</span>
+					</a>
+				</div>
+
+				<div class="tc-id-column tc-id-img-column">
+					<img src="images/hero.jpeg" alt="The team conducting a consultation" class="tc-id-img">
+				</div>
+
+			</div>
+		</article>
 
 		<footer>
-			<div class="attr-sl-background">
+			<div class="attr-sl-underline attr-sl-u-bg">
 				<div class="layout-margin">
-					<p class="attr-sl-bg-cnt"><span>Coded by </span><a href="https://twitter.com/ShameerKamalud1"
-							class="attr-sl-bg-a" target="_blank">Shameer Kamaludeen</a><span> with </span><a
-							href="https://www.templatemonster.com/authors/themesmid/#author-about" class="attr-sl-bg-a"
-							target="_blank">THEMESMID</a> <a
+					<p class="attr-sl-u-content attr-sl-u-cnt-center"><span>Coded by </span><a
+							href="https://twitter.com/ShameerKamalud1" class="attr-sl-u-link" target="_blank">Shameer
+							Kamaludeen</a><span> with </span><a href="https://www.templatemonster.com/authors/themesmid/#author-about"
+							class="attr-sl-u-link" target="_blank">THEMESMID</a> <a
 							href="https://www.templatemonster.com/website-templates/faster-multipurpose-responsive-html-website-template-176905.html"
-							class="attr-sl-bg-a" target="_blank">Faster-Multipurpose Responsive HTML Website Template</a><span>
+							class="attr-sl-u-link" target="_blank">Faster-Multipurpose Responsive HTML Website Template</a><span>
 							design.</span></p>
 				</div>
 			</div>

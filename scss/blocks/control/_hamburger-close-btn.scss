@@ -1,17 +1,13 @@
-/* || Component - Button SVG fixed size
+/* || Block - Hamberger close buttons
    -------------------------------------------------------------------------- */
-// The component support only svg code in the HTML
-// In the future make this component work with JS so we can dynamically add SVG 
-// code in the HTML so this won't clutter HTML, so don't need to care about 
-// HTML once adding the component
 
-@use 'sass:color';
 @use '../../abstracts/variables' as var;
 @use '../../abstracts/mixins' as mx;
+@use '../../base/utilities';
 
 $background-color: var.$bc-secondary;
 
-.btn-svg-fixed-size {
+.hamburger-close-btn {
 	@include mx.btn-icon-compatible($bg-color: var.$bc-secondary,
 		$border: none,
 		$width: 35px,
@@ -22,10 +18,18 @@ $background-color: var.$bc-secondary;
 		$transition: (background-color 0.2s ease, outline 0.2s ease));
 }
 
-.btn-svg-fs-svg {
+.hc-btn-icon {
 	@include mx.svg-fixed-size($icon-color: false,
-		$icon-width: 10px,
-		$icon-height: 10px,
-		$stroke: false,
-		$fill: var.$bc-primary);
+	$icon-width: 10px,
+	$icon-height: 10px,
+	$stroke: false,
+	$fill: var.$bc-primary);
+
+	opacity: 1;
+	transition: opacity 0.3s ease;
+}
+
+.hc-btn-icon-inactive {
+	opacity: 0;
+	@extend %hide-visually;
 }

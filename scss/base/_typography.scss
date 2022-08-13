@@ -15,49 +15,84 @@
 	letter-spacing: 0.4px;
 }
 
-// || PP Fonts (primary-color primary-font font sizes)
+// || FFP-CP Fonts (ff-primary c-primary fonts)
 
-%primary-xl-font {
+%ffp-cp-xxl-font {
+	font-size: var.$fs-xxl;
+	color: var.$c-primary;
+	font-family: var.$ff-primary;
+}
+
+%ffp-cp-xl-font {
 	font-size: var.$fs-xl;
 	color: var.$c-primary;
 	font-family: var.$ff-primary;
-
-	@media screen and (min-width: var.$mobile-view-landscape) {
-		font-size: (var.$fs-l * 1.14);
-	}
 }
 
-%primary-l-font {
+%ffp-cp-l-font {
 	font-size: var.$fs-l;
 	color: var.$c-primary;
 	font-family: var.$ff-primary;
-
-	@media screen and (min-width: var.$mobile-view-landscape) {
-		font-size: (var.$fs-l * 1.14);
-	}
 }
 
-// || SP fonts (Secondary-color primary-font font sizes)
+// || FFP-CS fonts (ff-primary c-secondary fonts)
 
-%secondary-l-font {
+%ffp-cs-l-font {
 	font-size: var.$fs-l;
 	color: var.$c-secondary;
 	font-family: var.$ff-primary;
 }
 
-%secondary-m-font {
+%ffp-cs-m-font {
 	font-size: var.$fs-m;
 	color: var.$c-secondary;
 	font-family: var.$ff-primary;
 }
 
-%secondary-s-font {
+%ffp-cs-s-font {
 	font-size: var.$fs-s;
 	color: var.$c-secondary;
 	font-family: var.$ff-primary;
 }
 
+// || FFS-CP fonts (ff-secondary c-primary fonts)
+
+%ffs-cp-l-font {
+	font-size: var.$fs-l;
+	color: var.$c-primary;
+	font-family: var.$ff-secondary;
+}
+
+// || FFP-BCP fonts (ff-primary bc-secondary fonts)
+
+%ffp-bcp-l-font {
+	font-size: var.$fs-l;
+	color: var.$bc-primary;
+	font-family: var.$ff-primary;
+}
+
+// || FFP-BCS fonts (ff-primary bc-secondary fonts)
+
+%ffp-bcs-xxl-font {
+	font-size: var.$fs-xxl;
+	color: var.$bc-secondary;
+	font-family: var.$ff-primary;
+}
+
+// || FFT-BCP fonts (ff-ternary bc-primary fonts)
+
+%fft-bcp-xs-font {
+	font-size: var.$fs-xs;
+	color: var.$bc-primary;
+	font-family: var.$ff-ternary;
+}
+
 // || LH-FW (Line height with font weight)
+
+%base-300 {
+	line-height: var.$lh-base;
+	font-weight: 300;
+}
 
 %base-400 {
 	line-height: var.$lh-base;
@@ -74,6 +109,11 @@
 	font-weight: 700;
 }
 
+%normal-300 {
+	line-height: var.$lh-normal;
+	font-weight: 300;
+}
+
 %normal-400 {
 	line-height: var.$lh-normal;
 	font-weight: 400;
@@ -87,6 +127,11 @@
 %normal-700 {
 	line-height: var.$lh-normal;
 	font-weight: 700;
+}
+
+%wide-300 {
+	line-height: var.$lh-wide;
+	font-weight: 300;
 }
 
 %wide-400 {
@@ -119,32 +164,31 @@ body {
 }
 
 h1 {
-	@extend %primary-xl-font;
+	@extend %ffp-cp-xl-font;
 	@extend %base-700
 }
 
 h2 {
-	@extend %primary-l-font;
+	@extend %ffp-cp-l-font;
 	@extend %base-700
 }
 
 h3 {
-	@extend %secondary-m-font;
+	@extend %ffp-cs-m-font;
 	@extend %base-700
 }
 
 p {
-	@extend %secondary-m-font;
+	@extend %ffp-cs-m-font;
 	@extend %normal-400;
 }
 
 label {
-	@extend %secondary-m-font;
+	@extend %ffp-cs-m-font;
 	font-weight: 400;
 }
 
 button {
-	@extend %secondary-m-font;
+	@extend %ffp-cs-m-font;
 	font-weight: 400;
-	text-transform: uppercase;
 }

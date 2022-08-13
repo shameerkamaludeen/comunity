@@ -3,11 +3,12 @@
 
 // common
 @use '../blocks/navbar/navbar-tc-msm';
-@use '../components/logo/logo-mobile-centered' with ($font-size: 27px);
-@use '../components/attribution/attr-sl-background';
+@use '../components/logo/logo-mobile-centered';
+@use '../components/button/btn-capsule-hover-wipe';
+@use '../components/attribution/attr-sl-underline';
 
 // home specific
-// ----- include home specific imports here------
+@use '../blocks/section/two-column-img-desc';
 
 .lm-centered-home h1 {
 	font-size: initial;

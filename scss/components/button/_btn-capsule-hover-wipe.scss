@@ -1,0 +1,60 @@
+/* || Components - Button capsule hover wipe
+   ========================================================================== */
+// capsule button which wipe on hover
+
+@use '../../abstracts/variables' as var;
+@use '../../abstracts/mixins' as mx;
+@use '../../base/typography';
+@use '../../base/utilities';
+@use 'sass:color';
+
+.btn-capsule-hover-wipe {
+	@extend %ffp-bcp-l-font;
+	@extend %base-400;
+	border-radius: 200px;
+	cursor: pointer;
+	border: none;
+	overflow: hidden;
+	padding: 0;
+	margin: 0;
+	height: 50px;
+	display: inline-block;
+	text-decoration: none;
+
+	&:focus {
+		outline: 2px solid var.$c-secondary;
+		outline-offset: 2px;
+	}
+
+	&:hover .btn-chw-first-content,
+	&:focus .btn-chw-first-content {
+		bottom: 0;
+	}
+
+	&:hover .btn-chw-second-content,
+	&:focus .btn-chw-second-content {
+		bottom: 0;
+	}
+
+	&:active .btn-chw-first-content {
+		background-color: var.$bc-secondary;
+	}
+}
+
+.btn-chw-content {
+	display: block;
+	padding: 14.21px 38px;
+	overflow: hidden;
+	position: relative;
+	transition: bottom 0.3s linear;
+}
+
+.btn-chw-first-content {
+	background-color: var.$c-primary;
+	bottom: 50px;
+}
+
+.btn-chw-second-content {
+	background-color: var.$bc-secondary;
+	bottom: 50px;
+}

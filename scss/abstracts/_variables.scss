@@ -16,7 +16,8 @@ $c-ternary: hsl(236, 7%, 57%);
 
 // Font family 
 $ff-primary: 'Poppins', sans-serif;
-$ff-secondary: 'Montserrat', sans-serif;
+$ff-secondary: 'PT Sans Caption', sans-serif;
+$ff-ternary: 'Montserrat', sans-serif;
 
 // Viewports
 $mobile-view-small: 20em; // 320px standard
@@ -30,13 +31,13 @@ $desktop-view-: 75em; // 1200px standard
 $word-spacing: 0.8px;
 $lettter-spacing: 0.4px;
 
-$fs-xxl: 2.2rem;
+$fs-xxl: 2.2rem; 
 $fs-xl: 1.875rem;
 $fs-l: 1.125rem;
 $fs-m: 1rem;
 $fs-s: 0.875rem;
 $fs-xs: 0.75rem;
 
-$lh-base: 1.15;
-$lh-normal: 1.5;
+$lh-base: 1.2;
+$lh-normal: 1.65;
 $lh-wide: 2;

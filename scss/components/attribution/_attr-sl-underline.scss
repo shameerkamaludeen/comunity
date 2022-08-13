@@ -1,0 +1,33 @@
+/* || Components - Attribution single line with background
+   ========================================================================== */
+// Link color in this component is same as description with underline 
+@use '../../abstracts/variables' as var;
+@use '../../abstracts/mixins' as mx;
+@use '../../base/typography';
+
+.attr-sl-underline {
+	padding: 13px 0;
+}
+
+.attr-sl-u-content {
+	// ff, c, fs
+	@extend %fft-bcp-xs-font;
+	// lh, fw
+	@extend %wide-400;
+	margin: 0;
+	letter-spacing: 0.4px;
+}
+
+.attr-sl-u-link {
+	@include mx.link-border-underline;
+}
+
+// modifiers
+
+.attr-sl-u-bg {
+	background-color: var.$bc-secondary;
+}
+
+.attr-sl-u-cnt-center {
+	text-align: center;
+}

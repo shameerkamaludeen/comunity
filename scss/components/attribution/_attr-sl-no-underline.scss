@@ -1,0 +1,32 @@
+/* || Components - Attribution single line description
+   ========================================================================== */
+
+@use '../../abstracts/variables' as var;
+@use '../../abstracts/mixins' as mx;
+@use '../../base/typography';
+
+.attr-sl-no-underline {
+	padding: 13px 0;
+}
+
+.attr-sl-no-u-content {
+	// ff, c, fs
+	@extend %ffp-cs-s-font;
+	// lh, fw
+	@extend %normal-400;
+	margin: 0;
+}
+
+.attr-sl-no-u-link {
+	@include mx.link-no-underline;
+}
+
+// modifiers
+
+.attr-sl-no-u-bg {
+	background-color: var.$bc-secondary;
+}
+
+.attr-sl-no-u-cnt-center {
+	text-align: center;
+}

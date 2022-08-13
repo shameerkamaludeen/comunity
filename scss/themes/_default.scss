@@ -8,6 +8,14 @@
 
 /* || General styles */
 
+body {
+	background: url(../images/home-bg.webp) left 16% / auto no-repeat;
+
+	@media screen and (min-width: var.$laptop-view) {
+		background: url(../images/home-bg.webp) left top / cover no-repeat;
+	}
+}
+
 /* || Typography */
 
 /* || Header and Main Navigation */
@@ -21,13 +29,3 @@
 // which they are used.
 
 // || Footer
-
-.attr-sl-background {
-	padding: 13px 0;
-}
-
-.attr-sl-bg-cnt {
-	text-align: center;
-	margin-left: auto;
-	margin-right: auto;
-}

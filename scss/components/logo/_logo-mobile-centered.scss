@@ -2,8 +2,8 @@
    ========================================================================== */
 @use '../../abstracts/variables' as var;
 
-$logo-center-break: var.$tablet-view  !default;
-$font-size: var.$fs-xl !default;
+$logo-center-break: var.$tablet-view;
+$font-size: 27px;
 
 .logo-mobile-centered {
 	text-align: center;

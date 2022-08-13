@@ -3,5 +3,47 @@
 // The design is horizontal on larger screens and horizontal on small devices 
 // fixed to either right or left with the dark transparent background
 
-@use '../control/hamburger-close-btns';
+@use '../../abstracts/variables' as var;
+@use '../../base/sitewide';
+@use '../control/hamburger-close-btn';
 @use '../menu/menu-row-column';
+@use 'sass:color';
+
+.nav-menu-fixed-side {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	z-index: -1;
+	@extend %flex-h-right;
+
+	@media screen and (min-width: var.$mobile-view-landscape) {
+		position: initial;
+		display: initial;
+	}
+
+	@media screen and (min-width: var.$tablet-view) {
+		z-index: initial;
+	}
+}
+
+.nav-menu-fs-active {
+	z-index: 10;
+}
+
+.nm-fs-transparent-bg {
+	align-self: flex-start;
+
+	@media screen and (min-width: var.$mobile-view-landscape) {
+		display: none;
+	}
+}
+
+.nm-fs-tbg-active {
+	align-self: initial;
+	flex: 1 0 auto;
+	background-color: color.adjust(var.$c-primary, $alpha: -0.3);
+	text-align: right;
+	transition: background-color .4s ease;
+}
