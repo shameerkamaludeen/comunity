@@ -1,8 +1,14 @@
 /* || Layout - Main
    ========================================================================== */
 
+@use '../abstracts/variables' as var;
 @use '../base/utilities';
 
-.mh-hide-visually {
+main {
+	background-color: var.$bc-primary;
+	margin-top: 66px;
+}
+
+.main-heading-hv {
 	@extend %hide-visually;
 }

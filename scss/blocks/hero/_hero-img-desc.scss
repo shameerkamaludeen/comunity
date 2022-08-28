@@ -1,0 +1,86 @@
+/* || Block - Hero image description
+   ========================================================================== */
+// Features:
+// two column layout with margin less image
+// split heading, normal heading and subheading
+// read more link
+
+@use '../../abstracts/variables' as var;
+@use '../../base/typography';
+@use '../../components/button/btn-capsule-hover-wipe';
+
+
+.hero-img-desc {
+	@media screen and (min-width: var.$tablet-view) {
+		display: flex;
+	}
+}
+
+.hero-id-column {}
+
+.hero-id-desc-column {
+	margin-bottom: 27px;
+
+	@media screen and (min-width: var.$tablet-view) {
+		flex: 2;
+		margin-bottom: 0;
+	}
+}
+
+.hero-id-img-column {
+	overflow: hidden;
+
+	@media screen and (min-width: var.$tablet-view) {
+		flex: 3;
+	}
+}
+
+.hero-id-heading {
+	margin: 0;
+	@extend %ffp-cp-xxl-font;
+	@extend %base-500;
+}
+
+.hero-id-split-heading {
+	margin: 0;
+}
+
+.hero-id-sh-content {
+	display: block;
+}
+
+.hero-id-sh-first-text {
+	@extend %ffp-cp-xxl-font;
+	@extend %base-500;
+}
+
+.hero-id-sh-second-text {
+	@extend %ffp-bcs-xxl-font;
+	@extend %base-700;
+}
+
+.hero-id-subheading {
+	@extend %ffp-cp-xxl-font;
+	@extend %base-300;
+	margin: 0;
+}
+
+.hero-id-para {
+	@extend %ffp-cs-s-font;
+	@extend %normal-400;
+}
+
+.hero-id-read-more {
+	margin-top: 13px;
+}
+
+.hero-id-img {
+	width: 100%;
+	position: relative;
+	left: 100%;
+}
+
+.hero-id-img-animate {
+	left: 0;
+	transition: left 1s ease;
+}

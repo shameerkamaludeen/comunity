@@ -1,4 +1,4 @@
-/* || Abstracts - Default theme
+/* || Themes - Default theme
    ========================================================================== */
 
 // When having several themes, this file contains everything related to the
@@ -6,10 +6,30 @@
 
 @use '../abstracts/variables' as var;
 
-// || General styles
+/* || General styles */
 
 body {
-	background-color: var.$bc-primary;
+	background: url(../images/home-bg.webp) center / cover no-repeat;
+
+	// @media screen and (min-width: var.$laptop-view) {
+	// 	background: url(../images/home-bg.webp) left top / cover no-repeat;
+	// }
 }
 
-// || Pages
+/* || Typography */
+
+/* || Header and Main Navigation */
+
+/* || Utilitites */
+
+/* || Sitewiede */
+
+/* || Store Pages */
+// Specific things, broken down by the context, page, or even component in 
+// which they are used.
+
+header+section {
+	margin-top: 76px;
+}
+
+// || Footer

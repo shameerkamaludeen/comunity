@@ -1,0 +1,49 @@
+/* || Component - Card centered profile
+   ========================================================================== */
+
+@use '../../abstracts/variables' as var;
+@use '../../abstracts/mixins' as mx;
+@use '../../base/typography';
+@use 'sass:color';
+
+.card-center-profile {
+	text-align: center;
+	background-color: color.adjust(var.$bc-ternary-lighter, $lightness: -1%);
+	border-radius: 10px;
+	padding: 42px 20px;
+	margin: 0 10px;
+}
+
+// add ".card-cp-img-raster" for img element along with the below wrapper
+.card-cp-image {
+	@include mx.fixed-img-icon($width: 93px,
+		$height: 93px,
+		$img-icon-placeholder: '%img-icon-cover-center');
+	margin-left: auto;
+	margin-right: auto;
+
+	&-raster {
+		border-radius: 50%;
+	}
+}
+
+.card-cp-heading {
+	@extend %ffp-bcs-xs-font;
+	@extend %base-500;
+	text-transform: uppercase;
+	margin-top: 0.9em;
+	margin-bottom: 0.5em;
+}
+
+.card-cp-tag {
+	@extend %ffp-cp-xs-font;
+	@extend %base-300;
+	display: block;
+}
+
+.card-cp-para {
+	@extend %ffp-cs-s-font;
+	@extend %normal-300;
+	font-style: italic;
+	margin-top: 0.8em;
+}

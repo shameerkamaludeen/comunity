@@ -1,0 +1,61 @@
+/* || Block - Services with carousel
+   ========================================================================== */
+// Features:
+// services block with carousel to display each service
+// serivices as card having centered content with rounded icon
+// split and normal heading
+
+@use '../../abstracts/variables' as var;
+@use '../../base/sitewide';
+@use '../../components/card/card-center-round-icon';
+@use 'sass:color';
+
+.services-carousel {
+	background-color: color.adjust(var.$bc-ternary-lighter, $hue: 15);
+	padding: 13px 0 40px;
+	margin-top: 60px;
+}
+
+/* normal heading */
+.sc-heading {
+	text-align: center;
+	@extend %ffp-cp-xl-font;
+	@extend %base-500;
+}
+
+/* split heading */
+.sc-split-heading {
+	text-align: center;
+}
+
+/* split heading first text */
+.sc-sh-first-txt {
+	@extend %ffp-cp-xl-font;
+	@extend %base-500;
+}
+
+/* split heading second text */
+.sc-sh-second-txt {
+	@extend %ffp-bcs-xl-font;
+	@extend %base-700;
+}
+
+.sc-para {
+	text-align: center;
+	@extend %normal-300;
+	@extend %ffp-cs-s-font;
+	max-width: 650px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 75px;
+}
+
+// carousel element
+.sc-carousel {}
+
+// carousel item
+.sc-carousel-item {}
+
+.sc-link-wrapper {
+	@extend %link-wrapper-basic;
+}

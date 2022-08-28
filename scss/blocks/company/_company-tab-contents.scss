@@ -1,0 +1,81 @@
+/* || Block - company with tab contents
+   ========================================================================== */
+// Features:
+// two column block with margin less image
+// split heading and normal heading
+// 
+
+@use '../../abstracts/variables' as var;
+@use '../../base/typography';
+@use '../../components/button/btn-no-bg-border';
+
+.company-tab-contents {
+	padding-top: 50px;
+	padding-bottom: 30px;
+
+	@media screen and (min-width: var.$tablet-view) {
+		display: flex;
+	}
+}
+
+
+.ctc-column {}
+
+.ctc-desc-column {
+	margin-bottom: 27px;
+
+	@media screen and (min-width: var.$tablet-view) {
+		flex: 2;
+		margin-bottom: 0;
+	}
+}
+
+.ctc-img-column {
+	overflow: hidden;
+
+	@media screen and (min-width: var.$tablet-view) {
+		flex: 3;
+	}
+}
+
+/* normal heading */
+.ctc-heading {
+	text-align: center;
+	@extend %ffp-cp-xl-font;
+	@extend %base-500;
+}
+
+/* split heading */
+.ctc-split-heading {
+	text-align: center;
+}
+
+/* split heading first text */
+.ctc-sh-first-text {
+	@extend %ffp-cp-xl-font;
+	@extend %base-500;
+}
+
+/* split heading second text */
+.ctc-sh-second-text {
+	@extend %ffp-bcs-xl-font;
+	@extend %base-700;
+}
+
+.ctc-tabs-component-wr {}
+
+.ctc-para {
+	@extend %ffp-cs-s-font;
+	@extend %normal-300;
+}
+
+.ctc-img {
+	width: 100%;
+	position: relative;
+	right: 100%;
+}
+
+.ctc-img-animate {
+	right: 0;
+	transition: right 1s ease;
+}

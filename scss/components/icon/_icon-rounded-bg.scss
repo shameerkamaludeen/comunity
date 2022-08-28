@@ -1,0 +1,34 @@
+/* || Components - Icon rounded with background 
+   ========================================================================== */
+
+@use '../../abstracts/variables' as var;
+@use '../../base/sitewide';
+@use '../../abstracts/mixins' as mx;
+@use 'sass:color';
+
+$background-color: var.$bc-ternary;
+$icon-width: 67px;
+$icon-img-width: 33px;
+
+.icon-rounded-bg {
+	@extend %flex-vh-center;
+	background-color: $background-color;
+	border-radius: 50%;
+	width: $icon-width;
+	height: $icon-width;
+}
+
+.ir-bg-responsive {
+	@media screen and (min-width: var.$mobile-view-landscape) {
+		width: ($icon-width + 8);
+		height: ($icon-width + 8);
+	}
+}
+
+.ir-bg-img {
+	@include mx.svg-fixed-size ($icon-color: false,
+		$icon-width: $icon-img-width,
+		$icon-height: $icon-img-width,
+		$stroke: var.$bc-secondary,
+		$fill: false)
+}

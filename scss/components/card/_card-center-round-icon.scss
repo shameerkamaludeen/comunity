@@ -1,0 +1,30 @@
+/* || Components - Card centered contents with rounded icon 
+   ========================================================================== */
+// Dependencies - icon-rounded-bg
+
+@use '../../abstracts/mixins' as mx;
+@use '../../base/typography';
+@use '../../base/sitewide';
+
+.card-center-round-icon {
+	@extend %flex-dc-h-center;
+}
+
+.card-cri-icon {
+	@include mx.fixed-img-icon($width: 70px,
+	$height: 70px,
+	$img-icon-placeholder: '%img-icon-contain-center')
+}
+
+.card-cri-heading {
+	@extend %ffp-cp-m-font;
+	@extend %base-500;
+	text-align: center;
+	margin: 1.2em 0;
+}
+
+.card-cri-para {
+	text-align: center;
+	@extend %normal-300;
+	@extend %ffp-cs-s-font;
+}

@@ -1,0 +1,44 @@
+/* || Block - Testimonial carousel
+  =========================================================================== */
+
+@use '../../base/sitewide';
+@use '../../components/card/card-center-profile';
+
+.testimonial-carousel {
+	text-align: center;
+	margin-top: 47px;
+}
+
+.tc-heading-normal {
+	@extend %ffp-cp-xl-font;
+	@extend %base-500;
+}
+
+.tc-split-heading {
+}
+
+.tc-sh-first-txt {
+	@extend %ffp-cp-xl-font;
+	@extend %base-500;
+}
+
+.tc-sh-second-txt {
+	@extend %ffp-bcs-xl-font;
+	@extend %base-700;
+}
+
+.tc-para {
+	text-align: center;
+	@extend %normal-300;
+	@extend %ffp-cs-s-font;
+	max-width: 650px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.tc-carousel {
+	margin-top: 30px;
+}
+
+.tc-carousel-item {
+}

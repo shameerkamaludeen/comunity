@@ -3,10 +3,36 @@
 @use '../abstracts/variables' as var;
 
 .layout-margin {
-	margin-right: 23px;
-	margin-left: 23px;
+	margin-right: 15px;
+	margin-left: 15px;
+
+	@media screen and (min-width: var.$tablet-view) {
+		margin-right: 45px;
+		margin-left: 45px;
+	}
+
+	@media screen and (min-width: var.$laptop-view) {
+		margin-right: 45px;
+		margin-left: 45px;
+	}
+}
+
+.layout-margin-left-align {
+	@media screen and (min-width: var.$tablet-view) {
+		margin-right: initial;
+		padding-right: 60px;
+	}
+}
+
+.layout-margin-right-align {
+	@media screen and (min-width: var.$tablet-view) {
+		margin-left: initial;
+		padding-left: 60px;
+	}
 }
 
 .fixed-centered {
-	max-width: 415px;
+	max-width: 1300px;
+	margin-right: auto;
+	margin-left: auto;
 }

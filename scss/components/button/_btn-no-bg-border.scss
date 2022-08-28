@@ -1,0 +1,45 @@
+/* -----------------------------------------------------------------------------
+	|| Components - Button no background border
+	=========================================================================== */
+@use '../../abstracts/variables' as var;
+@use '../../base/typography';
+
+$width: 80px;
+$height: 35px;
+$outline-color: var.$bc-secondary;
+$transition: color 0.3s ease;
+$hover-focus-color: var.$c-primary;
+$active-color: var.$bc-secondary;
+$padding: 1px 4px;
+
+.btn-no-bg-border {
+	background-color: transparent;
+	border: none;
+	transition: $transition;
+	cursor: pointer;
+
+	&:focus {
+		outline: 2px solid $outline-color;
+	}
+}
+
+.btn-no-bgb-fixed {
+	width: $width;
+	height: $height;
+}
+
+// use this class for component wise typography else use block typography
+.btn-no-bgb-content {
+	@extend %normal-500;
+	@extend %ffp-cs-s-font;
+	padding: $padding;
+
+	&:hover,
+	&:focus {
+		color: $hover-focus-color;
+	}
+
+	&:active {
+		color: $active-color;
+	}
+}

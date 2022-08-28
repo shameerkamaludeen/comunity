@@ -2,8 +2,514 @@
 // =============================================================================
 
 @use '../abstracts/variables' as var;
+@use '../base/sitewide';
+@use 'sass:color';
+
+// || Utilities
+
+@mixin after-underline($underline-height: 2px,
+	$width: 100%,
+	$left: 0,
+	$right: auto,
+	$bottom: -2px,
+	$top: auto,
+	$border-radius: 5px,
+	$underline-color: var.$bc-secondary) {
+
+	position: relative;
+
+	&::after {
+		content: '';
+		position: absolute;
+		height: $underline-height;
+		background-color: $underline-color;
+
+		@if $width {
+			width: $width;
+		}
+
+		@if $right  !=auto {
+			right: $right;
+		}
+
+		@if $left  !=auto {
+			left: $left;
+		}
+
+		@if $bottom  !=auto {
+			bottom: $bottom;
+		}
+
+		@if $top  !=auto {
+			top: $top;
+		}
+
+		@if $border-radius {
+			border-radius: $border-radius;
+		}
+	}
+}
+
+@mixin horizontal-splitter() {}
+
+// || Layouts
 
 @mixin fixed-h-centered {
 	margin-left: auto;
 	margin-right: auto;
+}
+
+// || Links
+
+@mixin link-border-underline($outline: none,
+	$color: var.$bc-primary,
+	$border-bottom-width: 1.5px,
+	$border-bottom-style: solid,
+	$visited-color: color.adjust(var.$bc-primary, $lightness: -20%),
+	$focus-hover-color: var.$bc-ternary-lighter,
+	$active-color: var.$bc-secondary,
+	$transition: (color 0.3s ease, border-bottom-color 0.3s ease),
+	$cursor: pointer) {
+
+	text-decoration: none;
+	border-bottom: #{$border-bottom-width} #{$border-bottom-style};
+	transition: $transition;
+	cursor: $cursor;
+
+	@if $outline {
+		outline: none;
+	}
+
+	&:link {
+		color: $color;
+		border-bottom-color: $color;
+	}
+
+	&:visited {
+		@if $visited-color {
+			color: $visited-color;
+			border-bottom-color: $visited-color;
+		}
+	}
+
+	&:focus,
+	&:hover {
+		@if $focus-hover-color {
+			color: $focus-hover-color;
+			border-bottom-color: $focus-hover-color;
+		}
+	}
+
+	&:active {
+		@if $active-color {
+			color: $active-color;
+			border-bottom-color: $active-color;
+		}
+	}
+}
+
+@mixin link-no-underline ($outline: none,
+	$color: var.$bc-primary,
+	$visited-color: color.adjust(var.$bc-primary, $lightness: -10%),
+	$focus-hover-color: var.$c-primary,
+	$active-color: var.$c-secondary,
+	$transition: color 0.3s ease,
+	$cursor: pointer) {
+
+	text-decoration: none;
+	transition: $transition;
+	cursor: $cursor;
+
+	&:link {
+		color: $color;
+	}
+
+	&:visited {
+		color: $visited-color;
+	}
+
+	&:focus {
+		@if $outline {
+			outline: $outline;
+		}
+	}
+
+	&:focus,
+	&:hover {
+		color: $focus-hover-color;
+	}
+
+	&:active {
+		color: $active-color;
+	}
+}
+
+// Use this with any other normal link, cause this only deal with the underline
+@mixin link-after-underline ($underline-height: 2px,
+	$width: 100%,
+	$left: 0,
+	$right: auto,
+	$bottom: -2px,
+	$top: auto,
+	$border-radius: 5px,
+	$outline: none,
+	$cursor: pointer,
+	$underline-opacity-effect: true,
+	$underline-transition: (opacity 0.3s ease, background-color 0.3s ease),
+	$underline-color: var.$bc-primary,
+	$underline-focus-hover-color: var.$c-primary,
+	$underline-active-color: var.$c-secondary) {
+
+	text-decoration: none;
+	cursor: $cursor;
+
+	@if $outline {
+		outline: $outline;
+	}
+
+	// underline for the text elemenet inside the link
+	&-txt {
+		@include after-underline($underline-height: $underline-height,
+			$width: $width,
+			$left: $left,
+			$right: $right,
+			$bottom: $bottom,
+			$top: $top,
+			$underline-color: $underline-color, // underline background color
+			$border-radius: $border-radius);
+
+		@if $underline-opacity-effect {
+			&::after {
+				opacity: 0;
+				transition: $underline-transition;
+			}
+		}
+	}
+
+	// basic underline modifiers for the text elemenet inside the link
+
+	&:hover &-txt::after,
+	&:focus &-txt::after,
+	&.active &-txt::after {
+		@if $underline-opacity-effect {
+			opacity: 1;
+		}
+
+		@if $underline-focus-hover-color {
+			background-color: $underline-focus-hover-color;
+		}
+	}
+
+	@if $underline-active-color {
+		&:active &-txt::after {
+			background-color: $underline-active-color;
+		}
+	}
+}
+
+// use this along with '%link-no-decor-outline' if required
+@mixin link-basic-modifiers($color: var.$bc-primary,
+	$visited-color: color.adjust(var.$bc-primary, $lightness: -10%),
+	$focus-hover-color: var.$c-primary,
+	$active-color: var.$c-secondary,
+	$transition: color 0.3s ease,
+	$cursor: pointer) {
+
+	transition: $transition;
+	cursor: $cursor;
+
+	&:link {
+		@if $color {
+			color: $color;
+		}
+	}
+
+	&:visited {
+		@if $visited-color {
+			color: $visited-color;
+		}
+	}
+
+	&:focus,
+	&:hover {
+		@if $focus-hover-color {
+			color: $focus-hover-color;
+		}
+	}
+
+	&:active {
+		@if $active-color {
+			color: $active-color;
+		}
+	}
+}
+
+@mixin link-capsule($background-color: var.$bc-secondary,
+	$color: false,
+	$width: 100%,
+	$outline: 2px solid var.$bc-secondary,
+	$padding: 1px 4px,
+	$border: none,
+	$hover-bg-color: color.adjust($background-color, $lightness: 5%),
+	$hover-color: false,
+	$border-radius: 200px,
+	$active-bg-color: color.adjust($background-color, $blackness: 5%),
+	$active-color: false) {
+
+	@if $background-color {
+		background-color: $background-color;
+	}
+
+	@if $width {
+		width: $width;
+	}
+
+	@if $color {
+		color: $color;
+	}
+
+	border-radius: 200px;
+	cursor: pointer;
+	border: none;
+	padding: $padding;
+	transition: color 0.2s ease,
+	background-color 0.2s ease;
+
+	&:link {
+		@if $color {
+			color: $color;
+		}
+	}
+
+	&:hover,
+	&:focus {
+		@if $hover-bg-color {
+			background-color: $hover-bg-color;
+		}
+
+		@if $hover-color {
+			color: $hover-color;
+		}
+
+		@if $outline {
+			outline: $outline;
+		}
+	}
+
+	&:active {
+		@if $active-bg-color {
+			background-color: $active-bg-color;
+		}
+
+		@if $active-color {
+			color: $active-color;
+		}
+	}
+}
+
+// link wrapper with modifiers
+@mixin link-wrapper-modifiers() {
+	// add later
+	// we have a placeholder for basic, make a mixin with modifiers also
+}
+
+// || SVG's
+
+@mixin svg-fixed-size ($icon-color: var.$bc-primary,
+	$icon-width: 10px,
+	$icon-height: 10px,
+	$stroke: var.$bc-primary,
+	$fill: var.$bc-primary) {
+
+	width: $icon-width;
+	height: $icon-height;
+
+	@if $icon-color {
+		color: $icon-color;
+	}
+
+	@if $stroke {
+		stroke: $stroke;
+	}
+
+	@if $fill {
+		fill: $fill;
+	}
+}
+
+// || Buttons
+
+@mixin btn-icon-compatible($bg-color: var.$bc-secondary,
+	$bg-active-color: color.adjust(var.$bc-secondary, $whiteness: 20%),
+	$border: none,
+	$width: 35px,
+	$height: 35px,
+	$border-radius: 4px,
+	$outline: 2px solid var.$c-primary,
+	$outline-offset: -2px,
+	$transition: (background-color 0.2s ease, outline 0.2s ease)) {
+
+	@if $border {
+		border: $border;
+	}
+
+	@if $width {
+		width: $width;
+	}
+
+	@if $height {
+		height: $height;
+	}
+
+	@if $border-radius {
+		border-radius: $border-radius;
+	}
+
+	@if $outline-offset {
+		outline-offset: $outline-offset;
+	}
+
+	@if $transition {
+		transition: $transition;
+	}
+
+	@extend %inline-flex-vh-center;
+
+	@if $bg-color {
+		background-color: $bg-color;
+
+		&:active {
+			background-color: $bg-active-color
+		}
+	}
+
+	@if $outline {
+
+		&:hover,
+		&:focus {
+			outline: $outline;
+		}
+	}
+}
+
+@mixin btn-text-compatible () {
+	// create with the help of 'btn-icon-compatible'
+}
+
+@mixin btn-capsule($background-color: var.$bc-secondary,
+	$color: false,
+	$width: 100%,
+	$outline: 2px solid var.$bc-secondary,
+	$padding: 1px 4px,
+	$hover-bg-color: color.adjust($background-color, $lightness: 5%),
+	$hover-color: false,
+	$border-radius: 200px,
+	$active-bg-color: color.adjust($background-color, $blackness: 5%),
+	$active-color: false) {
+
+	@if $background-color {
+		background-color: $background-color;
+	}
+
+	@if $width {
+		width: $width;
+	}
+
+	@if $color {
+		color: $color;
+	}
+
+	border-radius: 200px;
+	cursor: pointer;
+	border: none;
+	padding: $padding;
+	transition: color 0.2s ease,
+	background-color 0.2s ease;
+
+	&:hover,
+	&:focus {
+		@if $hover-bg-color {
+			background-color: $hover-bg-color;
+		}
+
+		@if $hover-color {
+			color: $hover-color;
+		}
+
+		@if $outline {
+			outline: $outline;
+		}
+	}
+
+	&:active {
+		@if $active-bg-color {
+			background-color: $active-bg-color;
+		}
+
+		@if $active-color {
+			color: $active-color;
+		}
+	}
+}
+
+// || Animation
+
+@mixin animation-keyframes($animation-name: animation-#{unique-id()},
+	$animation-duration: .5s,
+	$animation-timing-function: ease,
+	$animation-fill-mode: both) {
+	@keyframes #{$animation-name} {
+		@content;
+	}
+
+	animation-name: $animation-name;
+	animation-timing-function: $animation-timing-function;
+	animation-duration: $animation-duration;
+	animation-fill-mode: $animation-fill-mode;
+}
+
+// || Images
+
+@mixin fixed-img-icon($width: 70px,
+	$height: 70px,
+	$img-icon-placeholder: '%img-icon-contain-center') {
+	width: $width;
+	height: $height;
+
+	&-raster {
+		@extend #{$img-icon-placeholder};
+	}
+}
+
+@mixin fixed-img-icon-number($width: 70px,
+	$height: 70px,
+	$object-fit: cover,
+	$object-position: 50% 50%) {
+	width: $width;
+	height: $height;
+
+	&-raster {
+		object-fit: $object-fit;
+		object-position: $object-position;
+	}
+}
+
+// || Horizontal rule(hr)
+
+@mixin hr-full-width($color: var.$bc-secondary,
+	$height: 1px,
+	$border-style: solid) {
+	padding: 0;
+	border: none;
+	border-top: $height $border-style $color;
+}
+
+@mixin hr-fixed-width($color: var.$bc-secondary,
+	$height: 1px,
+	$border-style: solid,
+	$width: 50%) {
+	padding: 0;
+	border: none;
+	border-top: $height $border-style $color;
+	width: $width;
 }
