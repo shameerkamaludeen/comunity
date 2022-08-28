@@ -17,6 +17,20 @@
 	}
 }
 
+.layout-margin-left-align {
+	@media screen and (min-width: var.$tablet-view) {
+		margin-right: initial;
+		padding-right: 60px;
+	}
+}
+
+.layout-margin-right-align {
+	@media screen and (min-width: var.$tablet-view) {
+		margin-left: initial;
+		padding-left: 60px;
+	}
+}
+
 .fixed-centered {
 	max-width: 1300px;
 	margin-right: auto;

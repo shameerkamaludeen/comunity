@@ -1,0 +1,64 @@
+/* || Block - Lead with background
+   ========================================================================== */
+
+@use '../../abstracts/variables' as var;
+@use '../../abstracts/mixins' as mx;
+@use '../../base/typography';
+
+.lead-background {
+	background: url(../images/business-desk.webp) center / cover no-repeat;
+	text-align: center;
+	padding-top: 84px;
+	padding-bottom: 90px;
+}
+
+.lead-bg-heading {
+	@extend %ffp-bcp-xxl-font;
+	margin: 0;
+}
+
+.lead-bgh-text {
+	@media screen and (max-width: var.$mobile-view-landscape) {
+		display: block;
+	}
+}
+
+.lead-bgh-first-text {
+	@extend %base-500;
+}
+
+.lead-bgh-second-text {
+	@extend %normal-700;
+}
+
+.lead-bg-tag {
+	@extend %ffp-bcp-m-font;
+	@extend %normal-300;
+	margin-top: 0;
+}
+
+.lead-bg-lead {
+	display: inline-block;
+	line-height: 1;
+	@extend %ffp-bcp-m-font;
+	font-weight: 600;
+	@extend %base-spacing;
+	@include mx.link-border-underline($outline: none,
+		$color: var.$bc-primary,
+		$border-bottom-width: 1.5px,
+		$border-bottom-style: solid,
+		$visited-color: false,
+		$focus-hover-color: false,
+		$active-color: false,
+		$transition: (color 0.3s ease, border-bottom-color 0.3s ease),
+		$cursor: pointer);
+
+	&:focus,
+	&:hover {
+		border-bottom: none;
+	}
+
+	&:active {
+		color: var.$c-primary;
+	}
+}

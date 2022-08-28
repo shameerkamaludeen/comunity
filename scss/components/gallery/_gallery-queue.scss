@@ -1,0 +1,62 @@
+/* || Component - Gallery queue
+   -------------------------------------------------------------------------- */
+// Feature:
+// Full width and columnwise on mobile, fixed height flexible row on other 
+// devices
+
+@use '../../abstracts/variables' as var;
+@use '../../base/sitewide';
+
+.gallery-queue {
+	overflow: hidden; /* for animation */
+	@media screen and (min-width: var.$mobile-view-portrait) {
+		display: flex;
+		flex-flow: row wrap;
+		gap: 10px;
+	}
+
+	@media screen and (min-width: var.$laptop-view) {
+		flex-wrap: nowrap;
+	}
+}
+
+.gq-image-wr {
+	&:not(:first-child) {
+		margin-top: 10px;
+	}
+
+	@media screen and (min-width: var.$mobile-view-portrait) {
+		flex: 0 1 250px;
+		height: 286px;
+
+		&:not(:first-child) {
+			margin-top: 0;
+		}
+	}
+
+	@media screen and (min-width: var.$laptop-view) {
+		flex: initial;
+	}
+}
+
+// for animation
+.gq-img-wr-animation {
+	position: relative;
+	left: 100%;
+}
+
+.gq-img-wr-animate {
+	left: 0;
+	transition: left 1s ease;
+}
+
+.gq-image-wr-link {
+	display: block;
+	@extend %link-wrapper-basic;
+	width: 100%;
+	height: 100%;
+}
+
+.gq-image {
+	@extend %img-icon-cover-top;
+}

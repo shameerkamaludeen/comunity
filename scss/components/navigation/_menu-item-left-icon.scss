@@ -1,0 +1,40 @@
+/* || Component - Menu item with left arrow
+   ========================================================================== */
+// Features:
+// no underline
+// item wrapped with link
+
+@use '../../abstracts/variables' as var;
+@use '../../abstracts/mixins' as mx;
+@use '../../base/typography';
+@use 'sass:color';
+
+.menu-item-left-icon {
+	margin-bottom: 10px;
+}
+
+.mi-li-link {
+	@include mx.link-no-underline ($outline: 2px solid var.$bc-secondary,
+		$color: color.adjust(var.$bc-primary, $lightness: -34%),
+		$visited-color: color.adjust(var.$bc-primary, $lightness: -34%),
+		$focus-hover-color: var.$bc-secondary,
+		$active-color: color.adjust(var.$c-secondary, $lightness: 15%),
+		$transition: color 0.3s ease,
+		$cursor: pointer);
+}
+
+.mi-li-icon {
+	display: inline-block;
+	margin-right: 10px;
+	@include mx.svg-fixed-size ($icon-color: false,
+		$icon-width: 7px,
+		$icon-height: 14px,
+		$stroke: false,
+		$fill: var.$bc-secondary);
+}
+
+.mi-li-link-text {
+	font-size: var.$fs-s;
+	font-family: var.$ff-primary;
+	@extend %base-300;
+}

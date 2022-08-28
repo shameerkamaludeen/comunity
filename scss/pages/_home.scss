@@ -1,15 +1,12 @@
 /* || Pages - Home
    ========================================================================== */
 
-// common
-@use '../blocks/navbar/navbar-tc-msm';
-@use '../components/logo/logo-mobile-centered';
-@use '../components/button/btn-capsule-hover-wipe';
-@use '../components/attribution/attr-sl-underline';
-
-// home specific
-@use '../blocks/section/two-column-img-desc';
-
-.lm-centered-home h1 {
-	font-size: initial;
-}
+@use '../blocks/hero/hero-img-desc';
+@use '../blocks/services/services-carousel';
+@use '../blocks/company/company-tab-contents';
+@use '../components/tab/row-full-width-tabs';
+@use '../blocks/team/team-desc-gallery';
+@use '../blocks/price/price-overlap-card-center';
+@use '../blocks/lead/lead-background';
+@use '../blocks/testimonial/testimonial-carousel';
+@use '../blocks/contact/contact-map-form';

@@ -50,6 +50,8 @@
 	}
 }
 
+@mixin horizontal-splitter() {}
+
 // || Layouts
 
 @mixin fixed-h-centered {
@@ -84,19 +86,25 @@
 	}
 
 	&:visited {
-		color: $visited-color;
-		border-bottom-color: $visited-color;
+		@if $visited-color {
+			color: $visited-color;
+			border-bottom-color: $visited-color;
+		}
 	}
 
 	&:focus,
 	&:hover {
-		color: $focus-hover-color;
-		border-bottom-color: $focus-hover-color;
+		@if $focus-hover-color {
+			color: $focus-hover-color;
+			border-bottom-color: $focus-hover-color;
+		}
 	}
 
 	&:active {
-		color: $active-color;
-		border-bottom-color: $active-color;
+		@if $active-color {
+			color: $active-color;
+			border-bottom-color: $active-color;
+		}
 	}
 }
 
@@ -112,16 +120,18 @@
 	transition: $transition;
 	cursor: $cursor;
 
-	@if $outline {
-		outline: $outline;
-	}
-
 	&:link {
 		color: $color;
 	}
 
 	&:visited {
 		color: $visited-color;
+	}
+
+	&:focus {
+		@if $outline {
+			outline: $outline;
+		}
 	}
 
 	&:focus,
@@ -208,31 +218,99 @@
 	transition: $transition;
 	cursor: $cursor;
 
-	@if $color {
-		&:link {
+	&:link {
+		@if $color {
 			color: $color;
 		}
 	}
 
-	@if $visited-color {
-		&:visited {
+	&:visited {
+		@if $visited-color {
 			color: $visited-color;
 		}
 	}
 
-	@if $focus-hover-color {
-
-		&:focus,
-		&:hover {
+	&:focus,
+	&:hover {
+		@if $focus-hover-color {
 			color: $focus-hover-color;
 		}
 	}
 
-	@if $active-color {
-		&:active {
+	&:active {
+		@if $active-color {
 			color: $active-color;
 		}
 	}
+}
+
+@mixin link-capsule($background-color: var.$bc-secondary,
+	$color: false,
+	$width: 100%,
+	$outline: 2px solid var.$bc-secondary,
+	$padding: 1px 4px,
+	$border: none,
+	$hover-bg-color: color.adjust($background-color, $lightness: 5%),
+	$hover-color: false,
+	$border-radius: 200px,
+	$active-bg-color: color.adjust($background-color, $blackness: 5%),
+	$active-color: false) {
+
+	@if $background-color {
+		background-color: $background-color;
+	}
+
+	@if $width {
+		width: $width;
+	}
+
+	@if $color {
+		color: $color;
+	}
+
+	border-radius: 200px;
+	cursor: pointer;
+	border: none;
+	padding: $padding;
+	transition: color 0.2s ease,
+	background-color 0.2s ease;
+
+	&:link {
+		@if $color {
+			color: $color;
+		}
+	}
+
+	&:hover,
+	&:focus {
+		@if $hover-bg-color {
+			background-color: $hover-bg-color;
+		}
+
+		@if $hover-color {
+			color: $hover-color;
+		}
+
+		@if $outline {
+			outline: $outline;
+		}
+	}
+
+	&:active {
+		@if $active-bg-color {
+			background-color: $active-bg-color;
+		}
+
+		@if $active-color {
+			color: $active-color;
+		}
+	}
+}
+
+// link wrapper with modifiers
+@mixin link-wrapper-modifiers() {
+	// add later
+	// we have a placeholder for basic, make a mixin with modifiers also
 }
 
 // || SVG's
@@ -321,7 +399,8 @@
 @mixin btn-capsule($background-color: var.$bc-secondary,
 	$color: false,
 	$width: 100%,
-	$outline-color: var.$bc-secondary,
+	$outline: 2px solid var.$bc-secondary,
+	$padding: 1px 4px,
 	$hover-bg-color: color.adjust($background-color, $lightness: 5%),
 	$hover-color: false,
 	$border-radius: 200px,
@@ -341,10 +420,9 @@
 	}
 
 	border-radius: 200px;
-	outline: $outline-color;
 	cursor: pointer;
 	border: none;
-	padding: 1px 4px;
+	padding: $padding;
 	transition: color 0.2s ease,
 	background-color 0.2s ease;
 
@@ -358,17 +436,17 @@
 			color: $hover-color;
 		}
 
-		@if $outline-color {
-			outline-color: $outline-color;
+		@if $outline {
+			outline: $outline;
 		}
 	}
 
 	&:active {
-		@if $hover-bg-color {
+		@if $active-bg-color {
 			background-color: $active-bg-color;
 		}
 
-		@if $hover-color {
+		@if $active-color {
 			color: $active-color;
 		}
 	}
@@ -388,4 +466,50 @@
 	animation-timing-function: $animation-timing-function;
 	animation-duration: $animation-duration;
 	animation-fill-mode: $animation-fill-mode;
+}
+
+// || Images
+
+@mixin fixed-img-icon($width: 70px,
+	$height: 70px,
+	$img-icon-placeholder: '%img-icon-contain-center') {
+	width: $width;
+	height: $height;
+
+	&-raster {
+		@extend #{$img-icon-placeholder};
+	}
+}
+
+@mixin fixed-img-icon-number($width: 70px,
+	$height: 70px,
+	$object-fit: cover,
+	$object-position: 50% 50%) {
+	width: $width;
+	height: $height;
+
+	&-raster {
+		object-fit: $object-fit;
+		object-position: $object-position;
+	}
+}
+
+// || Horizontal rule(hr)
+
+@mixin hr-full-width($color: var.$bc-secondary,
+	$height: 1px,
+	$border-style: solid) {
+	padding: 0;
+	border: none;
+	border-top: $height $border-style $color;
+}
+
+@mixin hr-fixed-width($color: var.$bc-secondary,
+	$height: 1px,
+	$border-style: solid,
+	$width: 50%) {
+	padding: 0;
+	border: none;
+	border-top: $height $border-style $color;
+	width: $width;
 }

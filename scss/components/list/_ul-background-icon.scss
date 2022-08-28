@@ -1,0 +1,42 @@
+/* || Components - Unordered list with background icon
+   ========================================================================== */
+// Features:
+// icon outside list item (first and second line texts are aligned)
+// link class
+
+@use '../../abstracts/variables' as var;
+@use '../../abstracts/mixins' as mx;
+@use '../../base/typography';
+@use 'sass:color';
+
+.ul-background-icon {
+	list-style-type: none;
+}
+
+.ul-bg-li {
+	padding-left: 16px;
+	background-image: url(../images/icons/angle-right-solid.svg);
+	background-position: 0 5px;
+	background-size: 6px 13px;
+	background-repeat: no-repeat;
+
+	&:not(:last-child) {
+		margin-bottom: 10px;
+	}
+}
+
+.ul-bg-content {
+	font-size: var.$fs-s;
+	font-family: var.$ff-primary;
+	@extend %base-300;
+}
+
+.ul-bg-link {
+	@include mx.link-no-underline ($outline: 2px solid var.$bc-secondary,
+		$color: color.adjust(var.$bc-primary, $lightness: -34%),
+		$visited-color: color.adjust(var.$bc-primary, $lightness: -34%),
+		$focus-hover-color: var.$bc-secondary,
+		$active-color: color.adjust(var.$c-secondary, $lightness: 15%),
+		$transition: color 0.3s ease,
+		$cursor: pointer);
+}

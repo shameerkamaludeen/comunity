@@ -1,0 +1,59 @@
+/* || Component - Footer navigation grid with logo, menu, category
+   ========================================================================== */
+// Features:
+// Grid
+// Includes logo, simple menu with left arrow on each item and category
+
+@use '../../base/typography';
+@use '../../base/utilities';
+@use '../../components/logo/logo-img-link';
+@use '../../components/list/ul-background-icon';
+@use '../category/category-links-rounded-bg';
+
+.footer-nav-grid-lmc {
+	margin-top: 65px;
+	margin-bottom: 73px;
+	display: grid;
+	grid-template-areas:
+		"logo logo"
+		"menucol1 menucol2"
+		"menucol3 category";
+	grid-template-columns: 175px auto;
+	gap: 60px 20px;
+}
+
+.fng-lmc-logo {
+	grid-area: logo;
+}
+
+.fng-lmc-menu-col1 {
+	grid-area: menucol1;
+}
+
+.fng-lmc-menu-col2 {
+	grid-area: menucol2;
+
+}
+
+.fng-lmc-menu-col3 {
+	grid-area: menucol3;
+
+}
+
+.fng-lmc-category {
+	grid-area: category;
+
+}
+
+.fng-lmc-menu-heading {
+	@extend %ffp-cp-s-font;
+	@extend %base-600;
+}
+
+.fng-lmc-menu-group {}
+
+// use this if the above rule element is 'ul' element
+.fng-lmc-menu-group-ul {
+	@extend %ul-no-style;
+	margin: 8px 0 11px;
+}

@@ -10,9 +10,7 @@
 }
 
 .attr-sl-no-u-content {
-	// ff, c, fs
-	@extend %ffp-cs-s-font;
-	// lh, fw
+	@extend %ffp-cs-xs-font;
 	@extend %normal-400;
 	margin: 0;
 }

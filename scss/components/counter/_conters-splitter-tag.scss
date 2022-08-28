@@ -1,0 +1,55 @@
+/* || Components - Counters with splitter and tag
+   ========================================================================== */
+
+@use '../../abstracts/variables' as var;
+@use '../../abstracts/mixins' as mx;
+@use '../../base/typography';
+@use 'sass:color';
+
+.counters-splitter-tag {
+	margin-top: 50px;
+	@extend %flex-dc-h-center;
+	max-width: 510px;
+
+	@media screen and (min-width: var.$mobile-view-portrait) {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+}
+
+.cst-item {}
+
+.cst-item-splitter {
+	width: 74px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	@include mx.after-underline($underline-height: 2px,
+		$width: 100%,
+		$left: 0,
+		$right: auto,
+		$bottom: -2px,
+		$top: auto,
+		$border-radius: 5px,
+		$underline-color: color.adjust(var.$c-primary, $lightness: 65%));
+
+	@media screen and (min-width: var.$mobile-view-portrait) {
+		transform: rotate(90deg);
+	}
+}
+
+.cst-counter,
+.cst-tag {
+	text-transform: uppercase;
+	text-align: center;
+	display: block;
+}
+
+.cst-counter {
+	@extend %ffp-bcs-xxl-font;
+	@extend %base-700;
+}
+
+.cst-tag {
+	@extend %base-600;
+	@extend %ffp-cp-xs-font;
+}

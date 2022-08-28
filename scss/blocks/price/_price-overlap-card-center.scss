@@ -1,0 +1,57 @@
+/* || Block - Price overlaped cards with centered content
+   ========================================================================== */
+// Features:
+// overlaped styled cards with centered content
+// only suitable for 3 cards(price)
+// Buy now button
+
+@use '../../abstracts/variables' as var;
+@use '../../base/typography';
+@use '../../components/card/card-center-shadow';
+
+.price-overlap-card-center {
+	padding-top: 48px;
+	padding-bottom: 48px;
+	background-color: var.$bc-primary;
+}
+
+.price-occ-heading {
+	margin: 0;
+	@extend %ffp-cp-xl-font;
+	@extend %base-500;
+}
+
+.price-occ-split-heading {
+	margin: 0;
+	text-align: center;
+}
+
+.price-occ-sh-content {}
+
+.price-occ-sh-first-text {
+	@extend %ffp-cp-xl-font;
+	@extend %base-500;
+}
+
+.price-occ-sh-second-text {
+	@extend %ffp-bcs-xl-font;
+	@extend %base-700;
+}
+
+.price-occ-para {
+	@extend %ffp-cs-s-font;
+	@extend %normal-300;
+	text-align: center;
+}
+
+.price-occ-price-wr {
+	padding-top: 25px;
+}
+
+.price-occ-price {
+	max-width: 350px;
+	margin: 0 auto;
+	&:not(:first-child) {
+		margin-top: 16px;
+	}
+}

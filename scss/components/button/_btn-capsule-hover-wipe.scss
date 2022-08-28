@@ -9,7 +9,7 @@
 @use 'sass:color';
 
 .btn-capsule-hover-wipe {
-	@extend %ffp-bcp-l-font;
+	@extend %ffp-bcp-m-font;
 	@extend %base-400;
 	border-radius: 200px;
 	cursor: pointer;

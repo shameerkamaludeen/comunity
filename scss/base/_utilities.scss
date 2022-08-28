@@ -4,16 +4,9 @@
 // This will hide an element or block visually and still be able available for 
 // for screen readers 
 %hide-visually {
-	font-size: 0;
-	width: 1px;
-	height: 1px;
-	display: inline-block;
-	overflow: hidden;
 	position: absolute !important;
-	border: 0 !important;
-	padding: 0 !important;
-	margin: 0 !important;
-	clip: rect(1px, 1px, 1px, 1px);
+	top: -9999px !important;
+	left: -9999px !important;
 }
 
 // Remve unordered list default style
@@ -22,7 +15,24 @@
 	list-style-type: none;
 }
 
+// remove link docoration and outline
 %link-no-decor-outline {
 	text-decoration: none;
 	outline: none;
+}
+
+// absolute element cover its container
+%position-absolute-cover {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+
+// Remove field set default style
+%fieldset-no-style {
+	padding: 0;
+	margin: 0;
+	border: none;
 }

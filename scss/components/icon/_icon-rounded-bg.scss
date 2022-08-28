@@ -1,13 +1,14 @@
 /* || Components - Icon rounded with background 
    ========================================================================== */
 
-@use 'sass:color';
 @use '../../abstracts/variables' as var;
 @use '../../base/sitewide';
+@use '../../abstracts/mixins' as mx;
+@use 'sass:color';
 
-$background-color: color.adjust(var.$bc-ternary, $alpha: -0.9) !default;
-$icon-width: 42px !default;
-$icon-img-width: 17px !default;
+$background-color: var.$bc-ternary;
+$icon-width: 67px;
+$icon-img-width: 33px;
 
 .icon-rounded-bg {
 	@extend %flex-vh-center;
@@ -15,7 +16,9 @@ $icon-img-width: 17px !default;
 	border-radius: 50%;
 	width: $icon-width;
 	height: $icon-width;
+}
 
+.ir-bg-responsive {
 	@media screen and (min-width: var.$mobile-view-landscape) {
 		width: ($icon-width + 8);
 		height: ($icon-width + 8);
@@ -23,6 +26,9 @@ $icon-img-width: 17px !default;
 }
 
 .ir-bg-img {
-	width: $icon-img-width;
-	height: $icon-img-width;
+	@include mx.svg-fixed-size ($icon-color: false,
+		$icon-width: $icon-img-width,
+		$icon-height: $icon-img-width,
+		$stroke: var.$bc-secondary,
+		$fill: false)
 }

@@ -1,0 +1,33 @@
+/* || Component - Logo mobile centered
+   ========================================================================== */
+
+@use '../../abstracts/variables' as var;
+@use '../../base/typography';
+@use '../../base/sitewide';
+
+.logo-img-link {}
+
+// use the below rule along with this to get responsive
+.logo-il-responsive {
+	text-align: center;
+
+	@media screen and (min-width: var.$tablet-view) {
+		text-align: left;
+	}
+}
+
+.logo-il-link-wr {
+	display: inline-block;
+	outline: none;
+	@extend %ffp-cp-l-font;
+	@extend %link-wrapper-basic;
+}
+
+.logo-il-link-wr-fixed {
+	width: 150px;
+	height: 50px;
+}
+
+.logo-il-img {
+	width: 100%;
+}

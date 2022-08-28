@@ -1,0 +1,27 @@
+/* || Component - Category with flexible links of rounded background
+   ========================================================================== */
+
+@use '../../abstracts/variables' as var;
+@use '../../abstracts/mixins' as mx;
+@use '../../base/sitewide';
+@use 'sass:color';
+
+.category-links-rounded-bg {
+	@extend %flex-row-wrap;
+	gap: 13px 8px;
+}
+
+.cl-rb-link {
+	text-decoration: none;
+	@include mx.link-capsule($background-color: var.$bc-ternary,
+		$color: var.$bc-secondary,
+		$width: false,
+		$outline: none,
+		$padding: 8px 25px,
+		$border: none,
+		$hover-bg-color: var.$bc-secondary,
+		$hover-color: var.$bc-primary,
+		$border-radius: 200px,
+		$active-bg-color: color.adjust(var.$bc-secondary, $lightness: -15%),
+		$active-color: false);
+}

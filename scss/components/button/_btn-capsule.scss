@@ -4,13 +4,13 @@
 @use 'sass:color';
 @use '../../abstracts/variables' as var;
 
-$background-color: var.$bc-primary  !default;
-$color: var.$c-primary  !default;
-$width: 100% !default;
-$outline-color: var.$c-secondary  !default;
-$hover-bg-color: color.adjust($background-color, $lightness: 5%) !default;
-$hover-color: var.$bc-primary  !default;
-$border-radius: 200px !default;
+$background-color: var.$bc-primary;
+$color: var.$c-primary;
+$width: 100%;
+$outline-color: var.$c-secondary;
+$hover-bg-color: color.adjust($background-color, $lightness: 5%);
+$hover-color: var.$bc-primary;
+$border-radius: 200px;
 
 
 .button-capsule {

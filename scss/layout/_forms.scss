@@ -1,20 +1,5 @@
 /* || Abstracts - Forms
    ========================================================================== */
-@use '../base/utilities';
+// All forms will be listed here (seperate each form with a "||" comment)
 
-// Remove field set default style
-%fieldset-no-style {
-	padding: 0;
-	margin: 0;
-	border: none;
-}
-
-.form-legend-off {
-	.fl-off-fieldset {
-		@extend %fieldset-no-style;
-	}
-
-	.fl-off-legend {
-		@extend %hide-visually;
-	}
-}
+@use '../components/form/form-radiused';

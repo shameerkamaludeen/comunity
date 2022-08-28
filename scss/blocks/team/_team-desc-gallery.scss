@@ -1,0 +1,74 @@
+/* || Block - Team with description and gallery
+   ========================================================================== */
+// Features:
+// split and normal heading
+// read more link
+// gallery
+
+@use '../../abstracts/variables' as var;
+@use '../../base/typography';
+@use '../../components/gallery/gallery-queue';
+@use '../../components/image/img-foreground-desc';
+@use 'sass:color';
+
+.team-desc-gallery {
+	padding-top: 80px;
+	padding-bottom: 80px;
+	background-color: color.adjust(var.$bc-ternary-lighter, $hue: 15);
+}
+
+.team-dg-wr {
+	@media screen and (min-width: var.$laptop-view) {
+		display: flex;
+	}
+}
+
+.team-dg-column {}
+
+.team-dg-desc-column {
+	margin-bottom: 27px;
+
+	@media screen and (min-width: var.$tablet-view) {
+		flex: 1;
+		margin-bottom: 0;
+	}
+}
+
+.team-dg-gallery-column {
+	@media screen and (min-width: var.$tablet-view) {
+		flex: 2;
+	}
+}
+
+.team-dg-heading {
+	margin: 0;
+	@extend %ffp-cp-xl-font;
+	@extend %base-500;
+}
+
+.team-dg-split-heading {
+	margin: 0;
+}
+
+.team-dg-sh-content {}
+
+.team-dg-sh-first-text {
+	@extend %ffp-cp-xl-font;
+	@extend %base-500;
+}
+
+.team-dg-sh-second-text {
+	@extend %ffp-bcs-xl-font;
+	@extend %base-700;
+}
+
+.team-dg-para {
+	@extend %ffp-cs-s-font;
+	@extend %normal-300;
+}
+
+.team-dg-read-more {
+	margin-top: 13px;
+	@extend %ffp-bcp-s-font;
+	height: 44px;
+}

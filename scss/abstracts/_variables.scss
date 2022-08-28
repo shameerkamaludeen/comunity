@@ -7,17 +7,19 @@
 $bc-primary: hsl(0, 0%, 100%);
 $bc-secondary: hsl(228, 61%, 53%);
 $bc-ternary: hsl(208, 100%, 96%);
-$bc-ternary-lighter: hsl(207, 100%, 98%);
+$bc-ternary-lighter: hsl(207, 100%, 99%);
 
 // Font colors
 $c-primary: hsl(226, 13%, 19%);
 $c-secondary: hsl(0, 0%, 47%);
 $c-ternary: hsl(236, 7%, 57%);
+$c-error: hsl(0, 100%, 74%);
 
 // Font family 
 $ff-primary: 'Poppins', sans-serif;
 $ff-secondary: 'PT Sans Caption', sans-serif;
 $ff-ternary: 'Montserrat', sans-serif;
+$ff-neutral: 'Nunito Sans', sans-serif;
 
 // Viewports
 $mobile-view-small: 20em; // 320px standard
@@ -25,18 +27,20 @@ $mobile-view-portrait: 30em; // 480px standard
 $mobile-view-landscape: 40em; // 640px standard
 $tablet-view: 48em; // 768px standard
 $laptop-view: 64em; // 1024px standard
-$desktop-view-: 75em; // 1200px standard
+$desktop-view: 75em; // 1200px standard
 
 // Typography
 $word-spacing: 0.8px;
 $lettter-spacing: 0.4px;
 
-$fs-xxl: 2.2rem; 
-$fs-xl: 1.875rem;
-$fs-l: 1.125rem;
-$fs-m: 1rem;
-$fs-s: 0.875rem;
-$fs-xs: 0.75rem;
+$fs-xxxl: 2.75rem; // 44px
+$fs-xxl: 2.25rem; // 36px
+$fs-xl: 1.875rem; // 30px
+$fs-l: 1.5rem; // 24px
+$fs-m: 1.125rem; // 18px
+$fs-s: 1rem; // 16px
+$fs-xs: 0.875rem; // 14px
+$fs-xxs: 0.75rem; // 12px
 
 $lh-base: 1.2;
 $lh-normal: 1.65;

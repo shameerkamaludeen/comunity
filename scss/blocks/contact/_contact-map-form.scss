@@ -1,0 +1,110 @@
+/* || Block - Contact us with map and form
+   ========================================================================== */
+// Features:
+// Each details (address, phone) with a rounded icon
+// Map and form
+// Heading and paragraph
+
+@use '../../abstracts/variables' as var;
+@use '../../abstracts/mixins' as mx;
+@use '../../base/typography';
+@use '../../base/sitewide';
+@use '../../components/icon/icon-rounded-bg';
+@use 'sass:color';
+
+.contact-map-form {
+	margin-top: 70px;
+	padding-top: 80px;
+	padding-bottom: 70px;
+	background-color: color.adjust(var.$bc-ternary-lighter, $hue: 13deg);
+}
+
+.contact-mf-wr {
+	@media screen and (min-width: var.$tablet-view) {
+		display: flex;
+	}
+}
+
+.contact-mf-column {}
+
+.contact-mf-first-column {
+	margin-bottom: 35px;
+
+	@media screen and (min-width: var.$tablet-view) {
+		margin-bottom: 0;
+	}
+}
+
+.contact-mf-second-column {
+	@media screen and (min-width: var.$tablet-view) {}
+}
+
+.contact-mf-heading {
+	margin: 0;
+	@extend %ffp-cp-xl-font;
+	@extend %base-500;
+}
+
+.contact-mf-split-heading {
+	margin: 0;
+}
+
+.contact-mf-sh-first-text {
+	@extend %ffp-cp-xl-font;
+	@extend %base-500;
+}
+
+.contact-mf-sh-second-text {
+	@extend %ffp-bcs-xl-font;
+	@extend %base-700;
+}
+
+.contact-mf-para {
+	@extend %ffp-cs-s-font;
+	@extend %normal-300;
+}
+
+.contact-mf-details-wr {
+	margin-top: 35px;
+	margin-bottom: 35px;
+
+	@media screen and (min-width: var.$desktop-view) {
+		display: flex;
+		align-items: center;
+	}
+}
+
+.contact-mf-detail {
+	@extend %flex-v-center;
+	margin-bottom: 25px;
+
+	@media screen and (min-width: var.$desktop-view) {
+		margin-bottom: 0;
+	}
+}
+
+.contact-mf-detail-icon {
+	flex-shrink: 0;
+}
+
+.contact-mf-detail-content {
+	padding-left: 18px
+}
+
+.contact-mf-dc-heading {
+	@extend %fft-cp-s-font;
+	@extend %base-400;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+}
+
+.contact-mf-dc-desc {
+	@extend %fft-cs-s-font;
+	@extend %base-500;
+}
+
+.contact-mf-map-wr {
+	height: 400px;
+}
+
+.contact-mf-form {}

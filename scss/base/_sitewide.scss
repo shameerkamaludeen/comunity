@@ -1,5 +1,7 @@
 /* || Abstracts - Sitewide
    ========================================================================== */
+// Sitewide is the collection of style rules in the form of placeholders and 
+// strictly not utilities
 
 @use '../abstracts/variables' as var;
 @use 'sass:color';
@@ -20,13 +22,6 @@
 	align-items: center;
 }
 
-// Flexible direction column aligned centerd 
-%flex-dc-a-center {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-
 // Flexible vertically centered horizontally right
 %flex-v-center-h-right {
 	display: flex;
@@ -35,9 +30,42 @@
 }
 
 // Flexible horizontally right
+%flex-v-center {
+	display: flex;
+	align-items: center;
+}
+
+// Flexible horizontally right
 %flex-h-right {
 	display: flex;
 	justify-content: flex-end;
+}
+
+// Flexible horizontally center
+%flex-h-center {
+	display: flex;
+	justify-content: center;
+}
+
+// Flexible direction column vertically and horizontally centerd 
+%flex-dc-vh-center {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+// Flexible direction column horizontally centered 
+%flex-dc-h-center {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+// flexible row wrap
+%flex-row-wrap {
+	display: flex;
+	flex-flow: row wrap;
 }
 
 // || Inline-flex
@@ -53,4 +81,165 @@
 %fixed-h-center {
 	margin-left: auto;
 	margin-right: auto;
+}
+
+// || Images or icons
+
+// Images or icons contains x-center and y-center
+%img-icon-contain-center {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	object-position: center;
+}
+
+// Images or icons contains, x-right and y-center
+%img-icon-contain-right {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	object-position: right;
+}
+
+// Images or icons contains, x-left and y-center
+%img-icon-contain-left {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	object-position: left;
+}
+
+// Images or icons contains, x-center and y-top
+%img-icon-contain-top {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	object-position: top;
+}
+
+// Images or icons contains, x-center and y-bottom
+%img-icon-contain-bottom {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	object-position: bottom;
+}
+
+// Images or icons contains, x-left and y-top
+%img-icon-contain-left-top {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	object-position: left top;
+}
+
+// Images or icons contains, x-left and y-bottom
+%img-icon-contain-left-bottom {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	object-position: left bottom;
+}
+
+// Images or icons contains, x-right and y-top
+%img-icon-contain-right-top {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	object-position: right top;
+}
+
+// Images or icons contains, x-right and y-bottom
+%img-icon-contain-right-bottom {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	object-position: right bottom;
+}
+
+// Images or icons cover x-center and y-center
+%img-icon-cover-center {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+
+// Images or icons cover, x-right and y-center
+%img-icon-cover-right {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: right;
+}
+
+// Images or icons cover, x-left and y-center
+%img-icon-cover-left {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: left;
+}
+
+// Images or icons cover, x-center and y-top
+%img-icon-cover-top {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: top;
+}
+
+// Images or icons cover, x-center and y-bottom
+%img-icon-cover-bottom {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: bottom;
+}
+
+// Images or icons cover, x-left and y-top
+%img-icon-cover-left-top {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: left top;
+}
+
+// Images or icons cover, x-left and y-bottom
+%img-icon-cover-left-bottom {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: left bottom;
+}
+
+// Images or icons cover, x-right and y-top
+%img-icon-cover-right-top {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: right top;
+}
+
+// Images or icons cover, x-right and y-bottom
+%img-icon-cover-right-bottom {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: right bottom;
+}
+
+// || Link
+
+%link-wrapper-basic {
+	text-decoration: none;
+	cursor: pointer;
+
+	&:link,
+	&:visited,
+	&:focus,
+	&:hover,
+	&:active {
+		color: transparent;
+	}
 }

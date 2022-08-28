@@ -9,11 +9,11 @@
 /* || General styles */
 
 body {
-	background: url(../images/home-bg.webp) left 16% / auto no-repeat;
+	background: url(../images/home-bg.webp) center / cover no-repeat;
 
-	@media screen and (min-width: var.$laptop-view) {
-		background: url(../images/home-bg.webp) left top / cover no-repeat;
-	}
+	// @media screen and (min-width: var.$laptop-view) {
+	// 	background: url(../images/home-bg.webp) left top / cover no-repeat;
+	// }
 }
 
 /* || Typography */
@@ -27,5 +27,9 @@ body {
 /* || Store Pages */
 // Specific things, broken down by the context, page, or even component in 
 // which they are used.
+
+header+section {
+	margin-top: 76px;
+}
 
 // || Footer
