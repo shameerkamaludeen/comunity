@@ -10,6 +10,11 @@
 	text-align: center;
 	padding-top: 84px;
 	padding-bottom: 90px;
+
+	@media screen and (min-width: var.$tablet-view) {
+		padding-top: 78px;
+		padding-bottom: 85px;
+	}
 }
 
 .lead-bg-heading {

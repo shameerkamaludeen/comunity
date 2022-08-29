@@ -6,6 +6,11 @@
 	margin-right: 15px;
 	margin-left: 15px;
 
+	@media screen and (min-width: var.$mobile-view-portrait) {
+		margin-right: 25px;
+		margin-left: 25px;
+	}
+
 	@media screen and (min-width: var.$tablet-view) {
 		margin-right: 45px;
 		margin-left: 45px;

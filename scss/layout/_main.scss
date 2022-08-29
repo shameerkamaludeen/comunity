@@ -7,6 +7,14 @@
 main {
 	background-color: var.$bc-primary;
 	margin-top: 66px;
+
+	margin-bottom: 20px;
+	box-shadow: 0px 10px 10px 0px rgb(0 0 0 / 25%);
+
+	@media screen and (min-width: var.$tablet-view) {
+		padding-top: 29px;
+		margin-bottom: 62px;
+	}
 }
 
 .main-heading-hv {

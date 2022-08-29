@@ -10,8 +10,7 @@
 @use '../../components/button/btn-no-bg-border';
 
 .company-tab-contents {
-	padding-top: 50px;
-	padding-bottom: 30px;
+	margin-top: 50px;
 
 	@media screen and (min-width: var.$tablet-view) {
 		display: flex;
@@ -22,11 +21,14 @@
 .ctc-column {}
 
 .ctc-desc-column {
-	margin-bottom: 27px;
+	margin-top: 33px;
 
 	@media screen and (min-width: var.$tablet-view) {
-		flex: 2;
-		margin-bottom: 0;
+		flex: 1 0 50%;
+		margin-top: 0;
+		// for left side image smooth
+		position: relative;
+		box-shadow: -15px 0px 10px -11px white;
 	}
 }
 
@@ -34,7 +36,8 @@
 	overflow: hidden;
 
 	@media screen and (min-width: var.$tablet-view) {
-		flex: 3;
+		// for left side image smooth
+		position: relative;
 	}
 }
 
@@ -71,8 +74,15 @@
 
 .ctc-img {
 	width: 100%;
+	// for transition
 	position: relative;
 	right: 100%;
+
+	@media screen and (min-width: var.$tablet-view) {
+		height: 100%;
+		object-fit: cover;
+		object-position: left bottom;
+	}
 }
 
 .ctc-img-animate {

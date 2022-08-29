@@ -575,7 +575,7 @@
 			<section class="contact-map-form">
 				<div class="contact-mf-wr layout-margin">
 
-					<div class="contact-mf-first-column">
+					<div class="contact-mf-desc-wr">
 						<h3 class="contact-mf-split-heading"><span class="contact-mf-sh-first-text">Contact</span><span
 								class="contact-mf-sh-second-text"> Us</span></h3>
 
@@ -594,7 +594,6 @@
 										<circle cx="12" cy="9" r="1" />
 									</svg>
 								</div>
-
 								<div class="contact-mf-detail-content">
 									<h4 class="contact-mf-dc-heading">Adress:</h4>
 									<address class="contact-mf-dc-desc">7292 Dictum Av. San Antonio MI 47096</address>
@@ -611,56 +610,52 @@
 											d="M12.7407967,18.4035953 L15.8976569,15.246735 L21.114676,18.885324 L19.9443794,20.055614 C19.1648657,20.8351277 18.020623,21.1243165 16.9643502,20.8087683 C13.7351168,19.8440753 10.8342484,18.0754771 8.26174492,15.5029737 C5.6892452,12.930474 3.92064841,10.0296102 2.95595454,6.80038244 C2.64039085,5.74410652 2.92958124,4.59985601 3.70910009,3.82033716 L4.87939464,2.65004261 L8.51798358,7.86706169 L5.36112331,11.023922" />
 									</svg>
 								</div>
-
 								<div class="contact-mf-detail-content">
 									<h4 class="contact-mf-dc-heading">Phone:</h4>
 									<address class="contact-mf-dc-desc">+30 0123-456-789</address>
 								</div>
 							</div>
 						</div>
-
-						<div class="contact-mf-map-wr">
-							<iframe
-								src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6059.250925124929!2d-73.93581916866103!3d40.594021953365534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c243795d80f17f%3A0xf52fb8261724b02d!2sDictum%20Ct%2C%20Brooklyn%2C%20NY%2011229%2C%20USA!5e0!3m2!1sen!2sin!4v1661435467773!5m2!1sen!2sin"
-								width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-								referrerpolicy="no-referrer-when-downgrade"></iframe>
-						</div>
 					</div>
 
-					<div class="contact-mf-second-column">
-						<form action="pages/contact-us.html" class="form-radiused" id="contactUsForm">
-							<ul class="form-rd-ul">
-								<li class="form-rd-li">
-									<label for="email" class="form-rd-hide-visually">Please enter your email<span
-											class="form-rd-lw-required" aria-label="Required"></span></label>
-									<input class="form-rd-input-email form-rd-full-width" type="email" name="email" id="email" required
-										placeholder="Email:">
-									<label aria-live="polite" class="form-rd-errormsg form-rd-hide-visually"></label>
-								</li>
-
-								<li class="form-rd-li">
-									<label for="email" class="form-rd-hide-visually">Please enter your email<span
-											class="form-rd-lw-required" aria-label="Required"></span></label>
-									<input class="form-rd-input-text form-rd-full-width" type="text" name="name" id="name" required
-										placeholder="Name:">
-									<label aria-live="polite" class="form-rd-errormsg form-rd-hide-visually"></label>
-								</li>
-
-								<li class="form-rd-li">
-									<label for="email" class="form-rd-hide-visually">Please enter your email<span
-											class="form-rd-lw-required" aria-label="Required"></span></label>
-									<textarea class="form-rd-textarea form-rd-full-width" name="message" id="message"
-										placeholder="Message:"></textarea>
-								</li>
-
-								<li class="form-rd-li">
-									<button type="submit" class="form-rd-submit-btn">Contact Us</button>
-									<span class="form-rd-global-errormsg" aria-live="polite"></span>
-								</li>
-							</ul>
-						</form>
+					<div class="contact-mf-map-wr">
+						<iframe
+							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6059.250925124929!2d-73.93581916866103!3d40.594021953365534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c243795d80f17f%3A0xf52fb8261724b02d!2sDictum%20Ct%2C%20Brooklyn%2C%20NY%2011229%2C%20USA!5e0!3m2!1sen!2sin!4v1661435467773!5m2!1sen!2sin"
+							width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+							referrerpolicy="no-referrer-when-downgrade"></iframe>
 					</div>
 
+					<form action="pages/contact-us.html" class="contact-mf-form form-radiused" id="contactUsForm">
+						<ul class="form-rd-ul">
+							<li class="form-rd-li">
+								<label for="email" class="form-rd-hide-visually">Please enter your email<span
+										class="form-rd-lw-required" aria-label="Required"></span></label>
+								<input class="form-rd-input-email form-rd-full-width" type="email" name="email" id="email" required
+									placeholder="Email:">
+								<label aria-live="polite" class="form-rd-errormsg form-rd-hide-visually"></label>
+							</li>
+
+							<li class="form-rd-li">
+								<label for="email" class="form-rd-hide-visually">Please enter your email<span
+										class="form-rd-lw-required" aria-label="Required"></span></label>
+								<input class="form-rd-input-text form-rd-full-width" type="text" name="name" id="name" required
+									placeholder="Name:">
+								<label aria-live="polite" class="form-rd-errormsg form-rd-hide-visually"></label>
+							</li>
+
+							<li class="form-rd-li">
+								<label for="email" class="form-rd-hide-visually">Please enter your email<span
+										class="form-rd-lw-required" aria-label="Required"></span></label>
+								<textarea class="form-rd-textarea form-rd-full-width" name="message" id="message"
+									placeholder="Message:"></textarea>
+							</li>
+
+							<li class="form-rd-li">
+								<button type="submit" class="form-rd-submit-btn">Contact Us</button>
+								<span class="form-rd-global-errormsg" aria-live="polite"></span>
+							</li>
+						</ul>
+					</form>
 				</div>
 			</section>
 
