@@ -9,11 +9,19 @@
 /* || General styles */
 
 body {
-	background: url(../images/home-bg.webp) center / cover no-repeat;
+	background: url(../images/home-bg.webp) 50% top / cover no-repeat;
 
-	// @media screen and (min-width: var.$laptop-view) {
-	// 	background: url(../images/home-bg.webp) left top / cover no-repeat;
-	// }
+	@media screen and (min-width: var.$mobile-view-portrait) {
+		background: url(../images/home-bg.webp) 54% top / cover no-repeat;
+	}
+
+	@media screen and (min-width: var.$mobile-view-landscape) {
+		background: url(../images/home-bg.webp) 59% top / cover no-repeat;
+	}
+
+	@media screen and (min-width: var.$tablet-view) {
+		background: url(../images/home-bg.webp) center / cover no-repeat;
+	}
 }
 
 /* || Typography */
@@ -29,7 +37,7 @@ body {
 // which they are used.
 
 header+section {
-	margin-top: 76px;
+	margin-top: 73px;
 }
 
 // || Footer

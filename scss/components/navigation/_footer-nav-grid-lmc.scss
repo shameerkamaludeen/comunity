@@ -4,6 +4,7 @@
 // Grid
 // Includes logo, simple menu with left arrow on each item and category
 
+@use '../../abstracts/variables' as var;
 @use '../../base/typography';
 @use '../../base/utilities';
 @use '../../components/logo/logo-img-link';
@@ -11,15 +12,23 @@
 @use '../category/category-links-rounded-bg';
 
 .footer-nav-grid-lmc {
-	margin-top: 65px;
+	margin-top: 55px;
 	margin-bottom: 73px;
 	display: grid;
+	grid-template-columns: repeat(2, 1fr);
 	grid-template-areas:
 		"logo logo"
 		"menucol1 menucol2"
 		"menucol3 category";
-	grid-template-columns: 175px auto;
-	gap: 60px 20px;
+	gap: 45px 20px;
+
+	@media screen and (min-width: var.$tablet-view) {
+		margin-bottom: 50px;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-areas:
+			"logo menucol1 menucol2"
+			"menucol3 category category";
+	}
 }
 
 .fng-lmc-logo {

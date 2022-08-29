@@ -15,7 +15,9 @@
 
 .form-rd-row-wr,
 .form-rd-li {
-	margin-bottom: 20px;
+	&:not(:last-child) {
+		margin-bottom: 20px;
+	}
 }
 
 .form-rd-label {}

@@ -14,29 +14,30 @@
 
 .contact-map-form {
 	margin-top: 70px;
-	padding-top: 80px;
-	padding-bottom: 70px;
+	padding-top: 70px;
+	padding-bottom: 50px;
 	background-color: color.adjust(var.$bc-ternary-lighter, $hue: 13deg);
+
+	@media screen and (min-width: var.$tablet-view) {
+		margin-top: 106px;
+		padding-top: 80px;
+		padding-bottom: 90px;
+	}
 }
 
 .contact-mf-wr {
 	@media screen and (min-width: var.$tablet-view) {
-		display: flex;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 30px 60px;
 	}
 }
 
-.contact-mf-column {}
-
-.contact-mf-first-column {
-	margin-bottom: 35px;
-
+.contact-mf-desc-wr {
 	@media screen and (min-width: var.$tablet-view) {
-		margin-bottom: 0;
+		grid-column: 1;
+		grid-row: 1;
 	}
-}
-
-.contact-mf-second-column {
-	@media screen and (min-width: var.$tablet-view) {}
 }
 
 .contact-mf-heading {
@@ -66,7 +67,6 @@
 
 .contact-mf-details-wr {
 	margin-top: 35px;
-	margin-bottom: 35px;
 
 	@media screen and (min-width: var.$desktop-view) {
 		display: flex;
@@ -105,6 +105,25 @@
 
 .contact-mf-map-wr {
 	height: 400px;
+	margin-top: 35px;
+
+	@media screen and (min-width: var.$mobile-view-landscape) {
+		height: 350px;
+	}
+
+	@media screen and (min-width: var.$tablet-view) {
+		margin-top: 0;
+		grid-column: 1 / 3;
+		grid-row: 2;
+	}
 }
 
-.contact-mf-form {}
+.contact-mf-form {
+	margin-top: 35px;
+
+	@media screen and (min-width: var.$tablet-view) {
+		margin-top: 42px;
+		grid-column: 2;
+		grid-row: 1;
+	}
+}

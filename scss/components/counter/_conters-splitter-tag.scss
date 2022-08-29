@@ -14,6 +14,11 @@
 	@media screen and (min-width: var.$mobile-view-portrait) {
 		flex-direction: row;
 		justify-content: space-between;
+		margin-top: 35px;
+	}
+
+	@media screen and (min-width: var.$tablet-view) {
+		width: 320px;
 	}
 }
 
@@ -23,17 +28,15 @@
 	width: 74px;
 	margin-top: 20px;
 	margin-bottom: 20px;
-	@include mx.after-underline($underline-height: 2px,
-		$width: 100%,
-		$left: 0,
-		$right: auto,
-		$bottom: -2px,
-		$top: auto,
-		$border-radius: 5px,
-		$underline-color: color.adjust(var.$c-primary, $lightness: 65%));
+	height: 2px;
+	border-radius: 5px;
+	background-color: color.adjust(var.$c-primary, $lightness: 65%);
 
 	@media screen and (min-width: var.$mobile-view-portrait) {
-		transform: rotate(90deg);
+		margin-top: 0;
+		margin-bottom: 0;
+		width: 2px;
+		height: 60px;
 	}
 }
 

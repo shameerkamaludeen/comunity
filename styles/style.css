@@ -901,6 +901,12 @@ button {
   margin-right: 15px;
   margin-left: 15px;
 }
+@media screen and (min-width: 30em) {
+  .layout-margin {
+    margin-right: 25px;
+    margin-left: 25px;
+  }
+}
 @media screen and (min-width: 48em) {
   .layout-margin {
     margin-right: 45px;
@@ -1101,11 +1107,11 @@ button {
 }
 
 .navbar-rrm-logo {
-  padding: 35px 0 0;
+  padding: 30px 0 0;
 }
 @media screen and (min-width: 40em) {
   .navbar-rrm-logo {
-    padding: 35px 0 15px;
+    padding-bottom: 15px;
   }
 }
 @media screen and (min-width: 48em) {
@@ -1146,6 +1152,14 @@ button {
 main {
   background-color: hsl(0deg, 0%, 100%);
   margin-top: 66px;
+  margin-bottom: 20px;
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.25);
+}
+@media screen and (min-width: 48em) {
+  main {
+    padding-top: 29px;
+    margin-bottom: 62px;
+  }
 }
 
 /* || Layout - Article
@@ -1224,12 +1238,19 @@ main {
 /* || Component - Footer navigation grid with logo, menu, category
    ========================================================================== */
 .footer-nav-grid-lmc {
-  margin-top: 65px;
+  margin-top: 55px;
   margin-bottom: 73px;
   display: grid;
+  grid-template-columns: repeat(2, 1fr);
   grid-template-areas: "logo logo" "menucol1 menucol2" "menucol3 category";
-  grid-template-columns: 175px auto;
-  gap: 60px 20px;
+  gap: 45px 20px;
+}
+@media screen and (min-width: 48em) {
+  .footer-nav-grid-lmc {
+    margin-bottom: 50px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "logo menucol1 menucol2" "menucol3 category category";
+  }
 }
 
 .fng-lmc-logo {
@@ -1305,8 +1326,8 @@ main {
    ========================================================================== */
 /* || Component - Form radiused
    ========================================================================== */
-.form-rd-row-wr,
-.form-rd-li {
+.form-rd-row-wr:not(:last-child),
+.form-rd-li:not(:last-child) {
   margin-bottom: 20px;
 }
 
@@ -1432,18 +1453,13 @@ main {
 }
 @media screen and (min-width: 48em) {
   .hero-id-desc-column {
-    flex: 2;
+    flex: 1 0 50%;
     margin-bottom: 0;
   }
 }
 
 .hero-id-img-column {
   overflow: hidden;
-}
-@media screen and (min-width: 48em) {
-  .hero-id-img-column {
-    flex: 3;
-  }
 }
 
 .hero-id-heading {
@@ -1456,6 +1472,11 @@ main {
 
 .hero-id-sh-content {
   display: block;
+}
+@media screen and (min-width: 40em) {
+  .hero-id-sh-content {
+    display: initial;
+  }
 }
 
 .hero-id-subheading {
@@ -1470,6 +1491,13 @@ main {
   width: 100%;
   position: relative;
   left: 100%;
+}
+@media screen and (min-width: 48em) {
+  .hero-id-img {
+    height: 100%;
+    object-fit: cover;
+    object-position: 22% top;
+  }
 }
 
 .hero-id-img-animate {
@@ -1496,7 +1524,7 @@ main {
    ========================================================================== */
 .services-carousel {
   background-color: #fafbff;
-  padding: 13px 0 40px;
+  padding: 12px 0 40px;
   margin-top: 60px;
 }
 
@@ -1518,6 +1546,11 @@ main {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 75px;
+}
+
+.sc-carousel-item {
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 /* -----------------------------------------------------------------------------
@@ -1551,8 +1584,7 @@ main {
 /* || Block - company with tab contents
    ========================================================================== */
 .company-tab-contents {
-  padding-top: 50px;
-  padding-bottom: 30px;
+  margin-top: 50px;
 }
 @media screen and (min-width: 48em) {
   .company-tab-contents {
@@ -1561,12 +1593,14 @@ main {
 }
 
 .ctc-desc-column {
-  margin-bottom: 27px;
+  margin-top: 33px;
 }
 @media screen and (min-width: 48em) {
   .ctc-desc-column {
-    flex: 2;
-    margin-bottom: 0;
+    flex: 1 0 50%;
+    margin-top: 0;
+    position: relative;
+    box-shadow: -15px 0px 10px -11px white;
   }
 }
 
@@ -1575,7 +1609,7 @@ main {
 }
 @media screen and (min-width: 48em) {
   .ctc-img-column {
-    flex: 3;
+    position: relative;
   }
 }
 
@@ -1596,6 +1630,13 @@ main {
   position: relative;
   right: 100%;
 }
+@media screen and (min-width: 48em) {
+  .ctc-img {
+    height: 100%;
+    object-fit: cover;
+    object-position: left bottom;
+  }
+}
 
 .ctc-img-animate {
   right: 0;
@@ -1612,6 +1653,12 @@ main {
   .counters-splitter-tag {
     flex-direction: row;
     justify-content: space-between;
+    margin-top: 35px;
+  }
+}
+@media screen and (min-width: 48em) {
+  .counters-splitter-tag {
+    width: 320px;
   }
 }
 
@@ -1619,21 +1666,16 @@ main {
   width: 74px;
   margin-top: 20px;
   margin-bottom: 20px;
-  position: relative;
-}
-.cst-item-splitter::after {
-  content: "";
-  position: absolute;
   height: 2px;
-  background-color: #d1d3dc;
-  width: 100%;
-  left: 0;
-  bottom: -2px;
   border-radius: 5px;
+  background-color: #d1d3dc;
 }
 @media screen and (min-width: 30em) {
   .cst-item-splitter {
-    transform: rotate(90deg);
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 2px;
+    height: 60px;
   }
 }
 
@@ -1677,6 +1719,7 @@ main {
 .row-fwt-content {
   position: relative;
   display: none;
+  width: 100%;
 }
 
 .row-fwt-content-active {
@@ -1694,58 +1737,6 @@ main {
     top: 0;
   }
 }
-/* || Component - Gallery queue
-   -------------------------------------------------------------------------- */
-.gallery-queue {
-  overflow: hidden; /* for animation */
-}
-@media screen and (min-width: 30em) {
-  .gallery-queue {
-    display: flex;
-    flex-flow: row wrap;
-    gap: 10px;
-  }
-}
-@media screen and (min-width: 64em) {
-  .gallery-queue {
-    flex-wrap: nowrap;
-  }
-}
-
-.gq-image-wr:not(:first-child) {
-  margin-top: 10px;
-}
-@media screen and (min-width: 30em) {
-  .gq-image-wr {
-    flex: 0 1 250px;
-    height: 286px;
-  }
-  .gq-image-wr:not(:first-child) {
-    margin-top: 0;
-  }
-}
-@media screen and (min-width: 64em) {
-  .gq-image-wr {
-    flex: initial;
-  }
-}
-
-.gq-img-wr-animation {
-  position: relative;
-  left: 100%;
-}
-
-.gq-img-wr-animate {
-  left: 0;
-  transition: left 1s ease;
-}
-
-.gq-image-wr-link {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
 /* || Component - Image foreground description
    -------------------------------------------------------------------------- */
 .img-foreground-desc {
@@ -1776,12 +1767,74 @@ main {
   margin-top: 0.3em;
 }
 
+/* || Component - Gallery queue
+   -------------------------------------------------------------------------- */
+.gallery-queue {
+  /* for animation */
+  overflow: hidden;
+}
+@media screen and (min-width: 30em) {
+  .gallery-queue {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 10px 15px;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 48em) {
+  .gallery-queue {
+    flex-wrap: nowrap;
+  }
+}
+
+.gq-image-wr:not(:first-child) {
+  margin-top: 10px;
+}
+@media screen and (min-width: 30em) {
+  .gq-image-wr {
+    flex: 0 1 auto;
+    height: 350px;
+  }
+  .gq-image-wr:not(:first-child) {
+    margin-top: 0;
+  }
+}
+@media screen and (min-width: 48em) {
+  .gq-image-wr {
+    flex: initial;
+    height: 255px;
+  }
+}
+
+.gq-img-wr-animation {
+  position: relative;
+  left: 100%;
+}
+
+.gq-img-wr-animate {
+  left: 0;
+  transition: left 1s ease;
+}
+
+.gq-image-wr-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 /* || Block - Team with description and gallery
    ========================================================================== */
 .team-desc-gallery {
-  padding-top: 80px;
-  padding-bottom: 80px;
+  margin-top: 60px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: #fafbff;
+}
+@media screen and (min-width: 40em) {
+  .team-desc-gallery {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
 }
 
 @media screen and (min-width: 64em) {
@@ -1790,17 +1843,16 @@ main {
   }
 }
 
-.team-dg-desc-column {
-  margin-bottom: 27px;
-}
-@media screen and (min-width: 48em) {
+@media screen and (min-width: 64em) {
   .team-dg-desc-column {
     flex: 1;
-    margin-bottom: 0;
   }
 }
 
-@media screen and (min-width: 48em) {
+.team-dg-gallery-column {
+  margin-top: 35px;
+}
+@media screen and (min-width: 64em) {
   .team-dg-gallery-column {
     flex: 2;
   }
@@ -1901,18 +1953,38 @@ main {
 
 .price-occ-para {
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 560px;
 }
 
 .price-occ-price-wr {
   padding-top: 25px;
 }
+@media screen and (min-width: 48em) {
+  .price-occ-price-wr {
+    display: flex;
+    gap: 20px 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
 
 .price-occ-price {
+  min-width: 275px;
   max-width: 350px;
   margin: 0 auto;
 }
 .price-occ-price:not(:first-child) {
   margin-top: 16px;
+}
+@media screen and (min-width: 48em) {
+  .price-occ-price {
+    flex: 1;
+  }
+  .price-occ-price:not(:first-child) {
+    margin-top: 0;
+  }
 }
 
 /* || Block - Lead with background
@@ -1922,6 +1994,12 @@ main {
   text-align: center;
   padding-top: 84px;
   padding-bottom: 90px;
+}
+@media screen and (min-width: 48em) {
+  .lead-background {
+    padding-top: 78px;
+    padding-bottom: 85px;
+  }
 }
 
 .lead-bg-heading {
@@ -1965,7 +2043,7 @@ main {
   text-align: center;
   background-color: #f5faff;
   border-radius: 10px;
-  padding: 42px 20px;
+  padding: 42px 20px 37px;
   margin: 0 10px;
 }
 
@@ -2000,10 +2078,15 @@ main {
   text-align: center;
   margin-top: 47px;
 }
+@media screen and (min-width: 48em) {
+  .testimonial-carousel {
+    margin-top: 80px;
+  }
+}
 
 .tc-para {
   text-align: center;
-  max-width: 650px;
+  max-width: 560px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -2038,23 +2121,30 @@ main {
    ========================================================================== */
 .contact-map-form {
   margin-top: 70px;
-  padding-top: 80px;
-  padding-bottom: 70px;
+  padding-top: 70px;
+  padding-bottom: 50px;
   background-color: #fafcff;
+}
+@media screen and (min-width: 48em) {
+  .contact-map-form {
+    margin-top: 106px;
+    padding-top: 80px;
+    padding-bottom: 90px;
+  }
 }
 
 @media screen and (min-width: 48em) {
   .contact-mf-wr {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px 60px;
   }
 }
 
-.contact-mf-first-column {
-  margin-bottom: 35px;
-}
 @media screen and (min-width: 48em) {
-  .contact-mf-first-column {
-    margin-bottom: 0;
+  .contact-mf-desc-wr {
+    grid-column: 1;
+    grid-row: 1;
   }
 }
 
@@ -2068,7 +2158,6 @@ main {
 
 .contact-mf-details-wr {
   margin-top: 35px;
-  margin-bottom: 35px;
 }
 @media screen and (min-width: 75em) {
   .contact-mf-details-wr {
@@ -2101,6 +2190,30 @@ main {
 
 .contact-mf-map-wr {
   height: 400px;
+  margin-top: 35px;
+}
+@media screen and (min-width: 40em) {
+  .contact-mf-map-wr {
+    height: 350px;
+  }
+}
+@media screen and (min-width: 48em) {
+  .contact-mf-map-wr {
+    margin-top: 0;
+    grid-column: 1/3;
+    grid-row: 2;
+  }
+}
+
+.contact-mf-form {
+  margin-top: 35px;
+}
+@media screen and (min-width: 48em) {
+  .contact-mf-form {
+    margin-top: 42px;
+    grid-column: 2;
+    grid-row: 1;
+  }
 }
 
 /* || Pages - Home
@@ -2109,7 +2222,22 @@ main {
    ========================================================================== */
 /* || General styles */
 body {
-  background: url(../images/home-bg.webp) center/cover no-repeat;
+  background: url(../images/home-bg.webp) 50% top/cover no-repeat;
+}
+@media screen and (min-width: 30em) {
+  body {
+    background: url(../images/home-bg.webp) 54% top/cover no-repeat;
+  }
+}
+@media screen and (min-width: 40em) {
+  body {
+    background: url(../images/home-bg.webp) 59% top/cover no-repeat;
+  }
+}
+@media screen and (min-width: 48em) {
+  body {
+    background: url(../images/home-bg.webp) center/cover no-repeat;
+  }
 }
 
 /* || Typography */
@@ -2118,7 +2246,7 @@ body {
 /* || Sitewiede */
 /* || Store Pages */
 header + section {
-  margin-top: 76px;
+  margin-top: 73px;
 }
 
 /*# sourceMappingURL=style.css.map */

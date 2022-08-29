@@ -12,7 +12,7 @@
 
 .services-carousel {
 	background-color: color.adjust(var.$bc-ternary-lighter, $hue: 15);
-	padding: 13px 0 40px;
+	padding: 12px 0 40px;
 	margin-top: 60px;
 }
 
@@ -54,7 +54,10 @@
 .sc-carousel {}
 
 // carousel item
-.sc-carousel-item {}
+.sc-carousel-item {
+	padding-left: 10px;
+	padding-right: 10px;
+}
 
 .sc-link-wrapper {
 	@extend %link-wrapper-basic;
