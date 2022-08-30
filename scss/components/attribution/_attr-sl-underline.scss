@@ -4,12 +4,17 @@
 @use '../../abstracts/variables' as var;
 @use '../../abstracts/mixins' as mx;
 @use '../../base/typography';
+@use '../../layout/grid';
 
 .attr-sl-underline {
 	padding: 13px 0;
 }
 
-.attr-sl-u-content {
+.attr-slu-lm-fixed {
+	@extend %lm-fixed;
+}
+
+.attr-slu-content {
 	// ff, c, fs
 	@extend %fft-bcp-xxs-font;
 	// lh, fw
@@ -18,16 +23,16 @@
 	letter-spacing: 0.4px;
 }
 
-.attr-sl-u-link {
+.attr-slu-link {
 	@include mx.link-border-underline;
 }
 
 // modifiers
 
-.attr-sl-u-bg {
+.attr-slu-bg {
 	background-color: var.$bc-secondary;
 }
 
-.attr-sl-u-cnt-center {
+.attr-slu-cnt-center {
 	text-align: center;
 }

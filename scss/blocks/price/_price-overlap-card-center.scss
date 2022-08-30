@@ -7,12 +7,17 @@
 
 @use '../../abstracts/variables' as var;
 @use '../../base/typography';
+@use '../../layout/grid';
 @use '../../components/card/card-center-shadow';
 
 .price-overlap-card-center {
 	padding-top: 48px;
 	padding-bottom: 48px;
 	background-color: var.$bc-primary;
+}
+
+.price-occ-lm-fixed {
+	@extend %lm-fixed;
 }
 
 .price-occ-heading {

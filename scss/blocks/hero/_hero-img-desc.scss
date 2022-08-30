@@ -7,6 +7,7 @@
 
 @use '../../abstracts/variables' as var;
 @use '../../base/typography';
+@use '../../layout/grid';
 @use '../../components/button/btn-capsule-hover-wipe';
 
 
@@ -14,6 +15,14 @@
 	@media screen and (min-width: var.$tablet-view) {
 		display: flex;
 	}
+}
+
+.hero-id-lm-fixed {
+	@extend %lm-fixed;
+}
+
+.hero-id-lm-fixed-l-tv {
+	@extend %lm-fixed-left-tv;
 }
 
 .hero-id-column {}
@@ -44,7 +53,7 @@
 .hero-id-sh-content {
 	display: block;
 
-	@media screen and (min-width: var.$mobile-view-landscape) {
+	@media screen and (min-width: var.$mobile-landscape-view) {
 		display: initial;
 	}
 }

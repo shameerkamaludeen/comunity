@@ -22,12 +22,12 @@ $ff-ternary: 'Montserrat', sans-serif;
 $ff-neutral: 'Nunito Sans', sans-serif;
 
 // Viewports
-$mobile-view-small: 20em; // 320px standard
-$mobile-view-portrait: 30em; // 480px standard
-$mobile-view-landscape: 40em; // 640px standard
+$mobile-small-view: 20em; // 320px standard
+$mobile-portrait-view: 30em; // 480px standard
+$mobile-landscape-view: 40em; // 640px standard
 $tablet-view: 48em; // 768px standard
 $laptop-view: 64em; // 1024px standard
-$desktop-view: 75em; // 1200px standard
+$pc-view: 75em; // 1200px standard
 
 // Typography
 $word-spacing: 0.8px;

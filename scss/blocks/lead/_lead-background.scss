@@ -4,6 +4,7 @@
 @use '../../abstracts/variables' as var;
 @use '../../abstracts/mixins' as mx;
 @use '../../base/typography';
+@use '../../layout/grid';
 
 .lead-background {
 	background: url(../images/business-desk.webp) center / cover no-repeat;
@@ -17,13 +18,17 @@
 	}
 }
 
+.lead-bg-lm-fixed {
+	@extend %lm-fixed;
+}
+
 .lead-bg-heading {
 	@extend %ffp-bcp-xxl-font;
 	margin: 0;
 }
 
 .lead-bgh-text {
-	@media screen and (max-width: var.$mobile-view-landscape) {
+	@media screen and (max-width: var.$mobile-landscape-view) {
 		display: block;
 	}
 }
