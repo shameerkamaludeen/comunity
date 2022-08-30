@@ -13,8 +13,11 @@
 
 .services-carousel {
 	background-color: color.adjust(var.$bc-ternary-lighter, $hue: 15);
-	padding: 12px 0 40px;
-	margin-top: 60px;
+	padding: 32px 0 50px;
+
+	@media screen and (min-width: var.$laptop-view) {
+		padding: 70px 0 80px;
+	}
 }
 
 /* layout margin fixed */

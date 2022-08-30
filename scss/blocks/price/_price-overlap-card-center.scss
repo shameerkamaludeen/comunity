@@ -14,6 +14,11 @@
 	padding-top: 48px;
 	padding-bottom: 48px;
 	background-color: var.$bc-primary;
+
+	@media screen and (min-width: var.$laptop-view) {
+		padding-top: 70px;
+		padding-bottom: 80px;
+	}
 }
 
 .price-occ-lm-fixed {
@@ -61,12 +66,44 @@
 		justify-content: center;
 		flex-wrap: wrap;
 	}
+
+	@media screen and (min-width: var.$laptop-view) {
+		justify-content: initial;
+		flex-wrap: nowrap;
+		gap: initial;
+	}
+
+	// overlap
+	.price-occ-price:nth-child(1) {
+		@media screen and (min-width: var.$laptop-view) {
+			margin-right: -8px;
+		}
+	}
+
+	.price-occ-price:nth-child(2) {
+		@media screen and (min-width: var.$laptop-view) {
+			position: relative;
+			z-index: 2;
+			margin-left: -4px;
+			margin-right: -4px;
+			top: 17px;
+		}
+	}
+
+	.price-occ-price:nth-child(3) {
+		@media screen and (min-width: var.$laptop-view) {
+			position: relative;
+			z-index: 1;
+			margin-left: -8px;
+		}
+	}
 }
 
 .price-occ-price {
 	min-width: 275px;
 	max-width: 350px;
 	margin: 0 auto;
+	background-color: var.$bc-primary;
 
 	&:not(:first-child) {
 		margin-top: 16px;

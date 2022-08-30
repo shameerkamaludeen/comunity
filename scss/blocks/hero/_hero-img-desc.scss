@@ -12,8 +12,14 @@
 
 
 .hero-img-desc {
+	padding-bottom: 60px;
+
 	@media screen and (min-width: var.$tablet-view) {
 		display: flex;
+	}
+
+	@media screen and (min-width: var.$laptop-view) {
+		align-items: center;
 	}
 }
 
@@ -33,6 +39,10 @@
 	@media screen and (min-width: var.$tablet-view) {
 		flex: 1 0 50%;
 		margin-bottom: 0;
+	}
+
+	@media screen and (min-width: var.$laptop-view) {
+		flex: 1 0 40%;
 	}
 }
 
@@ -93,6 +103,10 @@
 		height: 100%;
 		object-fit: cover;
 		object-position: 22% top;
+	}
+
+	@media screen and (min-width: var.$laptop-view) {
+		object-position: center;
 	}
 }
 

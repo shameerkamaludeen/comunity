@@ -11,10 +11,16 @@
 @use '../../components/button/btn-no-bg-border';
 
 .company-tab-contents {
-	margin-top: 50px;
+	padding-top: 60px;
+	padding-bottom: 60px;
 
 	@media screen and (min-width: var.$tablet-view) {
 		display: flex;
+	}
+
+	@media screen and (min-width: var.$laptop-view) {
+		padding-top: 70px;
+		padding-bottom: 70px;
 	}
 }
 

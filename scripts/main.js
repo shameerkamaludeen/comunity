@@ -60,6 +60,7 @@ function initCarouselElements() {
 		arrows: true,
 		slidesToShow: 3,
 		slidesToScroll: 2,
+		autoplaySpeed: 5000,
 		responsive: [
 			{
 				breakpoint: (laptopView * 16),

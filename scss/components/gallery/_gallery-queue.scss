@@ -23,6 +23,10 @@
 	@media screen and (min-width: var.$tablet-view) {
 		flex-wrap: nowrap;
 	}
+
+	@media screen and (min-width: var.$laptop-view) {
+		gap: 10px;
+	}
 }
 
 .gq-image-wr {
@@ -42,7 +46,7 @@
 
 	@media screen and (min-width: var.$tablet-view) {
 		flex: initial;
-		height: 255px;
+		height: initial;
 	}
 }
 

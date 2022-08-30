@@ -1,6 +1,9 @@
 /* || Pages - Home
    ========================================================================== */
 
+@use '../abstracts/variables' as var;
+
+// blocks and components
 @use '../blocks/hero/hero-img-desc';
 @use '../blocks/services/services-carousel';
 @use '../blocks/company/company-tab-contents';
@@ -10,3 +13,23 @@
 @use '../blocks/lead/lead-background';
 @use '../blocks/testimonial/testimonial-carousel';
 @use '../blocks/contact/contact-map-form';
+
+// || Contact us 
+
+.form-radiused {
+	.form-rd-ul {
+		margin-bottom: 0;
+
+		@media screen and (min-width: var.$tablet-view) {
+			margin-top: 0;
+		}
+	}
+}
+
+.ul-center-inside-icon {
+	.ul-ci-icon-li {
+		@media screen and (min-width: var.$laptop-view) {
+			margin-bottom: 5px;
+		}
+	}
+}

@@ -560,7 +560,7 @@ button {
 
 /* || Abstracts - Utilities
    ========================================================================== */
-.form-rd-hide-visually, .main-heading-hv, .hc-btn-icon-inactive {
+.main-heading-hv, .form-rd-hide-visually, .hc-btn-icon-inactive {
   position: absolute !important;
   top: -9999px !important;
   left: -9999px !important;
@@ -1156,6 +1156,14 @@ main {
   }
 }
 
+.main-padding-top {
+  padding-top: 73px;
+}
+
+.main-padding-bottom {
+  padding-bottom: 90px;
+}
+
 /* || Layout - Article
    ========================================================================== */
 /* || Components - Unordered list with background icon
@@ -1232,8 +1240,8 @@ main {
 /* || Component - Footer navigation grid with logo, menu, category
    ========================================================================== */
 .footer-nav-grid-lmc {
-  margin-top: 55px;
-  margin-bottom: 73px;
+  padding-top: 55px;
+  padding-bottom: 73px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-areas: "logo logo" "menucol1 menucol2" "menucol3 category";
@@ -1241,9 +1249,17 @@ main {
 }
 @media screen and (min-width: 48em) {
   .footer-nav-grid-lmc {
-    margin-bottom: 50px;
+    padding-bottom: 50px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: "logo menucol1 menucol2" "menucol3 category category";
+  }
+}
+@media screen and (min-width: 64em) {
+  .footer-nav-grid-lmc {
+    padding-bottom: 60px;
+    padding-top: 60px;
+    grid-template-columns: 18% 15% 15% 20% auto;
+    grid-template-areas: "logo menucol1 menucol2 menucol3 category";
   }
 }
 
@@ -1330,6 +1346,10 @@ main {
   display: none;
 }
 
+.form-rd-global-errormsg {
+  margin-top: 10px;
+}
+
 .form-rd-errormsg-active,
 .form-rd-g-errormsg-active {
   display: inline-block;
@@ -1371,7 +1391,6 @@ main {
 }
 
 .form-rd-submit-btn {
-  margin-bottom: 10px;
   background-color: hsl(228deg, 61%, 53%);
   border-radius: 200px;
   cursor: pointer;
@@ -1436,9 +1455,17 @@ main {
 
 /* || Block - Hero image description
    ========================================================================== */
+.hero-img-desc {
+  padding-bottom: 60px;
+}
 @media screen and (min-width: 48em) {
   .hero-img-desc {
     display: flex;
+  }
+}
+@media screen and (min-width: 64em) {
+  .hero-img-desc {
+    align-items: center;
   }
 }
 
@@ -1449,6 +1476,11 @@ main {
   .hero-id-desc-column {
     flex: 1 0 50%;
     margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 64em) {
+  .hero-id-desc-column {
+    flex: 1 0 40%;
   }
 }
 
@@ -1493,6 +1525,11 @@ main {
     object-position: 22% top;
   }
 }
+@media screen and (min-width: 64em) {
+  .hero-id-img {
+    object-position: center;
+  }
+}
 
 .hero-id-img-animate {
   left: 0;
@@ -1507,7 +1544,7 @@ main {
 }
 .card-cri-heading {
   text-align: center;
-  margin: 1.2em 0;
+  margin: 1.2em 0 0;
 }
 
 .card-cri-para {
@@ -1518,8 +1555,12 @@ main {
    ========================================================================== */
 .services-carousel {
   background-color: #fafbff;
-  padding: 12px 0 40px;
-  margin-top: 60px;
+  padding: 32px 0 50px;
+}
+@media screen and (min-width: 64em) {
+  .services-carousel {
+    padding: 70px 0 80px;
+  }
 }
 
 /* layout margin fixed */
@@ -1579,11 +1620,18 @@ main {
 /* || Block - company with tab contents
    ========================================================================== */
 .company-tab-contents {
-  margin-top: 50px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 @media screen and (min-width: 48em) {
   .company-tab-contents {
     display: flex;
+  }
+}
+@media screen and (min-width: 64em) {
+  .company-tab-contents {
+    padding-top: 70px;
+    padding-bottom: 70px;
   }
 }
 
@@ -1642,7 +1690,7 @@ main {
    ========================================================================== */
 .counters-splitter-tag {
   margin-top: 50px;
-  max-width: 510px;
+  max-width: 400px;
 }
 @media screen and (min-width: 30em) {
   .counters-splitter-tag {
@@ -1654,6 +1702,11 @@ main {
 @media screen and (min-width: 48em) {
   .counters-splitter-tag {
     width: 320px;
+  }
+}
+@media screen and (min-width: 48em) {
+  .counters-splitter-tag {
+    width: initial;
   }
 }
 
@@ -1714,6 +1767,16 @@ main {
 .row-fwt-content {
   position: relative;
   display: none;
+}
+@media screen and (min-width: 48em) {
+  .row-fwt-content {
+    min-height: 333px;
+  }
+}
+@media screen and (min-width: 64em) {
+  .row-fwt-content {
+    min-height: 228px;
+  }
 }
 
 .row-fwt-content-active {
@@ -1780,6 +1843,11 @@ main {
     flex-wrap: nowrap;
   }
 }
+@media screen and (min-width: 64em) {
+  .gallery-queue {
+    gap: 10px;
+  }
+}
 
 .gq-image-wr:not(:first-child) {
   margin-top: 10px;
@@ -1796,7 +1864,7 @@ main {
 @media screen and (min-width: 48em) {
   .gq-image-wr {
     flex: initial;
-    height: 255px;
+    height: initial;
   }
 }
 
@@ -1819,21 +1887,22 @@ main {
 /* || Block - Team with description and gallery
    ========================================================================== */
 .team-desc-gallery {
-  margin-top: 60px;
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: #fafbff;
 }
 @media screen and (min-width: 40em) {
   .team-desc-gallery {
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: 70px;
+    padding-bottom: 70px;
   }
 }
 
 @media screen and (min-width: 64em) {
   .team-dg-wr {
     display: flex;
+    align-items: center;
+    column-gap: 60px;
   }
 }
 
@@ -1848,6 +1917,7 @@ main {
 }
 @media screen and (min-width: 64em) {
   .team-dg-gallery-column {
+    margin-top: 0;
     flex: 2;
   }
 }
@@ -1935,6 +2005,12 @@ main {
   padding-bottom: 48px;
   background-color: hsl(0deg, 0%, 100%);
 }
+@media screen and (min-width: 64em) {
+  .price-overlap-card-center {
+    padding-top: 70px;
+    padding-bottom: 80px;
+  }
+}
 
 .price-occ-heading {
   margin: 0;
@@ -1963,11 +2039,40 @@ main {
     flex-wrap: wrap;
   }
 }
+@media screen and (min-width: 64em) {
+  .price-occ-price-wr {
+    justify-content: initial;
+    flex-wrap: nowrap;
+    gap: initial;
+  }
+}
+@media screen and (min-width: 64em) {
+  .price-occ-price-wr .price-occ-price:nth-child(1) {
+    margin-right: -8px;
+  }
+}
+@media screen and (min-width: 64em) {
+  .price-occ-price-wr .price-occ-price:nth-child(2) {
+    position: relative;
+    z-index: 2;
+    margin-left: -4px;
+    margin-right: -4px;
+    top: 17px;
+  }
+}
+@media screen and (min-width: 64em) {
+  .price-occ-price-wr .price-occ-price:nth-child(3) {
+    position: relative;
+    z-index: 1;
+    margin-left: -8px;
+  }
+}
 
 .price-occ-price {
   min-width: 275px;
   max-width: 350px;
   margin: 0 auto;
+  background-color: hsl(0deg, 0%, 100%);
 }
 .price-occ-price:not(:first-child) {
   margin-top: 16px;
@@ -2070,11 +2175,13 @@ main {
   =========================================================================== */
 .testimonial-carousel {
   text-align: center;
-  margin-top: 47px;
+  padding-top: 30px;
+  padding-bottom: 50px;
 }
 @media screen and (min-width: 48em) {
   .testimonial-carousel {
-    margin-top: 80px;
+    padding-top: 60px;
+    padding-bottom: 80px;
   }
 }
 
@@ -2114,16 +2221,12 @@ main {
 /* || Block - Contact us with map and form
    ========================================================================== */
 .contact-map-form {
-  margin-top: 70px;
   padding-top: 70px;
-  padding-bottom: 50px;
   background-color: #fafcff;
 }
 @media screen and (min-width: 48em) {
   .contact-map-form {
-    margin-top: 106px;
     padding-top: 80px;
-    padding-bottom: 90px;
   }
 }
 
@@ -2193,7 +2296,7 @@ main {
 }
 @media screen and (min-width: 48em) {
   .contact-mf-map-wr {
-    margin-top: 0;
+    margin-top: 20px;
     grid-column: 1/3;
     grid-row: 2;
   }
@@ -2204,7 +2307,7 @@ main {
 }
 @media screen and (min-width: 48em) {
   .contact-mf-form {
-    margin-top: 42px;
+    margin-top: 5px;
     grid-column: 2;
     grid-row: 1;
   }
@@ -2212,6 +2315,21 @@ main {
 
 /* || Pages - Home
    ========================================================================== */
+.form-radiused .form-rd-ul {
+  margin-bottom: 0;
+}
+@media screen and (min-width: 48em) {
+  .form-radiused .form-rd-ul {
+    margin-top: 0;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .ul-center-inside-icon .ul-ci-icon-li {
+    margin-bottom: 5px;
+  }
+}
+
 /* || Themes - Default theme
    ========================================================================== */
 /* || General styles */
@@ -2239,8 +2357,5 @@ body {
 /* || Utilitites */
 /* || Sitewiede */
 /* || Store Pages */
-header + section {
-  margin-top: 73px;
-}
 
 /*# sourceMappingURL=style.css.map */
