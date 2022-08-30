@@ -50,13 +50,16 @@
 	}
 }
 
-@mixin horizontal-splitter() {}
+@mixin horizontal-splitter() {
+	// write later using :: after
+}
 
 // || Layouts
 
-@mixin fixed-h-centered {
-	margin-left: auto;
-	margin-right: auto;
+// Layout margin auto fixed width
+@mixin lm-auto-fixed-width($width: 560px) {
+	width: $width;
+	@extend %lm-auto;
 }
 
 // || Links

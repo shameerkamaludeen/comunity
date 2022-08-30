@@ -2,11 +2,12 @@
    ========================================================================== */
 @use '../abstracts/variables' as var;
 
-.layout-margin {
+// Layout margin fixed
+%lm-fixed {
 	margin-right: 15px;
 	margin-left: 15px;
 
-	@media screen and (min-width: var.$mobile-view-portrait) {
+	@media screen and (min-width: var.$mobile-portrait-view) {
 		margin-right: 25px;
 		margin-left: 25px;
 	}
@@ -22,22 +23,65 @@
 	}
 }
 
-.layout-margin-left-align {
+// || Layout margin fixed left 
+// Tablet view
+%lm-fixed-left-tv {
 	@media screen and (min-width: var.$tablet-view) {
 		margin-right: initial;
 		padding-right: 60px;
 	}
 }
 
-.layout-margin-right-align {
+// Laptop view
+%lm-fixed-left-lv {
+	@media screen and (min-width: var.$pc-view) {
+		margin-right: initial;
+		padding-right: 60px;
+	}
+}
+
+// PC view
+%lm-fixed-left-pcv {
+	@media screen and (min-width: var.$pc-view) {
+		margin-right: initial;
+		padding-right: 60px;
+	}
+}
+
+// || Layout margin fixed right 
+
+// Tablet view
+%lm-fixed-right-tv {
 	@media screen and (min-width: var.$tablet-view) {
 		margin-left: initial;
 		padding-left: 60px;
 	}
 }
 
-.fixed-centered {
-	max-width: 1300px;
-	margin-right: auto;
+// Laptop view
+%lm-fixed-right-lv {
+	@media screen and (min-width: var.$laptop-view) {
+		margin-left: initial;
+		padding-left: 60px;
+	}
+}
+
+// PC view
+%lm-fixed-right-pcv {
+	@media screen and (min-width: var.$pc-view) {
+		margin-left: initial;
+		padding-left: 60px;
+	}
+}
+
+// Layout margin auto
+%lm-auto {
 	margin-left: auto;
+	margin-right: auto;
+}
+
+// Layout margin auto fixed width
+%lm-auto-fixed-width {
+	width: 560px;
+	@extend %lm-auto;
 }

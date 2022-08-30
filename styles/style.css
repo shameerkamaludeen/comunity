@@ -473,7 +473,7 @@ h3 {
   font-family: "Montserrat", sans-serif;
 }
 
-.attr-sl-u-content {
+.attr-slu-content {
   font-size: 0.75rem;
   color: hsl(0deg, 0%, 100%);
   font-family: "Montserrat", sans-serif;
@@ -532,7 +532,7 @@ h3 {
   font-weight: 700;
 }
 
-.attr-sl-u-content {
+.attr-slu-content {
   line-height: 2;
   font-weight: 400;
 }
@@ -897,47 +897,41 @@ button {
 
 /* || Layout - Grid
    ========================================================================== */
-.layout-margin {
+.contact-mf-lm-fixed, .tc-lm-fixed, .lead-bg-lm-fixed, .price-occ-lm-fixed, .team-dg-lm-fixed, .ctc-lm-fixed, .sc-lm-fixed, .hero-id-lm-fixed, .attr-slu-lm-fixed, .fng-lmc-lm-fixed, .navbar-rrm-lm-fixed {
   margin-right: 15px;
   margin-left: 15px;
 }
 @media screen and (min-width: 30em) {
-  .layout-margin {
+  .contact-mf-lm-fixed, .tc-lm-fixed, .lead-bg-lm-fixed, .price-occ-lm-fixed, .team-dg-lm-fixed, .ctc-lm-fixed, .sc-lm-fixed, .hero-id-lm-fixed, .attr-slu-lm-fixed, .fng-lmc-lm-fixed, .navbar-rrm-lm-fixed {
     margin-right: 25px;
     margin-left: 25px;
   }
 }
 @media screen and (min-width: 48em) {
-  .layout-margin {
+  .contact-mf-lm-fixed, .tc-lm-fixed, .lead-bg-lm-fixed, .price-occ-lm-fixed, .team-dg-lm-fixed, .ctc-lm-fixed, .sc-lm-fixed, .hero-id-lm-fixed, .attr-slu-lm-fixed, .fng-lmc-lm-fixed, .navbar-rrm-lm-fixed {
     margin-right: 45px;
     margin-left: 45px;
   }
 }
 @media screen and (min-width: 64em) {
-  .layout-margin {
+  .contact-mf-lm-fixed, .tc-lm-fixed, .lead-bg-lm-fixed, .price-occ-lm-fixed, .team-dg-lm-fixed, .ctc-lm-fixed, .sc-lm-fixed, .hero-id-lm-fixed, .attr-slu-lm-fixed, .fng-lmc-lm-fixed, .navbar-rrm-lm-fixed {
     margin-right: 45px;
     margin-left: 45px;
   }
 }
 
 @media screen and (min-width: 48em) {
-  .layout-margin-left-align {
+  .hero-id-lm-fixed-l-tv {
     margin-right: initial;
     padding-right: 60px;
   }
 }
 
 @media screen and (min-width: 48em) {
-  .layout-margin-right-align {
+  .ctc-lm-fixed-r-tv {
     margin-left: initial;
     padding-left: 60px;
   }
-}
-
-.fixed-centered {
-  max-width: 1300px;
-  margin-right: auto;
-  margin-left: auto;
 }
 
 /* || Abstracts - Header
@@ -1283,40 +1277,40 @@ main {
   padding: 13px 0;
 }
 
-.attr-sl-u-content {
+.attr-slu-content {
   margin: 0;
   letter-spacing: 0.4px;
 }
 
-.attr-sl-u-link {
+.attr-slu-link {
   text-decoration: none;
   border-bottom: 1.5px solid;
   transition: color 0.3s ease, border-bottom-color 0.3s ease;
   cursor: pointer;
   outline: none;
 }
-.attr-sl-u-link:link {
+.attr-slu-link:link {
   color: hsl(0deg, 0%, 100%);
   border-bottom-color: hsl(0deg, 0%, 100%);
 }
-.attr-sl-u-link:visited {
+.attr-slu-link:visited {
   color: #cccccc;
   border-bottom-color: #cccccc;
 }
-.attr-sl-u-link:focus, .attr-sl-u-link:hover {
+.attr-slu-link:focus, .attr-slu-link:hover {
   color: hsl(207deg, 100%, 99%);
   border-bottom-color: hsl(207deg, 100%, 99%);
 }
-.attr-sl-u-link:active {
+.attr-slu-link:active {
   color: hsl(228deg, 61%, 53%);
   border-bottom-color: hsl(228deg, 61%, 53%);
 }
 
-.attr-sl-u-bg {
+.attr-slu-bg {
   background-color: hsl(228deg, 61%, 53%);
 }
 
-.attr-sl-u-cnt-center {
+.attr-slu-cnt-center {
   text-align: center;
 }
 
@@ -1528,6 +1522,7 @@ main {
   margin-top: 60px;
 }
 
+/* layout margin fixed */
 /* normal heading */
 .sc-heading {
   text-align: center;
@@ -1719,7 +1714,6 @@ main {
 .row-fwt-content {
   position: relative;
   display: none;
-  width: 100%;
 }
 
 .row-fwt-content-active {

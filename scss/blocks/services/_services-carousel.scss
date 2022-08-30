@@ -7,6 +7,7 @@
 
 @use '../../abstracts/variables' as var;
 @use '../../base/sitewide';
+@use '../../layout/grid';
 @use '../../components/card/card-center-round-icon';
 @use 'sass:color';
 
@@ -14,6 +15,11 @@
 	background-color: color.adjust(var.$bc-ternary-lighter, $hue: 15);
 	padding: 12px 0 40px;
 	margin-top: 60px;
+}
+
+/* layout margin fixed */
+.sc-lm-fixed {
+	@extend %lm-fixed;
 }
 
 /* normal heading */

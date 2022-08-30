@@ -21,7 +21,7 @@
 	@extend %flex-vh-center;
 	transition: color 0.2s ease, background-color 0.2s ease;
 
-	@media screen and (min-width: var.$mobile-view-landscape) {
+	@media screen and (min-width: var.$mobile-landscape-view) {
 		width: 52px;
 		height: 52px;
 	}

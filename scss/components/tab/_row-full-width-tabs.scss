@@ -20,7 +20,7 @@ $tab-active-color: var.$c-primary;
 .row-fwt-tab {
 	margin-right: 10px;
 
-	@media screen and (min-width: var.$mobile-view-landscape) {
+	@media screen and (min-width: var.$mobile-landscape-view) {
 		margin-right: 25px;
 	}
 }

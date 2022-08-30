@@ -3,11 +3,16 @@
 // Features:
 // 
 
-@use '../../base/utilities';
 @use '../../abstracts/variables' as var;
+@use '../../base/utilities';
+@use '../../layout/grid';
 @use '../navigation/nav-menu-fixed-side';
 
 .navbar-responsive-right-menu {}
+
+.navbar-rrm-lm-fixed {
+	@extend %lm-fixed;
+}
 
 .navbar-rrm-wr {
 	@media screen and (min-width: var.$tablet-view) {
@@ -25,7 +30,7 @@
 .navbar-rrm-logo {
 	padding: 30px 0 0;
 
-	@media screen and (min-width: var.$mobile-view-landscape) {
+	@media screen and (min-width: var.$mobile-landscape-view) {
 		padding-bottom: 15px;
 	}
 

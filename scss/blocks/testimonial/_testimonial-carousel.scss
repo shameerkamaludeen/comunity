@@ -3,6 +3,7 @@
 
 @use '../../abstracts/variables' as var;
 @use '../../base/sitewide';
+@use '../../layout/grid';
 @use '../../components/card/card-center-profile';
 
 .testimonial-carousel {
@@ -12,6 +13,10 @@
 	@media screen and (min-width: var.$tablet-view) {
 		margin-top: 80px;
 	}
+}
+
+.tc-lm-fixed {
+	@extend %lm-fixed;
 }
 
 .tc-heading-normal {

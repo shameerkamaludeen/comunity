@@ -11,11 +11,11 @@
 body {
 	background: url(../images/home-bg.webp) 50% top / cover no-repeat;
 
-	@media screen and (min-width: var.$mobile-view-portrait) {
+	@media screen and (min-width: var.$mobile-portrait-view) {
 		background: url(../images/home-bg.webp) 54% top / cover no-repeat;
 	}
 
-	@media screen and (min-width: var.$mobile-view-landscape) {
+	@media screen and (min-width: var.$mobile-landscape-view) {
 		background: url(../images/home-bg.webp) 59% top / cover no-repeat;
 	}
 
