@@ -32,6 +32,10 @@
 	@extend %normal-400;
 }
 
+.form-rd-global-errormsg {
+	margin-top: 10px;
+}
+
 .form-rd-errormsg-active,
 .form-rd-g-errormsg-active {
 	display: inline-block;
@@ -92,7 +96,6 @@
 }
 
 .form-rd-submit-btn {
-	margin-bottom: 10px;
 	@extend %ffp-bcp-xs-font;
 	@extend %base-400;
 	@extend %base-spacing;

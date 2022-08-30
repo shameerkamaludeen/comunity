@@ -5,6 +5,7 @@
 // default one.
 
 @use '../abstracts/variables' as var;
+@use '../base/utilities';
 
 /* || General styles */
 
@@ -36,8 +37,8 @@ body {
 // Specific things, broken down by the context, page, or even component in 
 // which they are used.
 
-header+section {
-	margin-top: 73px;
+.main-heading-hv {
+	@extend %hide-visually;
 }
 
 // || Footer

@@ -42,6 +42,14 @@ $tab-active-color: var.$c-primary;
 .row-fwt-content {
 	position: relative;
 	display: none;
+
+	@media screen and (min-width: var.$tablet-view) {
+		min-height: 333px;
+	}
+
+	@media screen and (min-width: var.$laptop-view) {
+		min-height: 228px;
+	}
 }
 
 .row-fwt-content-active {

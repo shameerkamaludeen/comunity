@@ -9,7 +9,7 @@
 .counters-splitter-tag {
 	margin-top: 50px;
 	@extend %flex-dc-h-center;
-	max-width: 510px;
+	max-width: 400px;
 
 	@media screen and (min-width: var.$mobile-portrait-view) {
 		flex-direction: row;
@@ -19,6 +19,10 @@
 
 	@media screen and (min-width: var.$tablet-view) {
 		width: 320px;
+	}
+
+	@media screen and (min-width: var.$tablet-view) {
+		width: initial;
 	}
 }
 

@@ -2,7 +2,6 @@
    ========================================================================== */
 
 @use '../abstracts/variables' as var;
-@use '../base/utilities';
 
 main {
 	background-color: var.$bc-primary;
@@ -17,6 +16,10 @@ main {
 	}
 }
 
-.main-heading-hv {
-	@extend %hide-visually;
+.main-padding-top {
+	padding-top: 73px;
+}
+
+.main-padding-bottom {
+	padding-bottom: 90px;
 }

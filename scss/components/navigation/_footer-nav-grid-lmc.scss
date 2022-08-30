@@ -13,8 +13,8 @@
 @use '../category/category-links-rounded-bg';
 
 .footer-nav-grid-lmc {
-	margin-top: 55px;
-	margin-bottom: 73px;
+	padding-top: 55px;
+	padding-bottom: 73px;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	grid-template-areas:
@@ -24,11 +24,19 @@
 	gap: 45px 20px;
 
 	@media screen and (min-width: var.$tablet-view) {
-		margin-bottom: 50px;
+		padding-bottom: 50px;
 		grid-template-columns: repeat(3, 1fr);
 		grid-template-areas:
 			"logo menucol1 menucol2"
 			"menucol3 category category";
+	}
+
+	@media screen and (min-width: var.$laptop-view) {
+		padding-bottom: 60px;
+		padding-top: 60px;
+		grid-template-columns: 18% 15% 15% 20% auto;
+		grid-template-areas:
+			"logo menucol1 menucol2 menucol3 category";
 	}
 }
 
