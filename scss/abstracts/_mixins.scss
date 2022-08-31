@@ -3,6 +3,7 @@
 
 @use '../abstracts/variables' as var;
 @use '../base/sitewide';
+@use '../layout/grid';
 @use 'sass:color';
 
 // || Utilities
@@ -57,8 +58,8 @@
 // || Layouts
 
 // Layout margin auto fixed width
-@mixin lm-auto-fixed-width($width: 560px) {
-	width: $width;
+@mixin lm-auto-fixed-width($max-width: 560px) {
+	max-width: $max-width;
 	@extend %lm-auto;
 }
 

@@ -21,6 +21,10 @@
 	@extend %wide-400;
 	margin: 0;
 	letter-spacing: 0.4px;
+
+	@media screen and (min-width: var.$pc-view) {
+		font-size: var.$fs-xxs + 0.05rem;
+	}
 }
 
 .attr-slu-link {

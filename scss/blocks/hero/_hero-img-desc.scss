@@ -44,6 +44,10 @@
 	@media screen and (min-width: var.$laptop-view) {
 		flex: 1 0 40%;
 	}
+
+	@media screen and (min-width: var.$pc-view) {
+		flex: 1 0 45%;
+	}
 }
 
 .hero-id-img-column {
@@ -71,17 +75,29 @@
 .hero-id-sh-first-text {
 	@extend %ffp-cp-xxl-font;
 	@extend %base-500;
+
+	@media screen and (min-width: var.$pc-view) {
+		font-size: var.$fs-xxl + 0.5rem;
+	}
 }
 
 .hero-id-sh-second-text {
 	@extend %ffp-bcs-xxl-font;
 	@extend %base-700;
+
+	@media screen and (min-width: var.$pc-view) {
+		font-size: var.$fs-xxl + 0.5rem;
+	}
 }
 
 .hero-id-subheading {
 	@extend %ffp-cp-xxl-font;
 	@extend %base-300;
 	margin: 0;
+
+	@media screen and (min-width: var.$pc-view) {
+		font-size: var.$fs-xxl + 0.5rem;
+	}
 }
 
 .hero-id-para {

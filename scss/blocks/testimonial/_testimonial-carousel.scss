@@ -21,6 +21,10 @@
 	@extend %lm-fixed;
 }
 
+.tc-lm-auto-fw {
+	@extend %lm-auto-fixed-width;
+}
+
 .tc-heading-normal {
 	@extend %ffp-cp-xl-font;
 	@extend %base-500;
@@ -31,20 +35,25 @@
 .tc-sh-first-txt {
 	@extend %ffp-cp-xl-font;
 	@extend %base-500;
+
+	@media screen and (min-width: var.$pc-view) {
+		font-size: var.$fs-xl + 0.3rem;
+	}
 }
 
 .tc-sh-second-txt {
 	@extend %ffp-bcs-xl-font;
 	@extend %base-700;
+
+	@media screen and (min-width: var.$pc-view) {
+		font-size: var.$fs-xl + 0.3rem;
+	}
 }
 
 .tc-para {
 	text-align: center;
 	@extend %normal-300;
 	@extend %ffp-cs-s-font;
-	max-width: 560px;
-	margin-left: auto;
-	margin-right: auto;
 }
 
 .tc-carousel {

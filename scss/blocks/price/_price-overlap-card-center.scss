@@ -19,10 +19,18 @@
 		padding-top: 70px;
 		padding-bottom: 80px;
 	}
+
+	@media screen and (min-width: var.$pc-view) {
+		padding-bottom: 90px;
+	}
 }
 
 .price-occ-lm-fixed {
 	@extend %lm-fixed;
+}
+
+.price-occ-lm-auto-fw {
+	@extend %lm-auto-fixed-width;
 }
 
 .price-occ-heading {
@@ -41,20 +49,25 @@
 .price-occ-sh-first-text {
 	@extend %ffp-cp-xl-font;
 	@extend %base-500;
+
+	@media screen and (min-width: var.$pc-view) {
+		font-size: var.$fs-xl + 0.3rem;
+	}
 }
 
 .price-occ-sh-second-text {
 	@extend %ffp-bcs-xl-font;
 	@extend %base-700;
+
+	@media screen and (min-width: var.$pc-view) {
+		font-size: var.$fs-xl + 0.3rem;
+	}
 }
 
 .price-occ-para {
 	@extend %ffp-cs-s-font;
 	@extend %normal-300;
 	text-align: center;
-	margin-left: auto;
-	margin-right: auto;
-	max-width: 560px;
 }
 
 .price-occ-price-wr {
@@ -68,7 +81,6 @@
 	}
 
 	@media screen and (min-width: var.$laptop-view) {
-		justify-content: initial;
 		flex-wrap: nowrap;
 		gap: initial;
 	}
@@ -114,6 +126,9 @@
 			margin-top: 0;
 		}
 
+		align-self: flex-start;
+		margin: 0;
 		flex: 1;
 	}
+
 }

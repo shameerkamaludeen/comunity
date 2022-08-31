@@ -38,6 +38,10 @@
 		grid-template-areas:
 			"logo menucol1 menucol2 menucol3 category";
 	}
+
+	@media screen and (min-width: var.$pc-view) {
+		grid-template-columns: 15% 15% 15% 20% auto;
+	}
 }
 
 .fng-lmc-lm-fixed {
