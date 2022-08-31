@@ -42,4 +42,8 @@ $padding: 1px 4px;
 	&:active {
 		color: $active-color;
 	}
+
+	@media screen and (min-width: var.$pc-view) {
+		font-size: var.$fs-s + 0.1rem;
+	}
 }

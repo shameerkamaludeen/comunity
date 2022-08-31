@@ -71,12 +71,20 @@
 .ctc-sh-first-text {
 	@extend %ffp-cp-xl-font;
 	@extend %base-500;
+
+	@media screen and (min-width: var.$pc-view) {
+		font-size: var.$fs-xl + 0.3rem;
+	}
 }
 
 /* split heading second text */
 .ctc-sh-second-text {
 	@extend %ffp-bcs-xl-font;
 	@extend %base-700;
+
+	@media screen and (min-width: var.$pc-view) {
+		font-size: var.$fs-xl + 0.3rem;
+	}
 }
 
 .ctc-tabs-component-wr {}

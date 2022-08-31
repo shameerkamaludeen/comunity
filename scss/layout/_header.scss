@@ -1,3 +1,9 @@
 /* || Abstracts - Header
    ========================================================================== */
-	 
+
+@use '../abstracts/variables' as var;
+@use 'sass:color';
+
+header {
+	box-shadow: 0 2px 2px color.adjust(var.$bc-secondary, $alpha: -0.95);
+}

@@ -17,9 +17,9 @@
 		margin-left: 45px;
 	}
 
-	@media screen and (min-width: var.$laptop-view) {
-		margin-right: 45px;
-		margin-left: 45px;
+	@media screen and (min-width: var.$pc-view) {
+		margin-right: 65px;
+		margin-left: 65px;
 	}
 }
 
@@ -82,6 +82,6 @@
 
 // Layout margin auto fixed width
 %lm-auto-fixed-width {
-	width: 560px;
+	max-width: 560px;
 	@extend %lm-auto;
 }
