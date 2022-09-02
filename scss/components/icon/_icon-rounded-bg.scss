@@ -26,9 +26,9 @@ $icon-img-width: 33px;
 }
 
 .ir-bg-img {
-	@include mx.svg-fixed-size ($icon-color: false,
-		$icon-width: $icon-img-width,
-		$icon-height: $icon-img-width,
+	@include mx.svg-fixed-size ($color: false,
+		$width: $icon-img-width,
+		$height: $icon-img-width,
 		$stroke: var.$bc-secondary,
 		$fill: false)
 }

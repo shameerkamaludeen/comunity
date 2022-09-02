@@ -18,7 +18,7 @@
 @use 'vendors/slick-theme.scss';
 
 // 5. Layout
-@use 'layout/grid';
+@use 'layout/layout-base';
 @use 'layout/header';
 @use 'layout/navigation';
 @use 'layout/main';
@@ -29,6 +29,7 @@
 
 // 7. Page-specific styles
 @use 'pages/home';
+@use 'pages/about';
 
 // 8. Themes
 @use 'themes/default';

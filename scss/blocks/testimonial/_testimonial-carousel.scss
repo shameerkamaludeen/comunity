@@ -3,7 +3,7 @@
 
 @use '../../abstracts/variables' as var;
 @use '../../base/sitewide';
-@use '../../layout/grid';
+@use '../../layout/layout-base';
 @use '../../components/card/card-center-profile';
 
 .testimonial-carousel {
@@ -29,8 +29,6 @@
 	@extend %ffp-cp-xl-font;
 	@extend %base-500;
 }
-
-.tc-split-heading {}
 
 .tc-sh-first-txt {
 	@extend %ffp-cp-xl-font;
@@ -59,5 +57,3 @@
 .tc-carousel {
 	margin-top: 30px;
 }
-
-.tc-carousel-item {}

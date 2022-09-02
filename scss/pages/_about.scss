@@ -1,0 +1,36 @@
+/* || Page - about
+   ========================================================================== */
+
+@use '../components/breadcrumbs/breadcrumbs-center';
+@use '../blocks/company/company-tab-contents';
+@use '../blocks/lead/lead-background';
+@use '../blocks/services/services-carousel';
+@use '../blocks/brand/brands-img-list';
+@use '../blocks/team/team-desc-gallery';
+@use '../blocks/testimonial/testimonial-carousel';
+@use '../blocks/contact/contact-map-form';
+@use '../components/scroll-to-top/scroll-to-top-btn';
+
+.ctc-about {
+	padding-top: 0;
+}
+
+.ctc-about .ctc-desc-column,
+.ctc-about .ctc-split-heading {
+	margin-top: -0;
+}
+
+.ctc-about .ctc-img {
+	position: initial;
+	left: initial;
+}
+
+.ctc-about-last-sec {
+	.ctc-desc-column {
+		.ctc-para {
+			&:first-of-type {
+				font-style: italic;
+			}
+		}
+	}
+}

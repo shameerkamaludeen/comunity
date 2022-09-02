@@ -22,9 +22,9 @@
 	position: relative;
 	bottom: -2px;
 	margin-right: 7px;
-	@include mx.svg-fixed-size ($icon-color: false,
-		$icon-width: 14px,
-		$icon-height: 14px,
+	@include mx.svg-fixed-size ($color: false,
+		$width: 14px,
+		$height: 14px,
 		$stroke: false,
 		$fill: var.$bc-secondary)
 }

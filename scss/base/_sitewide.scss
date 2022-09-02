@@ -68,6 +68,12 @@
 	flex-flow: row wrap;
 }
 
+%flex-row-wrap-h-center {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+}
+
 // || Inline-flex
 
 // Flexible(inline) vertical and horizontal centered
@@ -229,7 +235,7 @@
 	object-position: right bottom;
 }
 
-// || Link
+// || Links
 
 %link-wrapper-basic {
 	text-decoration: none;
@@ -241,5 +247,87 @@
 	&:hover,
 	&:active {
 		color: transparent;
+	}
+}
+
+%site-link-bc-secondary {
+	transition: color 0.3s ease;
+	cursor: pointer;
+
+	&:link {
+		color: var.$bc-secondary;
+	}
+
+	&:visited {
+		color: color.adjust(var.$bc-secondary, $lightness: 15%);
+	}
+
+	&:focus,
+	&:hover {
+		color: var.$c-primary;
+	}
+
+	&:active {
+		color: color.adjust(var.$c-primary, $lightness: 15%);
+	}
+}
+
+%site-link-c-secondary {
+	transition: color 0.3s ease;
+	cursor: pointer;
+
+	&:link {
+		color: var.$c-secondary;
+	}
+
+	&:visited {
+		color: color.adjust(var.$c-secondary, $lightness: 10%);
+	}
+
+	&:focus,
+	&:hover {
+		color: var.$bc-secondary;
+	}
+
+	&:active {
+		color: color.adjust(var.$bc-secondary, $lightness: 20%);
+	}
+}
+
+// || Animation
+
+@keyframes slide-in-right {
+	from {
+		opacity: 0;
+		transform: translate(100%);
+	}
+
+	to {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+@keyframes slide-in-left {
+	from {
+		opacity: 0;
+		transform: translate(-100%);
+	}
+
+	to {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+@keyframes slide-in-bottom {
+	from {
+		opacity: 0;
+		transform: translate(0, 100%);
+	}
+
+	to {
+		opacity: 1;
+		transform: none;
 	}
 }

@@ -7,7 +7,7 @@
 
 @use '../../abstracts/variables' as var;
 @use '../../base/typography';
-@use '../../layout/grid';
+@use '../../layout/layout-base';
 @use '../../components/button/btn-capsule-hover-wipe';
 
 
@@ -22,16 +22,6 @@
 		align-items: center;
 	}
 }
-
-.hero-id-lm-fixed {
-	@extend %lm-fixed;
-}
-
-.hero-id-lm-fixed-l-tv {
-	@extend %lm-fixed-left-tv;
-}
-
-.hero-id-column {}
 
 .hero-id-desc-column {
 	margin-bottom: 27px;
@@ -50,9 +40,7 @@
 	}
 }
 
-.hero-id-img-column {
-	overflow: hidden;
-}
+.hero-id-img-column {}
 
 .hero-id-heading {
 	margin: 0;
@@ -111,9 +99,6 @@
 
 .hero-id-img {
 	width: 100%;
-	// for animation
-	position: relative;
-	left: 100%;
 
 	@media screen and (min-width: var.$tablet-view) {
 		height: 100%;
@@ -126,7 +111,21 @@
 	}
 }
 
+// Utilities
+// -----------------
+
+.hero-id-lm-fixed {
+	@extend %lm-fixed;
+}
+
+.hero-id-lm-fixed-l-tv {
+	@extend %lm-fixed-left-tv;
+}
+
+.hero-id-lp-r-tv {
+	@extend %lp-right-tv;
+}
+
 .hero-id-img-animate {
-	left: 0;
-	transition: left 1s ease;
+	animation: slide-in-right 1.25s;
 }

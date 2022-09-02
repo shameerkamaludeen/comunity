@@ -7,8 +7,10 @@
 
 @use '../../abstracts/variables' as var;
 @use '../../base/typography';
-@use '../../layout/grid';
+@use '../../base/sitewide';
+@use '../../layout/layout-base';
 @use '../../components/button/btn-no-bg-border';
+@use '../../components/button/btn-capsule-hover-wipe';
 
 .company-tab-contents {
 	padding-top: 60px;
@@ -24,16 +26,6 @@
 	}
 }
 
-.ctc-lm-fixed {
-	@extend %lm-fixed;
-}
-
-.ctc-lm-fixed-r-tv {
-	@extend %lm-fixed-right-tv;
-}
-
-.ctc-column {}
-
 .ctc-desc-column {
 	margin-top: 33px;
 
@@ -47,20 +39,34 @@
 }
 
 .ctc-img-column {
-	overflow: hidden;
-
 	@media screen and (min-width: var.$tablet-view) {
 		// for left side image smooth
 		position: relative;
 	}
 }
 
-/* normal heading */
 .ctc-heading {
 	text-align: center;
 	@extend %ffp-cp-xl-font;
 	@extend %base-500;
 }
+
+.ctc-para {
+	@extend %ffp-cs-s-font;
+	@extend %normal-400;
+}
+
+.ctc-img {
+	width: 100%;
+
+	@media screen and (min-width: var.$tablet-view) {
+		height: 100%;
+		object-fit: cover;
+		object-position: left bottom;
+	}
+}
+
+// Utilities
 
 /* split heading */
 .ctc-split-heading {
@@ -87,27 +93,23 @@
 	}
 }
 
-.ctc-tabs-component-wr {}
-
-.ctc-para {
-	@extend %ffp-cs-s-font;
-	@extend %normal-300;
+.ctc-lm-fixed {
+	@extend %lm-fixed;
 }
 
-.ctc-img {
-	width: 100%;
-	// for transition
-	position: relative;
-	right: 100%;
+.ctc-lm-fixed-r-tv {
+	@extend %lm-fixed-right-tv;
+}
 
-	@media screen and (min-width: var.$tablet-view) {
-		height: 100%;
-		object-fit: cover;
-		object-position: left bottom;
-	}
+.ctc-lp-l-tv {
+	@extend %lp-left-tv;
+}
+
+.ctc-site-link-bcs {
+	@extend %site-link-bc-secondary;
+	text-decoration: none;
 }
 
 .ctc-img-animate {
-	right: 0;
-	transition: right 1s ease;
+	animation: slide-in-left 1.25s;
 }

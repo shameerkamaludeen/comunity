@@ -68,3 +68,12 @@ $tab-active-color: var.$c-primary;
 		top: 0;
 	}
 }
+
+.row-fwt-para {
+	@extend %ffp-cs-s-font;
+	@extend %normal-300;
+
+	&:last-of-type {
+		margin-bottom: 0;
+	}
+}

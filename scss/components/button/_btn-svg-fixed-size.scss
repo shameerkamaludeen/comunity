@@ -23,9 +23,9 @@ $background-color: var.$bc-secondary;
 }
 
 .btn-svg-fs-svg {
-	@include mx.svg-fixed-size($icon-color: false,
-		$icon-width: 10px,
-		$icon-height: 10px,
+	@include mx.svg-fixed-size($color: false,
+		$width: 10px,
+		$height: 10px,
 		$stroke: false,
 		$fill: var.$bc-primary);
 }
