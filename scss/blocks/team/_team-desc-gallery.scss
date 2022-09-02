@@ -7,7 +7,7 @@
 
 @use '../../abstracts/variables' as var;
 @use '../../base/typography';
-@use '../../layout/grid';
+@use '../../layout/layout-base';
 @use '../../components/gallery/gallery-queue';
 @use 'sass:color';
 
@@ -22,10 +22,6 @@
 	}
 }
 
-.team-dg-lm-fixed {
-	@extend %lm-fixed;
-}
-
 .team-dg-wr {
 	@media screen and (min-width: var.$laptop-view) {
 		display: flex;
@@ -33,8 +29,6 @@
 		column-gap: 60px;
 	}
 }
-
-.team-dg-column {}
 
 .team-dg-desc-column {
 
@@ -58,11 +52,27 @@
 	@extend %base-500;
 }
 
+.team-dg-para {
+	@extend %ffp-cs-s-font;
+	@extend %normal-300;
+}
+
+.team-dg-read-more {
+	margin-top: 13px;
+	@extend %ffp-bcp-s-font;
+	height: 44px;
+}
+
+// Utilties
+// -------------
+
+.team-dg-lm-fixed {
+	@extend %lm-fixed;
+}
+
 .team-dg-split-heading {
 	margin: 0;
 }
-
-.team-dg-sh-content {}
 
 .team-dg-sh-first-text {
 	@extend %ffp-cp-xl-font;
@@ -82,13 +92,6 @@
 	}
 }
 
-.team-dg-para {
-	@extend %ffp-cs-s-font;
-	@extend %normal-300;
-}
-
-.team-dg-read-more {
-	margin-top: 13px;
-	@extend %ffp-bcp-s-font;
-	height: 44px;
+.team-dg-gallery-animate {
+	animation: slide-in-right 1.25s;
 }

@@ -7,7 +7,7 @@
 
 @use '../../abstracts/variables' as var;
 @use '../../base/sitewide';
-@use '../../layout/grid';
+@use '../../layout/layout-base';
 @use '../../components/card/card-center-round-icon';
 @use 'sass:color';
 
@@ -68,9 +68,6 @@
 	@extend %ffp-cs-s-font;
 	margin-bottom: 75px;
 }
-
-// carousel element
-.sc-carousel {}
 
 // carousel item
 .sc-carousel-item {

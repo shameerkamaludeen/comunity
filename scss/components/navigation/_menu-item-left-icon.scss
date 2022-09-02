@@ -26,9 +26,9 @@
 .mi-li-icon {
 	display: inline-block;
 	margin-right: 10px;
-	@include mx.svg-fixed-size ($icon-color: false,
-		$icon-width: 7px,
-		$icon-height: 14px,
+	@include mx.svg-fixed-size ($color: false,
+		$width: 7px,
+		$height: 14px,
 		$stroke: false,
 		$fill: var.$bc-secondary);
 }

@@ -29,9 +29,15 @@ $tablet-view: 48em; // 768px standard
 $laptop-view: 64em; // 1024px standard
 $pc-view: 75em; // 1200px standard
 
-// Typography
-$word-spacing: 0.8px;
-$lettter-spacing: 0.4px;
+// Word spacing
+$base-ws: 0.8px;
+$normal-ws: 2px;
+$wide-ws: 3px;
+
+// Letter spacing
+$base-ls: 0.4px;
+$normal-ls: 1px;
+$wide-ls: 2px;
 
 $fs-xxxl: 2.75rem; // 44px
 $fs-xxl: 2.25rem; // 36px
@@ -42,6 +48,23 @@ $fs-s: 1rem; // 16px
 $fs-xs: 0.875rem; // 14px
 $fs-xxs: 0.75rem; // 12px
 
+// Line height
 $lh-base: 1.2;
 $lh-normal: 1.65;
 $lh-wide: 2;
+
+// layout margin fixed
+$lm-fixed-msv: 15px; // mobile small view
+$lm-fixed-mpv: 25px; // mobile portrait view
+$lm-fixed-mlv: 25px; // mobile landscape view
+$lm-fixed-tv: 45px; // tablet view
+$lm-fixed-lv: 45px; // laptop view
+$lm-fixed-pcv: 65px; // pc view
+
+// Layout margin fixed width 
+$lm-auto-fixed-width: 560px;
+
+// Layout padding
+$lp-base: 40px;
+$lp-normal: 60px;
+$lp-wide: 90px;

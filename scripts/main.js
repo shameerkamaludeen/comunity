@@ -1,18 +1,21 @@
 // Variables
 const windowInnerHeight = window.innerHeight;
+let clientWidth = document.documentElement.clientWidth;
 
 // counter
-let countersAnimationCase = true;
-let countersAnimationConsultant = true;
-let countersAnimationAward = true;
+let isCountersCaseAnimated = false;
+let isCountersConsultantAnimated = false;
+let isCountersCustomerAnimated = false;
+let isCountersAwardAnimated = false;
 
 // Viewports
-const mobileViewSmall = 20; // 320px standard
-const mobileViewPortrait = 30; // 480px standard
-const mobileViewLandscape = 40; // 640px standard
-const tabletView = 48; // 768px standard
-const laptopView = 64; // 1024px standard
-const desktopView = 75; // 1200px standard
+const mobileSmallView = 320; // 320px standard
+const mobilePortraitView = 480; // 480px standard
+const mobileLandscapeView = 640; // 640px standard
+const tabletView = 768; // 768px standard
+const laptopView = 1024; // 1024px standard
+const desktopView = 1200; // 1200px standard
+
 
 // run functions on document is ready(loaded)
 $(function () {
@@ -63,7 +66,7 @@ function initCarouselElements() {
 		autoplaySpeed: 5000,
 		responsive: [
 			{
-				breakpoint: (laptopView * 16),
+				breakpoint: laptopView,
 				settings: {
 					slidesToShow: 2,
 					slidesToScroll: 2,
@@ -71,7 +74,7 @@ function initCarouselElements() {
 				}
 			},
 			{
-				breakpoint: (mobileViewLandscape * 16),
+				breakpoint: mobileLandscapeView,
 				settings: {
 					slidesToShow: 1,
 					slidesToScroll: 1,
@@ -89,7 +92,7 @@ function initCarouselElements() {
 		slidesToScroll: 2,
 		responsive: [
 			{
-				breakpoint: (laptopView * 16),
+				breakpoint: laptopView,
 				settings: {
 					slidesToShow: 2,
 					slidesToScroll: 2,
@@ -97,7 +100,7 @@ function initCarouselElements() {
 				}
 			},
 			{
-				breakpoint: (mobileViewLandscape * 16),
+				breakpoint: mobileLandscapeView,
 				settings: {
 					slidesToShow: 1,
 					slidesToScroll: 1,
@@ -111,25 +114,27 @@ function initCarouselElements() {
 function addFullWidthTabsEvents() {
 	// selecting the block itself
 	const rowFullWidthTabsElem = $('#companyRowFullWidthTabs');
-	// finding all tab elements
-	const tabElems = rowFullWidthTabsElem.find('.btn-no-bg-border');
-	tabElems.each(function () {
-		const btnElem = $(this);
-		btnElem.on('click', function () {
+	if (rowFullWidthTabsElem.length) {
+		// finding all tab elements
+		const tabElems = rowFullWidthTabsElem.find('.btn-no-bg-border');
+		tabElems.each(function () {
+			const btnElem = $(this);
+			btnElem.on('click', function () {
 
-			// removing all active class on tab and adding on the current active tab
-			tabElems.removeClass('row-fwt-tab-active');
-			btnElem.addClass('row-fwt-tab-active');
+				// removing all active class on tab and adding on the current active tab
+				tabElems.removeClass('row-fwt-tab-active');
+				btnElem.addClass('row-fwt-tab-active');
 
-			const fwtTabSelector = `.row-fwt-content[data-fwt-content='${btnElem.attr('data-fwt-tab')}']`;
+				const fwtTabSelector = `.row-fwt-content[data-fwt-content='${btnElem.attr('data-fwt-tab')}']`;
 
-			// removing all active class and adding active class on content based on 
-			// the active tab
-			rowFullWidthTabsElem.find('.row-fwt-content').removeClass('row-fwt-content-active');
+				// removing all active class and adding active class on content based on 
+				// the active tab
+				rowFullWidthTabsElem.find('.row-fwt-content').removeClass('row-fwt-content-active');
 
-			rowFullWidthTabsElem.find(fwtTabSelector).addClass('row-fwt-content-active');
+				rowFullWidthTabsElem.find(fwtTabSelector).addClass('row-fwt-content-active');
+			});
 		});
-	});
+	}
 }
 
 function animateValue(obj, start, end, duration) {
@@ -146,58 +151,88 @@ function animateValue(obj, start, end, duration) {
 }
 
 function animateOnScroll(elem, callbackFunction) {
-	const elemWindowTopGap = elem.getBoundingClientRect().top;
-	if (elemWindowTopGap < windowInnerHeight) {
-		callbackFunction();
+	if (elem.length) {
+		const elemWindowTopGap = elem[0].getBoundingClientRect().top;
+		if (elemWindowTopGap < windowInnerHeight) {
+			callbackFunction();
+		}
 	}
 }
 
 $(window).on('scroll', function () {
 	animationOnScrollLoad();
+	activateScrollToTop();
 });
 
 function animationOnScrollLoad() {
 	// animate couters
 	const counterComponentElem = $('#countersSplitterTag');
-	animateOnScroll(counterComponentElem.find('.cst-counter-cases')[0], () => {
-		if (countersAnimationCase) {
-			animateValue(counterComponentElem.find('.cst-counter-cases')[0], 0, 267, 1500);
-			countersAnimationCase = false;
+	if (counterComponentElem.length) {
+		if (!isCountersCaseAnimated) {
+			animateOnScroll(counterComponentElem.find('.cst-counter-cases'), () => {
+				animateValue(counterComponentElem.find('.cst-counter-cases')[0], 0, 267, 1500);
+				isCountersCaseAnimated = true;
+			});
 		}
-	});
 
-	animateOnScroll(counterComponentElem.find('.cst-counter-consultant')[0], () => {
-		if (countersAnimationConsultant) {
-			animateValue(counterComponentElem.find('.cst-counter-consultant')[0], 0, 173, 1500);
-			countersAnimationConsultant = false;
+		if (!isCountersConsultantAnimated) {
+			animateOnScroll(counterComponentElem.find('.cst-counter-consultant'), () => {
+				animateValue(counterComponentElem.find('.cst-counter-consultant')[0], 0, 173, 1500);
+				isCountersConsultantAnimated = true;
+			});
 		}
-	});
 
-	animateOnScroll(counterComponentElem.find('.cst-counter-awards')[0], () => {
-		if (countersAnimationAward) {
-			animateValue(counterComponentElem.find('.cst-counter-awards')[0], 0, 478, 1500);
-			countersAnimationAward = false;
+		if (!isCountersAwardAnimated) {
+			animateOnScroll(counterComponentElem.find('.cst-counter-customers'), () => {
+				animateValue(counterComponentElem.find('.cst-counter-customers')[0], 0, 875, 1500);
+				isCountersAwardAnimated = true;
+			});
 		}
-	});
 
-	// animate images
+		if (!isCountersCustomerAnimated) {
+			animateOnScroll(counterComponentElem.find('.cst-counter-awards'), () => {
+				animateValue(counterComponentElem.find('.cst-counter-awards')[0], 0, 478, 1500);
+				isCountersCustomerAnimated = true;
+			});
+		}
+	}
+
+	// animate hero image
 	const heroIDImg = $('#heroIDImg');
-	animateOnScroll(heroIDImg[0], (elem = heroIDImg) => {
-		elem.addClass('hero-id-img-animate');
-	});
+	if (heroIDImg.length && !heroIDImg.hasClass('hero-id-img-animate')) {
+		animateOnScroll(heroIDImg, (elem = heroIDImg) => {
+			elem.addClass('hero-id-img-animate');
+		});
+	}
 
-	const companyImg = $('#ctcImg');
-	animateOnScroll(companyImg[0], (elem = companyImg) => {
-		$('#ctcImg').addClass('ctc-img-animate');
-	});
+	// animate company image
+	const companyImg = $('#companyTCImg');
+	if (companyImg.length && !companyImg.hasClass('ctc-img-animate')) {
+		animateOnScroll(companyImg, (elem = companyImg) => {
+			elem.addClass('ctc-img-animate');
+		});
+	}
 
 	// animate team gallery
-	$('#galleryQueue').find('.gq-img-wr-animation').each(function () {
-		const currentElem = $(this);
-		animateOnScroll(currentElem[0], (elem = currentElem) => {
-			elem.addClass('gq-img-wr-animate');
+	const teamDGGalleryElem = $('#teamDGGallery');
+	if (teamDGGalleryElem.length && !teamDGGalleryElem.hasClass('team-dg-gallery-animate')) {
+		animateOnScroll(teamDGGalleryElem, (elem = teamDGGalleryElem) => {
+			elem.addClass('team-dg-gallery-animate');
 		});
-	});
+	}
+
+	// animate prices
+	const priceOCCPriceWrElem = $('#priceOCCPriceWr');
+	if (priceOCCPriceWrElem.length) {
+		priceOCCPriceWrElem.find('.price-occ-price').each(function () {
+			const priceElem = $(this);
+			if (!priceElem.hasClass('price-occ-price-animate')) {
+				animateOnScroll(priceElem, (elem = priceElem) => {
+					elem.addClass('price-occ-price-animate');
+				});
+			}
+		});
+	}
 }
 
 $('#contactUsForm').on('submit', function (event) {
@@ -242,4 +277,26 @@ function contactUsFormValidation(contactUsFormElem) {
 	}
 
 	return isContactUsFormValid;
+}
+
+function activateScrollToTop() {
+	const scrollToTopElem = $('#scrollToTop');
+	if (clientWidth > mobileLandscapeView && scrollToTopElem.length) {
+		if (document.body.scrollTop > 700 || document.documentElement.scrollTop > 700) {
+			scrollToTopElem.addClass('scroll-tt-btn-active');
+		} else {
+			scrollToTopElem.removeClass('scroll-tt-btn-active');
+		}
+	}
+}
+
+$(window).on('resize', function () {
+	clientWidth = document.documentElement.clientWidth;
+});
+
+const scrollToTopElem = $('#scrollToTop');
+if (scrollToTopElem.length) {
+	scrollToTopElem.on('click', () => {
+		window.scrollTo({ top: 0, behavior: 'smooth' });
+	});
 }

@@ -7,7 +7,7 @@
 
 @use '../../abstracts/variables' as var;
 @use '../../base/typography';
-@use '../../layout/grid';
+@use '../../layout/layout-base';
 @use '../../components/card/card-center-shadow';
 
 .price-overlap-card-center {
@@ -25,43 +25,10 @@
 	}
 }
 
-.price-occ-lm-fixed {
-	@extend %lm-fixed;
-}
-
-.price-occ-lm-auto-fw {
-	@extend %lm-auto-fixed-width;
-}
-
 .price-occ-heading {
 	margin: 0;
 	@extend %ffp-cp-xl-font;
 	@extend %base-500;
-}
-
-.price-occ-split-heading {
-	margin: 0;
-	text-align: center;
-}
-
-.price-occ-sh-content {}
-
-.price-occ-sh-first-text {
-	@extend %ffp-cp-xl-font;
-	@extend %base-500;
-
-	@media screen and (min-width: var.$pc-view) {
-		font-size: var.$fs-xl + 0.3rem;
-	}
-}
-
-.price-occ-sh-second-text {
-	@extend %ffp-bcs-xl-font;
-	@extend %base-700;
-
-	@media screen and (min-width: var.$pc-view) {
-		font-size: var.$fs-xl + 0.3rem;
-	}
 }
 
 .price-occ-para {
@@ -84,31 +51,6 @@
 		flex-wrap: nowrap;
 		gap: initial;
 	}
-
-	// overlap
-	.price-occ-price:nth-child(1) {
-		@media screen and (min-width: var.$laptop-view) {
-			margin-right: -8px;
-		}
-	}
-
-	.price-occ-price:nth-child(2) {
-		@media screen and (min-width: var.$laptop-view) {
-			position: relative;
-			z-index: 2;
-			margin-left: -4px;
-			margin-right: -4px;
-			top: 17px;
-		}
-	}
-
-	.price-occ-price:nth-child(3) {
-		@media screen and (min-width: var.$laptop-view) {
-			position: relative;
-			z-index: 1;
-			margin-left: -8px;
-		}
-	}
 }
 
 .price-occ-price {
@@ -122,6 +64,8 @@
 	}
 
 	@media screen and (min-width: var.$tablet-view) {
+		min-width: 300px;
+
 		&:not(:first-child) {
 			margin-top: 0;
 		}
@@ -131,4 +75,74 @@
 		flex: 1;
 	}
 
+	&:nth-of-type() {
+		@media screen and (min-width: var.$laptop-view) {
+			margin-right: -8px;
+		}
+	}
+
+	&:nth-of-type(2) {
+		@media screen and (min-width: var.$laptop-view) {
+			position: relative;
+			z-index: 2;
+			margin-left: -4px;
+			margin-right: -4px;
+			top: 17px;
+		}
+	}
+
+	&:nth-of-type(3) {
+		@media screen and (min-width: var.$laptop-view) {
+			position: relative;
+			z-index: 1;
+			margin-left: -8px;
+		}
+	}
+}
+
+// Utilities
+// ---------------
+
+.price-occ-lm-fixed {
+	@extend %lm-fixed;
+}
+
+.price-occ-lm-auto-fw {
+	@extend %lm-auto-fixed-width;
+}
+
+
+.price-occ-split-heading {
+	margin: 0;
+	text-align: center;
+}
+
+.price-occ-sh-first-text {
+	@extend %ffp-cp-xl-font;
+	@extend %base-500;
+
+	@media screen and (min-width: var.$pc-view) {
+		font-size: var.$fs-xl + 0.3rem;
+	}
+}
+
+.price-occ-sh-second-text {
+	@extend %ffp-bcs-xl-font;
+	@extend %base-700;
+
+	@media screen and (min-width: var.$pc-view) {
+		font-size: var.$fs-xl + 0.3rem;
+	}
+}
+
+.price-occ-price:nth-of-type(1).price-occ-price-animate {
+	animation: slide-in-left 1.25s;
+}
+
+.price-occ-price:nth-of-type(2).price-occ-price-animate {
+	animation: slide-in-bottom 1.25s;
+}
+
+.price-occ-price:nth-of-type(3).price-occ-price-animate {
+	animation: slide-in-right 1.25s;
 }

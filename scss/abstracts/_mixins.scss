@@ -3,7 +3,7 @@
 
 @use '../abstracts/variables' as var;
 @use '../base/sitewide';
-@use '../layout/grid';
+@use '../layout/layout-base';
 @use 'sass:color';
 
 // || Utilities
@@ -194,7 +194,7 @@
 
 	&:hover &-txt::after,
 	&:focus &-txt::after,
-	&.active &-txt::after {
+	&-active &-txt::after {
 		@if $underline-opacity-effect {
 			opacity: 1;
 		}
@@ -319,17 +319,17 @@
 
 // || SVG's
 
-@mixin svg-fixed-size ($icon-color: var.$bc-primary,
-	$icon-width: 10px,
-	$icon-height: 10px,
+@mixin svg-fixed-size ($color: var.$bc-primary,
+	$width: 10px,
+	$height: 10px,
 	$stroke: var.$bc-primary,
 	$fill: var.$bc-primary) {
 
-	width: $icon-width;
-	height: $icon-height;
+	width: $width;
+	height: $height;
 
-	@if $icon-color {
-		color: $icon-color;
+	@if $color {
+		color: $color;
 	}
 
 	@if $stroke {
@@ -344,13 +344,15 @@
 // || Buttons
 
 @mixin btn-icon-compatible($bg-color: var.$bc-secondary,
-	$bg-active-color: color.adjust(var.$bc-secondary, $whiteness: 20%),
+	$bg-active-color: false,
+	$bg-hover-color: false,
 	$border: none,
 	$width: 35px,
 	$height: 35px,
 	$border-radius: 4px,
 	$outline: 2px solid var.$c-primary,
-	$outline-offset: -2px,
+	$outline-offset: false,
+	$cursor: pointer,
 	$transition: (background-color 0.2s ease, outline 0.2s ease)) {
 
 	@if $border {
@@ -377,21 +379,32 @@
 		transition: $transition;
 	}
 
-	@extend %inline-flex-vh-center;
-
 	@if $bg-color {
 		background-color: $bg-color;
+	}
 
-		&:active {
-			background-color: $bg-active-color
+	@if $cursor {
+		cursor: pointer;
+	}
+
+	@extend %inline-flex-vh-center;
+
+	&:focus,
+	&:hover {
+		@if $outline {
+			outline: $outline;
 		}
 	}
 
-	@if $outline {
+	&:hover {
+		@if $bg-hover-color {
+			background-color: $bg-hover-color;
+		}
+	}
 
-		&:hover,
-		&:focus {
-			outline: $outline;
+	&:active {
+		@if $bg-active-color {
+			background-color: $bg-active-color
 		}
 	}
 }
@@ -457,6 +470,7 @@
 }
 
 // || Animation
+// refer https://sass-lang.com/documentation/interpolation#in-sassscript
 
 @mixin animation-keyframes($animation-name: animation-#{unique-id()},
 	$animation-duration: .5s,

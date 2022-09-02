@@ -4,7 +4,7 @@
 @use '../../abstracts/variables' as var;
 @use '../../abstracts/mixins' as mx;
 @use '../../base/typography';
-@use '../../layout/grid';
+@use '../../layout/layout-base';
 
 .attr-sl-underline {
 	padding: 13px 0;

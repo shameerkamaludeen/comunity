@@ -10,6 +10,7 @@
 /* || General styles */
 
 body {
+	overflow-x: hidden;
 	background: url(../images/home-bg.webp) 50% top / cover no-repeat;
 
 	@media screen and (min-width: var.$mobile-portrait-view) {

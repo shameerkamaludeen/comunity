@@ -381,7 +381,7 @@ img {
   font-family: "Poppins", sans-serif;
 }
 
-.card-cp-tag, .ul-ci-icon-content, .cst-tag, .form-rd-input-email,
+.card-cp-tag, .ul-ci-icon-content, .cst-tag, .form-rd-label, .form-rd-label-required, .form-rd-input-email,
 .form-rd-input-text, .form-rd-textarea {
   font-size: 0.875rem;
   color: hsl(226deg, 13%, 19%);
@@ -394,7 +394,7 @@ h3 {
   font-family: "Poppins", sans-serif;
 }
 
-.contact-mf-para, .card-cp-para, .tc-para, .price-occ-para, .team-dg-para, .ctc-para, .btn-no-bgb-content, .card-cri-para, .sc-para, .hero-id-para, button, label, p, h4 {
+.contact-mf-para, .card-cp-para, .tc-para, .price-occ-para, .team-dg-para, .row-fwt-para, .ctc-para, .btn-no-bgb-content, .card-cri-para, .sc-para, .hero-id-para, button, label, p, h4 {
   font-size: 1rem;
   color: hsl(0deg, 0%, 47%);
   font-family: "Poppins", sans-serif;
@@ -467,7 +467,7 @@ h3 {
   font-family: "Montserrat", sans-serif;
 }
 
-.contact-mf-dc-desc {
+.bc-center-content, .contact-mf-dc-desc {
   font-size: 1rem;
   color: hsl(0deg, 0%, 47%);
   font-family: "Montserrat", sans-serif;
@@ -490,13 +490,13 @@ h3 {
   font-weight: 300;
 }
 
-.contact-mf-dc-heading, .card-cs-lead, .btn-capsule-hover-wipe, .form-rd-input-email,
+.contact-mf-dc-heading, .card-cs-lead, .btn-capsule-hover-wipe, .form-rd-label, .form-rd-label-required, .form-rd-input-email,
 .form-rd-input-text, .form-rd-submit-btn, .mi-hu-link {
   line-height: 1.2;
   font-weight: 400;
 }
 
-.contact-mf-heading, .contact-mf-sh-first-text, .contact-mf-dc-desc, .card-cp-heading, .tc-heading-normal, .tc-sh-first-txt, .lead-bgh-first-text, .price-occ-heading, .price-occ-sh-first-text, .card-cs-heading, .card-cs-tag-light, .team-dg-heading, .team-dg-sh-first-text, .ctc-heading, .ctc-sh-first-text, .card-cri-heading, .sc-heading, .sc-sh-first-txt, .hero-id-heading, .hero-id-sh-first-text {
+.bc-center-content, .contact-mf-heading, .contact-mf-sh-first-text, .contact-mf-dc-desc, .card-cp-heading, .tc-heading-normal, .tc-sh-first-txt, .lead-bgh-first-text, .price-occ-heading, .price-occ-sh-first-text, .card-cs-heading, .card-cs-tag-light, .team-dg-heading, .team-dg-sh-first-text, .ctc-heading, .ctc-sh-first-text, .card-cri-heading, .sc-heading, .sc-sh-first-txt, .hero-id-heading, .hero-id-sh-first-text {
   line-height: 1.2;
   font-weight: 500;
 }
@@ -511,12 +511,12 @@ h3 {
   font-weight: 700;
 }
 
-.contact-mf-para, .card-cp-para, .tc-para, .lead-bg-tag, .price-occ-para, .team-dg-para, .ctc-para, .card-cri-para, .sc-para {
+.contact-mf-para, .card-cp-para, .tc-para, .lead-bg-tag, .price-occ-para, .team-dg-para, .row-fwt-para, .card-cri-para, .sc-para {
   line-height: 1.65;
   font-weight: 300;
 }
 
-.hero-id-para, .form-rd-errormsg,
+.ctc-para, .hero-id-para, .form-rd-errormsg,
 .form-rd-global-errormsg, .form-rd-textarea, p {
   line-height: 1.65;
   font-weight: 400;
@@ -615,13 +615,19 @@ button {
   flex-flow: row wrap;
 }
 
-.hamburger-close-btn {
+.brands-img-list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.scroll-tt-btn-button, .hamburger-close-btn {
   display: inline-flex;
   justify-content: center;
   align-items: center;
 }
 
-.card-cri-icon-raster {
+.brands-il-img, .card-cri-icon-raster {
   width: 100%;
   height: 100%;
   object-fit: contain;
@@ -642,14 +648,78 @@ button {
   object-position: top;
 }
 
-.gq-image-wr-link, .sc-link-wrapper, .logo-il-link-wr {
+.brands-il-link-wr, .gq-image-wr-link, .sc-link-wrapper, .logo-il-link-wr {
   text-decoration: none;
   cursor: pointer;
 }
-.gq-image-wr-link:link, .sc-link-wrapper:link, .logo-il-link-wr:link, .gq-image-wr-link:visited, .sc-link-wrapper:visited, .logo-il-link-wr:visited, .gq-image-wr-link:focus, .sc-link-wrapper:focus, .logo-il-link-wr:focus, .gq-image-wr-link:hover, .sc-link-wrapper:hover, .logo-il-link-wr:hover, .gq-image-wr-link:active, .sc-link-wrapper:active, .logo-il-link-wr:active {
+.brands-il-link-wr:link, .gq-image-wr-link:link, .sc-link-wrapper:link, .logo-il-link-wr:link, .brands-il-link-wr:visited, .gq-image-wr-link:visited, .sc-link-wrapper:visited, .logo-il-link-wr:visited, .brands-il-link-wr:focus, .gq-image-wr-link:focus, .sc-link-wrapper:focus, .logo-il-link-wr:focus, .brands-il-link-wr:hover, .gq-image-wr-link:hover, .sc-link-wrapper:hover, .logo-il-link-wr:hover, .brands-il-link-wr:active, .gq-image-wr-link:active, .sc-link-wrapper:active, .logo-il-link-wr:active {
   color: transparent;
 }
 
+.ctc-site-link-bcs {
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+.ctc-site-link-bcs:link {
+  color: hsl(228deg, 61%, 53%);
+}
+.ctc-site-link-bcs:visited {
+  color: #7c90df;
+}
+.ctc-site-link-bcs:focus, .ctc-site-link-bcs:hover {
+  color: hsl(226deg, 13%, 19%);
+}
+.ctc-site-link-bcs:active {
+  color: #4b5162;
+}
+
+.bc-center-site-link {
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+.bc-center-site-link:link {
+  color: hsl(0deg, 0%, 47%);
+}
+.bc-center-site-link:visited {
+  color: #919191;
+}
+.bc-center-site-link:focus, .bc-center-site-link:hover {
+  color: hsl(228deg, 61%, 53%);
+}
+.bc-center-site-link:active {
+  color: #90a1e4;
+}
+
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translate(100%);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes slide-in-left {
+  from {
+    opacity: 0;
+    transform: translate(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes slide-in-bottom {
+  from {
+    opacity: 0;
+    transform: translate(0, 100%);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
 /* Slider */
 .slick-slider {
   position: relative;
@@ -895,26 +965,26 @@ button {
   opacity: 0.75;
 }
 
-/* || Layout - Grid
+/* || Layout - Layout base
    ========================================================================== */
-.contact-mf-lm-fixed, .tc-lm-fixed, .lead-bg-lm-fixed, .price-occ-lm-fixed, .team-dg-lm-fixed, .ctc-lm-fixed, .sc-lm-fixed, .hero-id-lm-fixed, .attr-slu-lm-fixed, .fng-lmc-lm-fixed, .navbar-rrm-lm-fixed {
+.brands-il-lm-fixed, .contact-mf-lm-fixed, .tc-lm-fixed, .lead-bg-lm-fixed, .price-occ-lm-fixed, .team-dg-lm-fixed, .ctc-lm-fixed, .sc-lm-fixed, .hero-id-lm-fixed, .attr-slu-lm-fixed, .fng-lmc-lm-fixed, .navbar-rrm-lm-fixed {
   margin-right: 15px;
   margin-left: 15px;
 }
 @media screen and (min-width: 30em) {
-  .contact-mf-lm-fixed, .tc-lm-fixed, .lead-bg-lm-fixed, .price-occ-lm-fixed, .team-dg-lm-fixed, .ctc-lm-fixed, .sc-lm-fixed, .hero-id-lm-fixed, .attr-slu-lm-fixed, .fng-lmc-lm-fixed, .navbar-rrm-lm-fixed {
+  .brands-il-lm-fixed, .contact-mf-lm-fixed, .tc-lm-fixed, .lead-bg-lm-fixed, .price-occ-lm-fixed, .team-dg-lm-fixed, .ctc-lm-fixed, .sc-lm-fixed, .hero-id-lm-fixed, .attr-slu-lm-fixed, .fng-lmc-lm-fixed, .navbar-rrm-lm-fixed {
     margin-right: 25px;
     margin-left: 25px;
   }
 }
 @media screen and (min-width: 48em) {
-  .contact-mf-lm-fixed, .tc-lm-fixed, .lead-bg-lm-fixed, .price-occ-lm-fixed, .team-dg-lm-fixed, .ctc-lm-fixed, .sc-lm-fixed, .hero-id-lm-fixed, .attr-slu-lm-fixed, .fng-lmc-lm-fixed, .navbar-rrm-lm-fixed {
+  .brands-il-lm-fixed, .contact-mf-lm-fixed, .tc-lm-fixed, .lead-bg-lm-fixed, .price-occ-lm-fixed, .team-dg-lm-fixed, .ctc-lm-fixed, .sc-lm-fixed, .hero-id-lm-fixed, .attr-slu-lm-fixed, .fng-lmc-lm-fixed, .navbar-rrm-lm-fixed {
     margin-right: 45px;
     margin-left: 45px;
   }
 }
 @media screen and (min-width: 75em) {
-  .contact-mf-lm-fixed, .tc-lm-fixed, .lead-bg-lm-fixed, .price-occ-lm-fixed, .team-dg-lm-fixed, .ctc-lm-fixed, .sc-lm-fixed, .hero-id-lm-fixed, .attr-slu-lm-fixed, .fng-lmc-lm-fixed, .navbar-rrm-lm-fixed {
+  .brands-il-lm-fixed, .contact-mf-lm-fixed, .tc-lm-fixed, .lead-bg-lm-fixed, .price-occ-lm-fixed, .team-dg-lm-fixed, .ctc-lm-fixed, .sc-lm-fixed, .hero-id-lm-fixed, .attr-slu-lm-fixed, .fng-lmc-lm-fixed, .navbar-rrm-lm-fixed {
     margin-right: 65px;
     margin-left: 65px;
   }
@@ -923,14 +993,12 @@ button {
 @media screen and (min-width: 48em) {
   .hero-id-lm-fixed-l-tv {
     margin-right: initial;
-    padding-right: 60px;
   }
 }
 
 @media screen and (min-width: 48em) {
   .ctc-lm-fixed-r-tv {
     margin-left: initial;
-    padding-left: 60px;
   }
 }
 
@@ -943,6 +1011,18 @@ button {
   max-width: 560px;
 }
 
+@media screen and (min-width: 48em) {
+  .hero-id-lp-r-tv {
+    padding-right: 60px;
+  }
+}
+
+@media screen and (min-width: 48em) {
+  .ctc-lp-l-tv {
+    padding-left: 60px;
+  }
+}
+
 /* || Abstracts - Header
    ========================================================================== */
 header {
@@ -952,7 +1032,7 @@ header {
 /* || Components - Hamberger close buttons
    -------------------------------------------------------------------------- */
 .hamburger-close-btn {
-  margin: 8px;
+  margin: 10px;
   border: none;
   width: 35px;
   height: 35px;
@@ -960,14 +1040,11 @@ header {
   outline-offset: -2px;
   transition: background-color 0.2s ease, outline 0.2s ease;
   background-color: hsl(228deg, 61%, 53%);
+  cursor: pointer;
 }
-.hamburger-close-btn:active {
-  background-color: #7184d0;
-}
-.hamburger-close-btn:hover, .hamburger-close-btn:focus {
+.hamburger-close-btn:focus, .hamburger-close-btn:hover {
   outline: 2px solid hsl(226deg, 13%, 19%);
 }
-
 .hc-btn-icon {
   width: 10px;
   height: 10px;
@@ -1023,34 +1100,34 @@ header {
   opacity: 0;
   transition: opacity 0.3s ease;
 }
-.mi-hu-link:hover .mi-hu-link-txt::after, .mi-hu-link:focus .mi-hu-link-txt::after, .mi-hu-link.active .mi-hu-link-txt::after {
+.mi-hu-link:hover .mi-hu-link-txt::after, .mi-hu-link:focus .mi-hu-link-txt::after, .mi-hu-link-active .mi-hu-link-txt::after {
   opacity: 1;
 }
 
 /* || Component - Nav menu fixed side
    -------------------------------------------------------------------------- */
 .nav-menu-fixed-side {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
-  left: 0;
-  bottom: 0;
-  z-index: -1;
+  width: 55px;
+  height: 55px;
+  z-index: 10;
 }
 @media screen and (min-width: 40em) {
   .nav-menu-fixed-side {
+    width: initial;
+    height: initial;
     position: initial;
     display: initial;
   }
 }
-@media screen and (min-width: 48em) {
-  .nav-menu-fixed-side {
-    z-index: initial;
-  }
-}
 
 .nav-menu-fs-active {
-  z-index: 10;
+  width: initial;
+  height: initial;
+  left: 0;
+  bottom: 0;
 }
 
 .nm-fs-transparent-bg {
@@ -1527,10 +1604,6 @@ main {
   }
 }
 
-.hero-id-img-column {
-  overflow: hidden;
-}
-
 .hero-id-heading {
   margin: 0;
 }
@@ -1575,8 +1648,6 @@ main {
 
 .hero-id-img {
   width: 100%;
-  position: relative;
-  left: 100%;
 }
 @media screen and (min-width: 48em) {
   .hero-id-img {
@@ -1592,8 +1663,7 @@ main {
 }
 
 .hero-id-img-animate {
-  left: 0;
-  transition: left 1s ease;
+  animation: slide-in-right 1.25s;
 }
 
 /* || Components - Card centered contents with rounded icon 
@@ -1727,18 +1797,25 @@ main {
   }
 }
 
-.ctc-img-column {
-  overflow: hidden;
-}
 @media screen and (min-width: 48em) {
   .ctc-img-column {
     position: relative;
   }
 }
 
-/* normal heading */
 .ctc-heading {
   text-align: center;
+}
+
+.ctc-img {
+  width: 100%;
+}
+@media screen and (min-width: 48em) {
+  .ctc-img {
+    height: 100%;
+    object-fit: cover;
+    object-position: left bottom;
+  }
 }
 
 /* split heading */
@@ -1760,22 +1837,12 @@ main {
   }
 }
 
-.ctc-img {
-  width: 100%;
-  position: relative;
-  right: 100%;
-}
-@media screen and (min-width: 48em) {
-  .ctc-img {
-    height: 100%;
-    object-fit: cover;
-    object-position: left bottom;
-  }
+.ctc-site-link-bcs {
+  text-decoration: none;
 }
 
 .ctc-img-animate {
-  right: 0;
-  transition: right 1s ease;
+  animation: slide-in-left 1.25s;
 }
 
 /* || Components - Counters with splitter and tag
@@ -1886,6 +1953,10 @@ main {
     top: 0;
   }
 }
+.row-fwt-para:last-of-type {
+  margin-bottom: 0;
+}
+
 /* || Component - Image foreground description
    -------------------------------------------------------------------------- */
 .img-foreground-desc {
@@ -1918,10 +1989,6 @@ main {
 
 /* || Component - Gallery queue
    -------------------------------------------------------------------------- */
-.gallery-queue {
-  /* for animation */
-  overflow: hidden;
-}
 @media screen and (min-width: 30em) {
   .gallery-queue {
     display: flex;
@@ -1958,16 +2025,6 @@ main {
     flex: initial;
     height: initial;
   }
-}
-
-.gq-img-wr-animation {
-  position: relative;
-  left: 100%;
-}
-
-.gq-img-wr-animate {
-  left: 0;
-  transition: left 1s ease;
 }
 
 .gq-image-wr-link {
@@ -2018,6 +2075,11 @@ main {
   margin: 0;
 }
 
+.team-dg-read-more {
+  margin-top: 13px;
+  height: 44px;
+}
+
 .team-dg-split-heading {
   margin: 0;
 }
@@ -2034,9 +2096,8 @@ main {
   }
 }
 
-.team-dg-read-more {
-  margin-top: 13px;
-  height: 44px;
+.team-dg-gallery-animate {
+  animation: slide-in-right 1.25s;
 }
 
 /* || Components - Unordered list with centered content and inside icon
@@ -2125,23 +2186,6 @@ main {
   margin: 0;
 }
 
-.price-occ-split-heading {
-  margin: 0;
-  text-align: center;
-}
-
-@media screen and (min-width: 75em) {
-  .price-occ-sh-first-text {
-    font-size: 2.175rem;
-  }
-}
-
-@media screen and (min-width: 75em) {
-  .price-occ-sh-second-text {
-    font-size: 2.175rem;
-  }
-}
-
 .price-occ-para {
   text-align: center;
 }
@@ -2163,27 +2207,6 @@ main {
     gap: initial;
   }
 }
-@media screen and (min-width: 64em) {
-  .price-occ-price-wr .price-occ-price:nth-child(1) {
-    margin-right: -8px;
-  }
-}
-@media screen and (min-width: 64em) {
-  .price-occ-price-wr .price-occ-price:nth-child(2) {
-    position: relative;
-    z-index: 2;
-    margin-left: -4px;
-    margin-right: -4px;
-    top: 17px;
-  }
-}
-@media screen and (min-width: 64em) {
-  .price-occ-price-wr .price-occ-price:nth-child(3) {
-    position: relative;
-    z-index: 1;
-    margin-left: -8px;
-  }
-}
 
 .price-occ-price {
   min-width: 275px;
@@ -2196,6 +2219,7 @@ main {
 }
 @media screen and (min-width: 48em) {
   .price-occ-price {
+    min-width: 300px;
     align-self: flex-start;
     margin: 0;
     flex: 1;
@@ -2203,6 +2227,56 @@ main {
   .price-occ-price:not(:first-child) {
     margin-top: 0;
   }
+}
+@media screen and (min-width: 64em) {
+  .price-occ-price:nth-of-type() {
+    margin-right: -8px;
+  }
+}
+@media screen and (min-width: 64em) {
+  .price-occ-price:nth-of-type(2) {
+    position: relative;
+    z-index: 2;
+    margin-left: -4px;
+    margin-right: -4px;
+    top: 17px;
+  }
+}
+@media screen and (min-width: 64em) {
+  .price-occ-price:nth-of-type(3) {
+    position: relative;
+    z-index: 1;
+    margin-left: -8px;
+  }
+}
+
+.price-occ-split-heading {
+  margin: 0;
+  text-align: center;
+}
+
+@media screen and (min-width: 75em) {
+  .price-occ-sh-first-text {
+    font-size: 2.175rem;
+  }
+}
+
+@media screen and (min-width: 75em) {
+  .price-occ-sh-second-text {
+    font-size: 2.175rem;
+  }
+}
+
+.price-occ-price:nth-of-type(1).price-occ-price-animate {
+  animation: slide-in-left 1.25s;
+}
+
+.price-occ-price:nth-of-type(2).price-occ-price-animate {
+  animation: slide-in-bottom 1.25s;
+}
+
+.price-occ-price:nth-of-type(3).price-occ-price-animate {
+  animation: slide-in-right 1.25s;
 }
 
 /* || Block - Lead with background
@@ -2468,27 +2542,120 @@ main {
   }
 }
 
+/* || Component - Scroll to top button
+   ========================================================================== */
+.scroll-to-top-btn {
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.scroll-tt-btn-active {
+  z-index: 9;
+  opacity: 0.7;
+}
+
+.scroll-tt-btn-button {
+  border: none;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+  background-color: hsl(208deg, 100%, 96%);
+  cursor: pointer;
+}
+.scroll-tt-btn-button:hover {
+  background-color: gray;
+}
+.scroll-tt-btn-button:active {
+  background-color: hsl(208deg, 100%, 96%);
+}
+
+.scroll-tt-btn-icon {
+  width: 20px;
+  height: 20px;
+  fill: hsl(228deg, 61%, 53%);
+}
+
 /* || Pages - Home
    ========================================================================== */
-.form-radiused .form-rd-ul {
+.form-rd-home .form-rd-ul {
   margin-bottom: 0;
 }
 @media screen and (min-width: 48em) {
-  .form-radiused .form-rd-ul {
+  .form-rd-home .form-rd-ul {
     margin-top: 0;
   }
 }
 
 @media screen and (min-width: 64em) {
-  .ul-center-inside-icon .ul-ci-icon-li {
+  .price-occ-home .ul-ci-icon-li {
     margin-bottom: 10px;
   }
+}
+
+/* || Components - Breadcrumbs center forward slash
+   ========================================================================== */
+.breadcrumbs-center {
+  background-color: hsl(207deg, 100%, 99%);
+  text-align: center;
+  padding-top: 22px;
+  padding-bottom: 22px;
+}
+
+.bc-center-site-link {
+  text-decoration: none;
+}
+
+/* || Block - Brands image list
+   ========================================================================== */
+.brands-img-list {
+  padding-top: 50px;
+  padding-bottom: 30px;
+  gap: 50px 20px;
+}
+
+.brands-il-img-wr {
+  height: 120px;
+  flex: 1 1 200px;
+}
+
+.brands-il-link-wr {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+}
+
+/* || Page - about
+   ========================================================================== */
+.ctc-about {
+  padding-top: 0;
+}
+
+.ctc-about .ctc-desc-column,
+.ctc-about .ctc-split-heading {
+  margin-top: 0;
+}
+
+.ctc-about .ctc-img {
+  position: initial;
+  left: initial;
+}
+
+.ctc-about-last-sec .ctc-desc-column .ctc-para:first-of-type {
+  font-style: italic;
 }
 
 /* || Themes - Default theme
    ========================================================================== */
 /* || General styles */
 body {
+  overflow-x: hidden;
   background: url(../images/home-bg.webp) 50% top/cover no-repeat;
 }
 @media screen and (min-width: 30em) {

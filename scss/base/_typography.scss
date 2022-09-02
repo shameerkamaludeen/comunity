@@ -11,18 +11,18 @@
 // -----------------------------------------------------------------------------
 
 %base-spacing {
-	word-spacing: 0.8px;
-	letter-spacing: 0.4px;
+	word-spacing: var.$base-ws;
+	letter-spacing: var.$base-ls;
 }
 
 %normal-spacing {
-	word-spacing: 2px;
-	letter-spacing: 1px;
+	word-spacing: var.$normal-ws;
+	letter-spacing: var.$normal-ls;
 }
 
 %wide-spacing {
-	word-spacing: 3px;
-	letter-spacing: 2px;
+	word-spacing: var.$wide-ws;
+	letter-spacing: var.$wide-ls;
 }
 
 // || FFP-CP Fonts (ff-primary c-primary fonts)

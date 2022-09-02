@@ -20,10 +20,16 @@
 	}
 }
 
-.form-rd-label {}
+.form-rd-label {
+	@extend %ffp-cp-xs-font;
+	@extend %base-400;
+}
 
 // for *(required) - this should be inside label
-.form-rd-label-required {}
+.form-rd-label-required {
+	@extend %ffp-cp-xs-font;
+	@extend %base-400;
+}
 
 .form-rd-errormsg,
 .form-rd-global-errormsg {

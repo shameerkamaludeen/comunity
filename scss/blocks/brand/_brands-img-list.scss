@@ -1,0 +1,34 @@
+/* || Block - Brands image list
+   ========================================================================== */
+
+@use '../../base/sitewide';
+@use '../../layout/layout-base';
+
+.brands-img-list {
+	padding-top: 50px;
+	padding-bottom: 30px;
+	@extend %flex-row-wrap-h-center;
+	gap: 50px 20px;
+}
+
+.brands-il-img-wr {
+	height: 120px;
+	flex: 1 1 200px;
+}
+
+.brands-il-img {
+	@extend %img-icon-contain-center;
+}
+
+// Utilities
+// -------------
+.brands-il-lm-fixed {
+	@extend %lm-fixed;
+}
+
+.brands-il-link-wr {
+	@extend %link-wrapper-basic;
+	display: inline-block;
+	height: 100%;
+	width: 100%;
+}

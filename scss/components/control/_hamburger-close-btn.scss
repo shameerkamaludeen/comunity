@@ -8,7 +8,7 @@
 $background-color: var.$bc-secondary;
 
 .hamburger-close-btn {
-	margin: 8px;
+	margin: 10px;
 	@include mx.btn-icon-compatible($bg-color: var.$bc-secondary,
 		$border: none,
 		$width: 35px,
@@ -20,9 +20,9 @@ $background-color: var.$bc-secondary;
 }
 
 .hc-btn-icon {
-	@include mx.svg-fixed-size($icon-color: false,
-	$icon-width: 10px,
-	$icon-height: 10px,
+	@include mx.svg-fixed-size($color: false,
+	$width: 10px,
+	$height: 10px,
 	$stroke: false,
 	$fill: var.$bc-primary);
 

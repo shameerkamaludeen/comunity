@@ -10,9 +10,6 @@
 
 
 .gallery-queue {
-	/* for animation */
-	overflow: hidden;
-
 	@media screen and (min-width: var.$mobile-portrait-view) {
 		display: flex;
 		flex-flow: row wrap;
@@ -48,17 +45,6 @@
 		flex: initial;
 		height: initial;
 	}
-}
-
-// for animation
-.gq-img-wr-animation {
-	position: relative;
-	left: 100%;
-}
-
-.gq-img-wr-animate {
-	left: 0;
-	transition: left 1s ease;
 }
 
 .gq-image-wr-link {

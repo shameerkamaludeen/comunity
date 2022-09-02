@@ -13,10 +13,11 @@
 @use '../blocks/lead/lead-background';
 @use '../blocks/testimonial/testimonial-carousel';
 @use '../blocks/contact/contact-map-form';
+@use '../components/scroll-to-top/scroll-to-top-btn';
 
 // || Contact us 
 
-.form-radiused {
+.form-rd-home {
 	.form-rd-ul {
 		margin-bottom: 0;
 
@@ -26,7 +27,9 @@
 	}
 }
 
-.ul-center-inside-icon {
+// || Price
+
+.price-occ-home {
 	.ul-ci-icon-li {
 		@media screen and (min-width: var.$laptop-view) {
 			margin-bottom: 10px;
