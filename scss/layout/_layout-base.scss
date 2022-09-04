@@ -76,6 +76,38 @@
 	margin-right: auto;
 }
 
+// Mobile landscape view
+%lm-auto-mlv {
+	@media screen and (min-width: var.$mobile-landscape-view) {
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+// Tablet view
+%lm-auto-tv {
+	@media screen and (min-width: var.$tablet-view) {
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+// Laptop view
+%lm-auto-lv {
+	@media screen and (min-width: var.$laptop-view) {
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+// PC view
+%lm-auto-pcv {
+	@media screen and (min-width: var.$pc-view) {
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
 // Layout margin auto fixed width
 %lm-auto-fixed-width {
 	max-width: var.$lm-auto-fixed-width;
