@@ -4,6 +4,7 @@
 @use '../../abstracts/variables' as var;
 @use '../../abstracts/mixins' as mx;
 @use '../../base/typography';
+@use '../../layout/layout-base';
 @use 'sass:color';
 
 .counters-splitter-tag {
@@ -11,7 +12,7 @@
 	@extend %flex-dc-h-center;
 	max-width: 400px;
 
-	@media screen and (min-width: var.$mobile-portrait-view) {
+	@media screen and (min-width: var.$mobile-landscape-view) {
 		flex-direction: row;
 		justify-content: space-between;
 		margin-top: 35px;
@@ -34,7 +35,7 @@
 	border-radius: 5px;
 	background-color: color.adjust(var.$c-primary, $lightness: 65%);
 
-	@media screen and (min-width: var.$mobile-portrait-view) {
+	@media screen and (min-width: var.$mobile-landscape-view) {
 		margin-top: 0;
 		margin-bottom: 0;
 		width: 2px;
@@ -57,4 +58,11 @@
 .cst-tag {
 	@extend %base-600;
 	@extend %ffp-cp-xs-font;
+}
+
+// Utilities
+// -----------
+
+.cst-counter-lm-auto-mlv {
+	@extend %lm-auto-mlv;
 }

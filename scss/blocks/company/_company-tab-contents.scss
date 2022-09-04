@@ -26,6 +26,13 @@
 	}
 }
 
+.ctc-img-column {
+	@media screen and (min-width: var.$tablet-view) {
+		// for left side image smooth
+		position: relative;
+	}
+}
+
 .ctc-desc-column {
 	margin-top: 33px;
 
@@ -38,17 +45,14 @@
 	}
 }
 
-.ctc-img-column {
-	@media screen and (min-width: var.$tablet-view) {
-		// for left side image smooth
-		position: relative;
-	}
-}
-
 .ctc-heading {
 	text-align: center;
 	@extend %ffp-cp-xl-font;
 	@extend %base-500;
+
+	@media screen and (min-width: var.$tablet-view) {
+		text-align: initial;
+	}
 }
 
 .ctc-para {
@@ -71,6 +75,10 @@
 /* split heading */
 .ctc-split-heading {
 	text-align: center;
+
+	@media screen and (min-width: var.$tablet-view) {
+		text-align: initial;
+	}
 }
 
 /* split heading first text */
@@ -99,6 +107,10 @@
 
 .ctc-lm-fixed-r-tv {
 	@extend %lm-fixed-right-tv;
+}
+
+.ctc-lm-fixed-l-tv {
+	@extend %lm-fixed-left-tv;
 }
 
 .ctc-lp-l-tv {

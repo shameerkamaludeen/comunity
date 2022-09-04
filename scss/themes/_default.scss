@@ -8,6 +8,9 @@
 @use '../base/utilities';
 
 /* || General styles */
+html {
+	overflow: auto;
+}
 
 body {
 	overflow-x: hidden;
@@ -22,7 +25,7 @@ body {
 	}
 
 	@media screen and (min-width: var.$tablet-view) {
-		background: url(../images/home-bg.webp) center / cover no-repeat;
+		background: url(../images/home-bg.webp) center top / cover no-repeat;
 	}
 }
 
@@ -37,6 +40,9 @@ body {
 /* || Store Pages */
 // Specific things, broken down by the context, page, or even component in 
 // which they are used.
+.breadcrumbs-center {
+	margin-top: 3px;
+}
 
 .main-heading-hv {
 	@extend %hide-visually;

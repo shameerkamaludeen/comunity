@@ -1,6 +1,7 @@
 /* || Block - Brands image list
    ========================================================================== */
 
+@use '../../abstracts/variables' as var;
 @use '../../base/sitewide';
 @use '../../layout/layout-base';
 
@@ -9,11 +10,25 @@
 	padding-bottom: 30px;
 	@extend %flex-row-wrap-h-center;
 	gap: 50px 20px;
+
+	@media screen and (min-width: var.$mobile-portrait-view) {
+		gap: 70px 0;
+		padding-bottom: 40px;
+	}
 }
 
 .brands-il-img-wr {
 	height: 120px;
-	flex: 1 1 200px;
+	flex: 0 1 200px;
+
+	@media screen and (min-width: var.$mobile-portrait-view) {
+		height: 130px;
+	}
+
+	@media screen and (min-width: var.$pc-view) {
+		flex: 1 1 180px;
+		height: 120px;
+	}
 }
 
 .brands-il-img {

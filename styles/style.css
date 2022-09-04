@@ -991,7 +991,7 @@ button {
 }
 
 @media screen and (min-width: 48em) {
-  .hero-id-lm-fixed-l-tv {
+  .ctc-lm-fixed-l-tv, .hero-id-lm-fixed-l-tv {
     margin-right: initial;
   }
 }
@@ -1002,9 +1002,16 @@ button {
   }
 }
 
-.contact-mf-lm-auto-fw, .main-lm-auto-fw, .tc-lm-auto-fw, .price-occ-lm-auto-fw, .sc-lm-auto-fw {
+.contact-mf-lm-auto-fw, .row-fwt-lm-auto, .main-lm-auto-fw, .tc-lm-auto-fw, .price-occ-lm-auto-fw, .sc-lm-auto-fw {
   margin-left: auto;
   margin-right: auto;
+}
+
+@media screen and (min-width: 40em) {
+  .row-fwt-lm-auto-mlv, .cst-counter-lm-auto-mlv {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .tc-lm-auto-fw, .price-occ-lm-auto-fw, .sc-lm-auto-fw {
@@ -1785,6 +1792,12 @@ main {
   }
 }
 
+@media screen and (min-width: 48em) {
+  .ctc-img-column {
+    position: relative;
+  }
+}
+
 .ctc-desc-column {
   margin-top: 33px;
 }
@@ -1797,14 +1810,13 @@ main {
   }
 }
 
-@media screen and (min-width: 48em) {
-  .ctc-img-column {
-    position: relative;
-  }
-}
-
 .ctc-heading {
   text-align: center;
+}
+@media screen and (min-width: 48em) {
+  .ctc-heading {
+    text-align: initial;
+  }
 }
 
 .ctc-img {
@@ -1821,6 +1833,11 @@ main {
 /* split heading */
 .ctc-split-heading {
   text-align: center;
+}
+@media screen and (min-width: 48em) {
+  .ctc-split-heading {
+    text-align: initial;
+  }
 }
 
 /* split heading first text */
@@ -1851,7 +1868,7 @@ main {
   margin-top: 50px;
   max-width: 400px;
 }
-@media screen and (min-width: 30em) {
+@media screen and (min-width: 40em) {
   .counters-splitter-tag {
     flex-direction: row;
     justify-content: space-between;
@@ -1877,7 +1894,7 @@ main {
   border-radius: 5px;
   background-color: #d1d3dc;
 }
-@media screen and (min-width: 30em) {
+@media screen and (min-width: 40em) {
   .cst-item-splitter {
     margin-top: 0;
     margin-bottom: 0;
@@ -1902,6 +1919,9 @@ main {
 
 .row-fwt-tab {
   margin-right: 10px;
+}
+.row-fwt-tab:last-of-type {
+  margin-right: 0;
 }
 @media screen and (min-width: 40em) {
   .row-fwt-tab {
@@ -2619,10 +2639,27 @@ main {
   padding-bottom: 30px;
   gap: 50px 20px;
 }
+@media screen and (min-width: 30em) {
+  .brands-img-list {
+    gap: 70px 0;
+    padding-bottom: 40px;
+  }
+}
 
 .brands-il-img-wr {
   height: 120px;
-  flex: 1 1 200px;
+  flex: 0 1 200px;
+}
+@media screen and (min-width: 30em) {
+  .brands-il-img-wr {
+    height: 130px;
+  }
+}
+@media screen and (min-width: 75em) {
+  .brands-il-img-wr {
+    flex: 1 1 180px;
+    height: 120px;
+  }
 }
 
 .brands-il-link-wr {
@@ -2633,27 +2670,49 @@ main {
 
 /* || Page - about
    ========================================================================== */
-.ctc-about {
+.ctc-about-first-sec {
   padding-top: 0;
 }
-
-.ctc-about .ctc-desc-column,
-.ctc-about .ctc-split-heading {
+.ctc-about-first-sec .ctc-desc-column,
+.ctc-about-first-sec .ctc-split-heading {
   margin-top: 0;
 }
-
-.ctc-about .ctc-img {
-  position: initial;
-  left: initial;
+.ctc-about-first-sec .ctc-split-heading {
+  text-align: center;
+}
+.ctc-about-first-sec .row-fwt-tab-hr {
+  max-width: 450px;
+}
+.ctc-about-first-sec .row-fwt-body {
+  max-width: 650px;
+}
+.ctc-about-first-sec .row-fwt-tabs-wr,
+.ctc-about-first-sec .row-fwt-para {
+  text-align: center;
+}
+.ctc-about-first-sec .row-fwt-content {
+  min-height: initial;
+}
+.ctc-about-first-sec .row-fwt-content[data-fwt-content=solution] .counters-splitter-tag {
+  max-width: 600px;
 }
 
-.ctc-about-last-sec .ctc-desc-column .ctc-para:first-of-type {
+@media screen and (min-width: 48em) {
+  .ctc-about-last-sec .ctc-img {
+    object-position: center;
+  }
+}
+.ctc-about-last-sec .ctc-para:first-of-type {
   font-style: italic;
 }
 
 /* || Themes - Default theme
    ========================================================================== */
 /* || General styles */
+html {
+  overflow: auto;
+}
+
 body {
   overflow-x: hidden;
   background: url(../images/home-bg.webp) 50% top/cover no-repeat;
@@ -2670,7 +2729,7 @@ body {
 }
 @media screen and (min-width: 48em) {
   body {
-    background: url(../images/home-bg.webp) center/cover no-repeat;
+    background: url(../images/home-bg.webp) center top/cover no-repeat;
   }
 }
 
@@ -2679,5 +2738,8 @@ body {
 /* || Utilitites */
 /* || Sitewiede */
 /* || Store Pages */
+.breadcrumbs-center {
+  margin-top: 3px;
+}
 
 /*# sourceMappingURL=style.css.map */
