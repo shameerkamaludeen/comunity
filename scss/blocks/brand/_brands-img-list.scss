@@ -2,6 +2,7 @@
    ========================================================================== */
 
 @use '../../abstracts/variables' as var;
+@use '../../base/utilities';
 @use '../../base/sitewide';
 @use '../../layout/layout-base';
 
@@ -37,6 +38,11 @@
 
 // Utilities
 // -------------
+
+.brands-heading-hv {
+	@extend %hide-visually;
+}
+
 .brands-il-lm-fixed {
 	@extend %lm-fixed;
 }
