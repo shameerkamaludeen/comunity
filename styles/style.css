@@ -560,7 +560,7 @@ button {
 
 /* || Abstracts - Utilities
    ========================================================================== */
-.main-heading-hv, .form-rd-hide-visually, .hc-btn-icon-inactive {
+.main-heading-hv, .brands-heading-hv, .form-rd-hide-visually, .hc-btn-icon-inactive {
   position: absolute !important;
   top: -9999px !important;
   left: -9999px !important;
@@ -581,7 +581,7 @@ button {
 
 /* || Abstracts - Sitewide
    ========================================================================== */
-.icon-rounded-bg {
+.icon-rounded-bg, .img-fd-figcaption {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -595,13 +595,6 @@ button {
 .nav-menu-fixed-side {
   display: flex;
   justify-content: flex-end;
-}
-
-.img-fd-figcaption {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 
 .ul-center-inside-icon, .card-center-round-icon, .counters-splitter-tag {
@@ -1979,7 +1972,7 @@ main {
 
 /* || Component - Image foreground description
    -------------------------------------------------------------------------- */
-.img-foreground-desc {
+.image-foreground-desc {
   display: block;
   margin: 0;
   position: relative;
@@ -1994,17 +1987,19 @@ main {
   background-color: rgba(62, 91, 208, 0.8);
 }
 
-.img-foreground-desc:hover .img-fd-figcaption,
-.img-foreground-desc:focus .img-fd-figcaption {
+.image-foreground-desc:hover .img-fd-figcaption,
+.image-foreground-desc:focus .img-fd-figcaption {
   z-index: initial;
 }
 
 .img-fd-heading {
   margin: 0;
+  text-align: center;
 }
 
 .img-fd-tag {
   margin-top: 0.3em;
+  text-align: center;
 }
 
 /* || Component - Gallery queue
@@ -2049,8 +2044,6 @@ main {
 
 .gq-image-wr-link {
   display: block;
-  width: 100%;
-  height: 100%;
 }
 
 /* || Block - Team with description and gallery
@@ -2549,6 +2542,8 @@ main {
 
 .contact-mf-map {
   display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .contact-mf-form {

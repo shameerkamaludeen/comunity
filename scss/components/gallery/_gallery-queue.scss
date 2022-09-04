@@ -6,7 +6,7 @@
 
 @use '../../abstracts/variables' as var;
 @use '../../base/sitewide';
-@use '../../components/image/img-foreground-desc';
+@use '../../components/image/image-foreground-desc';
 
 
 .gallery-queue {
@@ -50,8 +50,6 @@
 .gq-image-wr-link {
 	display: block;
 	@extend %link-wrapper-basic;
-	width: 100%;
-	height: 100%;
 }
 
 .gq-image {
