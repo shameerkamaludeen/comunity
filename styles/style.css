@@ -351,13 +351,13 @@ img {
   letter-spacing: 2px;
 }
 
-.hero-id-heading, .hero-id-sh-first-text, .hero-id-subheading, h1 {
+.services-tc-heading, .services-tc-sh-first-text, .hero-id-heading, .hero-id-sh-first-text, .hero-id-subheading, h1 {
   font-size: 2.25rem;
   color: hsl(226deg, 13%, 19%);
   font-family: "Poppins", sans-serif;
 }
 
-.contact-mf-heading, .contact-mf-sh-first-text, .tc-heading-normal, .tc-sh-first-txt, .price-occ-heading, .price-occ-sh-first-text, .team-dg-heading, .team-dg-sh-first-text, .ctc-heading, .ctc-sh-first-text, .sc-heading, .sc-sh-first-txt {
+.contact-mf-heading, .contact-mf-sh-first-text, .tc-heading-normal, .tc-sh-first-txt, .price-occ-heading, .price-occ-sh-first-text, .team-dg-heading, .team-dg-sh-first-text, .ctc-heading, .ctc-sh-first-text, .services-cc-heading, .services-cc-sh-first-txt, .sc-heading, .sc-sh-first-txt {
   font-size: 1.875rem;
   color: hsl(226deg, 13%, 19%);
   font-family: "Poppins", sans-serif;
@@ -375,7 +375,7 @@ img {
   font-family: "Poppins", sans-serif;
 }
 
-.fng-lmc-menu-heading {
+.services-tc-subheading, .ol-cnu-heading, .fng-lmc-menu-heading {
   font-size: 1rem;
   color: hsl(226deg, 13%, 19%);
   font-family: "Poppins", sans-serif;
@@ -394,7 +394,7 @@ h3 {
   font-family: "Poppins", sans-serif;
 }
 
-.contact-mf-para, .card-cp-para, .tc-para, .price-occ-para, .team-dg-para, .row-fwt-para, .ctc-para, .btn-no-bgb-content, .card-cri-para, .sc-para, .hero-id-para, button, label, p, h4 {
+.services-tc-para, .ol-cnu-para, .contact-mf-para, .card-cp-para, .tc-para, .price-occ-para, .team-dg-para, .row-fwt-para, .ctc-para, .btn-no-bgb-content, .card-cri-para, .services-cc-para, .sc-para, .hero-id-para, button, label, p, h4 {
   font-size: 1rem;
   color: hsl(0deg, 0%, 47%);
   font-family: "Poppins", sans-serif;
@@ -430,14 +430,20 @@ h3 {
   font-family: "Poppins", sans-serif;
 }
 
-.cst-counter, .hero-id-sh-second-text {
+.services-tc-sh-second-text, .cst-counter, .hero-id-sh-second-text {
   font-size: 2.25rem;
   color: hsl(228deg, 61%, 53%);
   font-family: "Poppins", sans-serif;
 }
 
-.contact-mf-sh-second-text, .tc-sh-second-txt, .price-occ-sh-second-text, .team-dg-sh-second-text, .ctc-sh-second-text, .sc-sh-second-txt {
+.contact-mf-sh-second-text, .tc-sh-second-txt, .price-occ-sh-second-text, .team-dg-sh-second-text, .ctc-sh-second-text, .services-cc-sh-second-txt, .sc-sh-second-txt {
   font-size: 1.875rem;
+  color: hsl(228deg, 61%, 53%);
+  font-family: "Poppins", sans-serif;
+}
+
+.ol-cnu-li::marker, .card-cri-read-more {
+  font-size: 1rem;
   color: hsl(228deg, 61%, 53%);
   font-family: "Poppins", sans-serif;
 }
@@ -496,7 +502,7 @@ h3 {
   font-weight: 400;
 }
 
-.bc-center-content, .contact-mf-heading, .contact-mf-sh-first-text, .contact-mf-dc-desc, .card-cp-heading, .tc-heading-normal, .tc-sh-first-txt, .lead-bgh-first-text, .price-occ-heading, .price-occ-sh-first-text, .card-cs-heading, .card-cs-tag-light, .team-dg-heading, .team-dg-sh-first-text, .ctc-heading, .ctc-sh-first-text, .card-cri-heading, .sc-heading, .sc-sh-first-txt, .hero-id-heading, .hero-id-sh-first-text {
+.services-tc-heading, .services-tc-subheading, .services-tc-sh-first-text, .ol-cnu-li::marker, .ol-cnu-heading, .bc-center-content, .contact-mf-heading, .contact-mf-sh-first-text, .contact-mf-dc-desc, .card-cp-heading, .tc-heading-normal, .tc-sh-first-txt, .lead-bgh-first-text, .price-occ-heading, .price-occ-sh-first-text, .card-cs-heading, .card-cs-tag-light, .team-dg-heading, .team-dg-sh-first-text, .ctc-heading, .ctc-sh-first-text, .card-cri-heading, .card-cri-read-more, .services-cc-heading, .services-cc-sh-first-txt, .sc-heading, .sc-sh-first-txt, .hero-id-heading, .hero-id-sh-first-text {
   line-height: 1.2;
   font-weight: 500;
 }
@@ -506,17 +512,17 @@ h3 {
   font-weight: 600;
 }
 
-.contact-mf-sh-second-text, .tc-sh-second-txt, .price-occ-sh-second-text, .team-dg-sh-second-text, .cst-counter, .ctc-sh-second-text, .sc-sh-second-txt, .hero-id-sh-second-text, h4, h3, h2, h1 {
+.services-tc-sh-second-text, .contact-mf-sh-second-text, .tc-sh-second-txt, .price-occ-sh-second-text, .team-dg-sh-second-text, .cst-counter, .ctc-sh-second-text, .services-cc-sh-second-txt, .sc-sh-second-txt, .hero-id-sh-second-text, h4, h3, h2, h1 {
   line-height: 1.2;
   font-weight: 700;
 }
 
-.contact-mf-para, .card-cp-para, .tc-para, .lead-bg-tag, .price-occ-para, .team-dg-para, .row-fwt-para, .card-cri-para, .sc-para {
+.contact-mf-para, .card-cp-para, .tc-para, .lead-bg-tag, .price-occ-para, .team-dg-para, .row-fwt-para, .card-cri-para, .services-cc-para, .sc-para {
   line-height: 1.65;
   font-weight: 300;
 }
 
-.ctc-para, .hero-id-para, .form-rd-errormsg,
+.services-tc-para, .ol-cnu-para, .ctc-para, .hero-id-para, .form-rd-errormsg,
 .form-rd-global-errormsg, .form-rd-textarea, p {
   line-height: 1.65;
   font-weight: 400;
@@ -597,7 +603,7 @@ button {
   justify-content: flex-end;
 }
 
-.ul-center-inside-icon, .card-center-round-icon, .counters-splitter-tag {
+.ul-center-inside-icon, .card-center-round-icon, .services-cc-cards-wr, .counters-splitter-tag {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -641,11 +647,11 @@ button {
   object-position: top;
 }
 
-.brands-il-link-wr, .gq-image-wr-link, .sc-link-wrapper, .logo-il-link-wr {
+.brands-il-link-wr, .gq-image-wr-link, .sc-link-wrapper, .services-cc-link-wr, .logo-il-link-wr {
   text-decoration: none;
   cursor: pointer;
 }
-.brands-il-link-wr:link, .gq-image-wr-link:link, .sc-link-wrapper:link, .logo-il-link-wr:link, .brands-il-link-wr:visited, .gq-image-wr-link:visited, .sc-link-wrapper:visited, .logo-il-link-wr:visited, .brands-il-link-wr:focus, .gq-image-wr-link:focus, .sc-link-wrapper:focus, .logo-il-link-wr:focus, .brands-il-link-wr:hover, .gq-image-wr-link:hover, .sc-link-wrapper:hover, .logo-il-link-wr:hover, .brands-il-link-wr:active, .gq-image-wr-link:active, .sc-link-wrapper:active, .logo-il-link-wr:active {
+.brands-il-link-wr:link, .gq-image-wr-link:link, .sc-link-wrapper:link, .services-cc-link-wr:link, .logo-il-link-wr:link, .brands-il-link-wr:visited, .gq-image-wr-link:visited, .sc-link-wrapper:visited, .services-cc-link-wr:visited, .logo-il-link-wr:visited, .brands-il-link-wr:focus, .gq-image-wr-link:focus, .sc-link-wrapper:focus, .services-cc-link-wr:focus, .logo-il-link-wr:focus, .brands-il-link-wr:hover, .gq-image-wr-link:hover, .sc-link-wrapper:hover, .services-cc-link-wr:hover, .logo-il-link-wr:hover, .brands-il-link-wr:active, .gq-image-wr-link:active, .sc-link-wrapper:active, .services-cc-link-wr:active, .logo-il-link-wr:active {
   color: transparent;
 }
 
@@ -960,42 +966,42 @@ button {
 
 /* || Layout - Layout base
    ========================================================================== */
-.brands-il-lm-fixed, .contact-mf-lm-fixed, .tc-lm-fixed, .lead-bg-lm-fixed, .price-occ-lm-fixed, .team-dg-lm-fixed, .ctc-lm-fixed, .sc-lm-fixed, .hero-id-lm-fixed, .attr-slu-lm-fixed, .fng-lmc-lm-fixed, .navbar-rrm-lm-fixed {
+.services-cc-lm-fixed, .services-tc-lm-fixed, .brands-il-lm-fixed, .contact-mf-lm-fixed, .tc-lm-fixed, .lead-bg-lm-fixed, .price-occ-lm-fixed, .team-dg-lm-fixed, .ctc-lm-fixed, .sc-lm-fixed, .hero-id-lm-fixed, .attr-slu-lm-fixed, .fng-lmc-lm-fixed, .navbar-rrm-lm-fixed {
   margin-right: 15px;
   margin-left: 15px;
 }
 @media screen and (min-width: 30em) {
-  .brands-il-lm-fixed, .contact-mf-lm-fixed, .tc-lm-fixed, .lead-bg-lm-fixed, .price-occ-lm-fixed, .team-dg-lm-fixed, .ctc-lm-fixed, .sc-lm-fixed, .hero-id-lm-fixed, .attr-slu-lm-fixed, .fng-lmc-lm-fixed, .navbar-rrm-lm-fixed {
+  .services-cc-lm-fixed, .services-tc-lm-fixed, .brands-il-lm-fixed, .contact-mf-lm-fixed, .tc-lm-fixed, .lead-bg-lm-fixed, .price-occ-lm-fixed, .team-dg-lm-fixed, .ctc-lm-fixed, .sc-lm-fixed, .hero-id-lm-fixed, .attr-slu-lm-fixed, .fng-lmc-lm-fixed, .navbar-rrm-lm-fixed {
     margin-right: 25px;
     margin-left: 25px;
   }
 }
 @media screen and (min-width: 48em) {
-  .brands-il-lm-fixed, .contact-mf-lm-fixed, .tc-lm-fixed, .lead-bg-lm-fixed, .price-occ-lm-fixed, .team-dg-lm-fixed, .ctc-lm-fixed, .sc-lm-fixed, .hero-id-lm-fixed, .attr-slu-lm-fixed, .fng-lmc-lm-fixed, .navbar-rrm-lm-fixed {
+  .services-cc-lm-fixed, .services-tc-lm-fixed, .brands-il-lm-fixed, .contact-mf-lm-fixed, .tc-lm-fixed, .lead-bg-lm-fixed, .price-occ-lm-fixed, .team-dg-lm-fixed, .ctc-lm-fixed, .sc-lm-fixed, .hero-id-lm-fixed, .attr-slu-lm-fixed, .fng-lmc-lm-fixed, .navbar-rrm-lm-fixed {
     margin-right: 45px;
     margin-left: 45px;
   }
 }
 @media screen and (min-width: 75em) {
-  .brands-il-lm-fixed, .contact-mf-lm-fixed, .tc-lm-fixed, .lead-bg-lm-fixed, .price-occ-lm-fixed, .team-dg-lm-fixed, .ctc-lm-fixed, .sc-lm-fixed, .hero-id-lm-fixed, .attr-slu-lm-fixed, .fng-lmc-lm-fixed, .navbar-rrm-lm-fixed {
+  .services-cc-lm-fixed, .services-tc-lm-fixed, .brands-il-lm-fixed, .contact-mf-lm-fixed, .tc-lm-fixed, .lead-bg-lm-fixed, .price-occ-lm-fixed, .team-dg-lm-fixed, .ctc-lm-fixed, .sc-lm-fixed, .hero-id-lm-fixed, .attr-slu-lm-fixed, .fng-lmc-lm-fixed, .navbar-rrm-lm-fixed {
     margin-right: 65px;
     margin-left: 65px;
   }
 }
 
 @media screen and (min-width: 48em) {
-  .ctc-lm-fixed-l-tv, .hero-id-lm-fixed-l-tv {
+  .services-tc-lm-fixed-l-tv, .ctc-lm-fixed-l-tv, .hero-id-lm-fixed-l-tv {
     margin-right: initial;
   }
 }
 
 @media screen and (min-width: 48em) {
-  .ctc-lm-fixed-r-tv {
+  .services-tc-lm-fixed-r-tv, .ctc-lm-fixed-r-tv {
     margin-left: initial;
   }
 }
 
-.contact-mf-lm-auto-fw, .row-fwt-lm-auto, .main-lm-auto-fw, .tc-lm-auto-fw, .price-occ-lm-auto-fw, .sc-lm-auto-fw {
+.contact-mf-lm-auto-fw, .row-fwt-lm-auto, .main-lm-auto-fw, .services-cc-lm-auto-fw, .tc-lm-auto-fw, .price-occ-lm-auto-fw, .sc-lm-auto-fw {
   margin-left: auto;
   margin-right: auto;
 }
@@ -1007,18 +1013,28 @@ button {
   }
 }
 
-.tc-lm-auto-fw, .price-occ-lm-auto-fw, .sc-lm-auto-fw {
+.services-cc-lm-auto-fw, .tc-lm-auto-fw, .price-occ-lm-auto-fw, .sc-lm-auto-fw {
   max-width: 560px;
 }
 
 @media screen and (min-width: 48em) {
-  .hero-id-lp-r-tv {
+  .hero-id-lp-right-tv {
+    padding-right: 40px;
+  }
+}
+@media screen and (min-width: 64em) {
+  .hero-id-lp-right-tv {
     padding-right: 60px;
   }
 }
 
 @media screen and (min-width: 48em) {
-  .ctc-lp-l-tv {
+  .services-tc-lp-left-tv, .ctc-lp-left-tv {
+    padding-left: 60px;
+  }
+}
+@media screen and (min-width: 75em) {
+  .services-tc-lp-left-tv, .ctc-lp-left-tv {
     padding-left: 60px;
   }
 }
@@ -1560,12 +1576,12 @@ main {
 
 .btn-chw-first-content {
   background-color: hsl(226deg, 13%, 19%);
-  bottom: 50px;
+  bottom: 100%;
 }
 
 .btn-chw-second-content {
   background-color: hsl(228deg, 61%, 53%);
-  bottom: 50px;
+  bottom: 100%;
 }
 
 /* || Block - Hero image description
@@ -1673,12 +1689,34 @@ main {
   height: 70px;
 }
 .card-cri-heading {
-  text-align: center;
   margin: 1.2em 0 0;
 }
 
 .card-cri-para {
   text-align: center;
+}
+
+.card-cri-read-more {
+  display: block;
+  padding: 12px 25px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+.card-cri-read-more:link {
+  color: hsl(228deg, 61%, 53%);
+}
+.card-cri-read-more:visited {
+  color: false;
+}
+.card-cri-read-more:focus {
+  outline: 2px solid hsl(228deg, 61%, 53%);
+}
+.card-cri-read-more:focus, .card-cri-read-more:hover {
+  color: hsl(0deg, 0%, 47%);
+}
+.card-cri-read-more:active {
+  color: hsl(226deg, 13%, 19%);
 }
 
 /* || Block - Services with carousel
@@ -1693,10 +1731,25 @@ main {
   }
 }
 
-/* layout margin fixed */
 /* normal heading */
 .sc-heading {
   text-align: center;
+}
+
+.sc-para {
+  text-align: center;
+  margin-bottom: 75px;
+}
+
+.sc-carousel-item {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+@media screen and (min-width: 48em) {
+  .sc-carousel-item {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 /* split heading */
@@ -1718,20 +1771,9 @@ main {
   }
 }
 
-.sc-para {
-  text-align: center;
-  margin-bottom: 75px;
-}
-
-.sc-carousel-item {
-  padding-left: 10px;
-  padding-right: 10px;
-}
-@media screen and (min-width: 48em) {
-  .sc-carousel-item {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
+/* layout margin fixed */
+.sc-link-wrapper {
+  outline: none;
 }
 
 /* -----------------------------------------------------------------------------
@@ -2044,6 +2086,7 @@ main {
 
 .gq-image-wr-link {
   display: block;
+  outline: none;
 }
 
 /* || Block - Team with description and gallery
@@ -2625,6 +2668,7 @@ main {
 
 .bc-center-site-link {
   text-decoration: none;
+  outline: none;
 }
 
 /* || Block - Brands image list
@@ -2699,6 +2743,161 @@ main {
 }
 .ctc-about-last-sec .ctc-para:first-of-type {
   font-style: italic;
+}
+
+/* || Component - Ordered list with custom number style
+   ========================================================================== */
+.ol-custom-number-unaligned {
+  list-style-type: none;
+  counter-reset: listCounter;
+  list-style-position: inside;
+  padding-left: 0;
+}
+
+.ol-cnu-li {
+  counter-increment: listCounter;
+}
+.ol-cnu-li:not(:last-child) {
+  margin-bottom: 28px;
+}
+.ol-cnu-li::marker {
+  content: counters(listCounter, "", decimal-leading-zero) ".";
+}
+.ol-cnu-li :first-child {
+  display: inline-block;
+}
+
+.ol-cnu-heading {
+  margin: 0;
+}
+
+.ol-cnu-para {
+  margin-top: 0.2em;
+}
+
+/* || Block - Services three column
+   ========================================================================== */
+.services-three-column {
+  padding-bottom: 60px;
+}
+
+.services-tc-col2 {
+  margin-top: 40px;
+}
+
+.services-tc-col3 {
+  margin-top: 15px;
+}
+
+.services-tc-img {
+  width: 100%;
+}
+
+@media screen and (max-width: 48em) {
+  .services-tc-heading {
+    text-align: center;
+  }
+}
+
+.services-tc-read-more {
+  margin-top: 5px;
+}
+
+.services-tc-split-heading {
+  margin-top: 0;
+}
+@media screen and (max-width: 47.9375em) {
+  .services-tc-split-heading {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 75em) {
+  .services-tc-sh-first-text {
+    font-size: 2.75rem;
+  }
+}
+
+@media screen and (min-width: 75em) {
+  .services-tc-sh-second-text {
+    font-size: 2.75rem;
+  }
+}
+
+/* || Block - Services with carousel
+   ========================================================================== */
+.services-centered-cards {
+  background-color: #fafbff;
+  padding-top: 40px;
+  padding-bottom: 30px;
+}
+@media screen and (min-width: 64em) {
+  .services-centered-cards {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+}
+
+/* normal heading */
+.services-cc-heading {
+  text-align: center;
+}
+
+.services-cc-para {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.services-cc-cards-wr {
+  row-gap: 30px;
+}
+
+.services-cc-card {
+  padding: 30px 20px;
+}
+
+/* split heading */
+.services-cc-split-heading {
+  text-align: center;
+}
+
+/* split heading first text */
+@media screen and (min-width: 75em) {
+  .services-cc-sh-first-txt {
+    font-size: 2.075rem;
+  }
+}
+
+/* split heading second text */
+@media screen and (min-width: 75em) {
+  .services-cc-sh-second-txt {
+    font-size: 2.075rem;
+  }
+}
+
+/* layout margin fixed */
+.services-cc-link-wr {
+  outline: none;
+}
+
+/* || Page - Services
+   ========================================================================== */
+.services-tc-services .btn-capsule-hover-wipe {
+  height: 45px;
+  font-size: 1rem;
+}
+.services-tc-services .btn-chw-content {
+  padding: 13px 38px;
+}
+
+.brands-il-services {
+  padding-top: 70px;
+  padding-bottom: 50px;
+}
+@media screen and (min-width: 30em) {
+  .brands-il-services {
+    padding-bottom: 50px;
+  }
 }
 
 /* || Themes - Default theme

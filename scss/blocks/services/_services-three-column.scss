@@ -1,0 +1,102 @@
+/* || Block - Services three column
+   ========================================================================== */
+// Features:
+// Two image column and a description column
+// Grid
+// split heading, custom list and read more
+
+@use '../../abstracts/variables' as var;
+@use '../../base/typography';
+@use '../../layout/layout-base';
+@use '../../components/list/ol-custom-number-unaligned';
+@use '../../components/button/btn-capsule-hover-wipe';
+
+.services-three-column {
+	padding-bottom: 60px;
+}
+
+.services-tc-col1 {}
+
+.services-tc-col2 {
+	margin-top: 40px;
+}
+
+.services-tc-col3 {
+	margin-top: 15px;
+}
+
+.services-tc-img-wr {}
+
+.services-tc-img {
+	width: 100%;
+}
+
+.services-tc-heading {
+	@extend %ffp-cp-xxl-font;
+	@extend %base-500;
+
+	@media screen and (max-width: var.$tablet-view) {
+		text-align: center;
+	}
+}
+
+.services-tc-subheading {
+	@extend %ffp-cp-s-font;
+	@extend %base-500;
+}
+
+.services-tc-para {
+	@extend %ffp-cs-s-font;
+	@extend %normal-400;
+}
+
+.services-tc-ol {}
+
+.services-tc-read-more {
+	margin-top: 5px;
+}
+
+// Optional
+// ------------
+
+.services-tc-split-heading {
+	margin-top: 0;
+
+	@media screen and (max-width: (var.$tablet-view - 0.0625em)) {
+		text-align: center;
+	}
+}
+
+.services-tc-sh-first-text {
+	@extend %ffp-cp-xxl-font;
+	@extend %base-500;
+
+	@media screen and (min-width: var.$pc-view) {
+		font-size: var.$fs-xxl + 0.5rem;
+	}
+}
+
+.services-tc-sh-second-text {
+	@extend %ffp-bcs-xxl-font;
+	@extend %base-700;
+
+	@media screen and (min-width: var.$pc-view) {
+		font-size: var.$fs-xxl + 0.5rem;
+	}
+}
+
+.services-tc-lm-fixed {
+	@extend %lm-fixed;
+}
+
+.services-tc-lm-fixed-r-tv {
+	@extend %lm-fixed-right-tv;
+}
+
+.services-tc-lm-fixed-l-tv {
+	@extend %lm-fixed-left-tv;
+}
+
+.services-tc-lp-left-tv {
+	@extend %lp-left-tv;
+}

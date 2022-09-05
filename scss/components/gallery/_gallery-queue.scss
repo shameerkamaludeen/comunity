@@ -50,6 +50,7 @@
 .gq-image-wr-link {
 	display: block;
 	@extend %link-wrapper-basic;
+	outline: none;
 }
 
 .gq-image {

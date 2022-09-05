@@ -120,6 +120,10 @@
 // Tablet view
 %lp-right-tv {
 	@media screen and (min-width: var.$tablet-view) {
+		padding-right: var.$lp-base;
+	}
+
+	@media screen and (min-width: var.$laptop-view) {
 		padding-right: var.$lp-normal;
 	}
 }
@@ -143,6 +147,10 @@
 // Tablet view
 %lp-left-tv {
 	@media screen and (min-width: var.$tablet-view) {
+		padding-left: var.$lp-normal;
+	}
+	
+	@media screen and (min-width: var.$pc-view) {
 		padding-left: var.$lp-normal;
 	}
 }

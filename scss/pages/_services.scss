@@ -1,5 +1,28 @@
 /* || Page - Services
    ========================================================================== */
 
+@use '../abstracts/variables' as var;
+@use '../blocks/services/services-three-column';
+@use '../blocks/services/services-centered-cards';
 @use '../blocks/brand/brands-img-list';
 @use '../blocks/lead/lead-background';
+
+.services-tc-services {
+	.btn-capsule-hover-wipe {
+		height: 45px;
+		font-size: var.$fs-s;
+	}
+
+	.btn-chw-content {
+		padding: 13px 38px;
+	}
+}
+
+.brands-il-services {
+	padding-top: 70px;
+	padding-bottom: 50px;
+
+	@media screen and (min-width: var.$mobile-portrait-view) {
+		padding-bottom: 50px;
+	}
+}
