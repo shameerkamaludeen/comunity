@@ -15,20 +15,93 @@
 	padding-bottom: 60px;
 }
 
-.services-tc-col1 {}
+.services-tc-wr {
+	@media screen and (min-width: var.$tablet-view) {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-areas:
+			"col2 col1";
+	}
+
+	@media screen and (min-width: var.$laptop-view) {
+		grid-template-columns: 3fr 2fr;
+	}
+}
+
+.services-tc-col1 {
+	@media screen and (min-width: var.$tablet-view) {
+		grid-area: col1;
+	}
+}
 
 .services-tc-col2 {
 	margin-top: 40px;
+
+	display: flex;
+	gap: 10px 15px;
+	flex-direction: column;
+
+	@media screen and (min-width: var.$mobile-landscape-view) {
+		flex-direction: row;
+	}
+
+	@media screen and (min-width: var.$tablet-view) {
+		grid-area: col2;
+		margin-top: 0;
+
+		flex-direction: column;
+	}
+
+	@media screen and (min-width: var.$laptop-view) {
+		flex-direction: row;
+	}
+
+	@media screen and (min-width: var.$pc-view) {
+		column-gap: 20px;
+	}
 }
 
-.services-tc-col3 {
-	margin-top: 15px;
-}
+.services-tc-img-wr {
 
-.services-tc-img-wr {}
+	&:first-child .services-tc-img {
+		@media screen and (min-width: var.$mobile-portrait-view) {
+			object-position: center;
+		}
+	}
+
+	&:last-child .services-tc-img {
+		@media screen and (min-width: var.$mobile-portrait-view) {
+			object-position: right 26%;
+		}
+
+		@media screen and (min-width: var.$laptop-view) {
+			object-position: center;
+		}
+	}
+}
 
 .services-tc-img {
 	width: 100%;
+	height: 100%;
+
+	@media screen and (min-width: var.$mobile-portrait-view) {
+		height: 300px;
+		object-fit: cover;
+	}
+
+	@media screen and (min-width: var.$mobile-landscape-view) {
+		height: 100%;
+		object-fit: initial;
+	}
+
+	@media screen and (min-width: var.$tablet-view) {
+		height: 225px;
+		object-fit: cover;
+	}
+
+	@media screen and (min-width: var.$laptop-view) {
+		height: 100%;
+	}
 }
 
 .services-tc-heading {
@@ -37,6 +110,10 @@
 
 	@media screen and (max-width: var.$tablet-view) {
 		text-align: center;
+	}
+
+	@media screen and (min-width: var.$mobile-portrait-view) {
+		margin-bottom: 1em;
 	}
 }
 
@@ -65,6 +142,10 @@
 	@media screen and (max-width: (var.$tablet-view - 0.0625em)) {
 		text-align: center;
 	}
+
+	@media screen and (min-width: var.$mobile-portrait-view) {
+		margin-bottom: 1.2em;
+	}
 }
 
 .services-tc-sh-first-text {
@@ -87,14 +168,6 @@
 
 .services-tc-lm-fixed {
 	@extend %lm-fixed;
-}
-
-.services-tc-lm-fixed-r-tv {
-	@extend %lm-fixed-right-tv;
-}
-
-.services-tc-lm-fixed-l-tv {
-	@extend %lm-fixed-left-tv;
 }
 
 .services-tc-lp-left-tv {

@@ -990,13 +990,13 @@ button {
 }
 
 @media screen and (min-width: 48em) {
-  .services-tc-lm-fixed-l-tv, .ctc-lm-fixed-l-tv, .hero-id-lm-fixed-l-tv {
+  .ctc-lm-fixed-l-tv, .hero-id-lm-fixed-l-tv {
     margin-right: initial;
   }
 }
 
 @media screen and (min-width: 48em) {
-  .services-tc-lm-fixed-r-tv, .ctc-lm-fixed-r-tv {
+  .ctc-lm-fixed-r-tv {
     margin-left: initial;
   }
 }
@@ -1024,13 +1024,23 @@ button {
 }
 @media screen and (min-width: 64em) {
   .hero-id-lp-right-tv {
+    padding-right: 50px;
+  }
+}
+@media screen and (min-width: 75em) {
+  .hero-id-lp-right-tv {
     padding-right: 60px;
   }
 }
 
 @media screen and (min-width: 48em) {
   .services-tc-lp-left-tv, .ctc-lp-left-tv {
-    padding-left: 60px;
+    padding-left: 40px;
+  }
+}
+@media screen and (min-width: 64em) {
+  .services-tc-lp-left-tv, .ctc-lp-left-tv {
+    padding-left: 50px;
   }
 }
 @media screen and (min-width: 75em) {
@@ -2781,21 +2791,106 @@ main {
   padding-bottom: 60px;
 }
 
-.services-tc-col2 {
-  margin-top: 40px;
+@media screen and (min-width: 48em) {
+  .services-tc-wr {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "col2 col1";
+  }
+}
+@media screen and (min-width: 64em) {
+  .services-tc-wr {
+    grid-template-columns: 3fr 2fr;
+  }
 }
 
-.services-tc-col3 {
-  margin-top: 15px;
+@media screen and (min-width: 48em) {
+  .services-tc-col1 {
+    grid-area: col1;
+  }
+}
+
+.services-tc-col2 {
+  margin-top: 40px;
+  display: flex;
+  gap: 10px 15px;
+  flex-direction: column;
+}
+@media screen and (min-width: 40em) {
+  .services-tc-col2 {
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 48em) {
+  .services-tc-col2 {
+    grid-area: col2;
+    margin-top: 0;
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 64em) {
+  .services-tc-col2 {
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 75em) {
+  .services-tc-col2 {
+    column-gap: 20px;
+  }
+}
+
+@media screen and (min-width: 30em) {
+  .services-tc-img-wr:first-child .services-tc-img {
+    object-position: center;
+  }
+}
+@media screen and (min-width: 30em) {
+  .services-tc-img-wr:last-child .services-tc-img {
+    object-position: right 26%;
+  }
+}
+@media screen and (min-width: 64em) {
+  .services-tc-img-wr:last-child .services-tc-img {
+    object-position: center;
+  }
 }
 
 .services-tc-img {
   width: 100%;
+  height: 100%;
+}
+@media screen and (min-width: 30em) {
+  .services-tc-img {
+    height: 300px;
+    object-fit: cover;
+  }
+}
+@media screen and (min-width: 40em) {
+  .services-tc-img {
+    height: 100%;
+    object-fit: initial;
+  }
+}
+@media screen and (min-width: 48em) {
+  .services-tc-img {
+    height: 225px;
+    object-fit: cover;
+  }
+}
+@media screen and (min-width: 64em) {
+  .services-tc-img {
+    height: 100%;
+  }
 }
 
 @media screen and (max-width: 48em) {
   .services-tc-heading {
     text-align: center;
+  }
+}
+@media screen and (min-width: 30em) {
+  .services-tc-heading {
+    margin-bottom: 1em;
   }
 }
 
@@ -2809,6 +2904,11 @@ main {
 @media screen and (max-width: 47.9375em) {
   .services-tc-split-heading {
     text-align: center;
+  }
+}
+@media screen and (min-width: 30em) {
+  .services-tc-split-heading {
+    margin-bottom: 1.2em;
   }
 }
 
@@ -2851,9 +2951,28 @@ main {
 .services-cc-cards-wr {
   row-gap: 30px;
 }
+@media screen and (min-width: 40em) {
+  .services-cc-cards-wr {
+    column-gap: 10px;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}
+@media screen and (min-width: 40em) {
+  .services-cc-cards-wr {
+    column-gap: 20px;
+  }
+}
 
 .services-cc-card {
   padding: 30px 20px;
+  max-width: 400px;
+}
+@media screen and (min-width: 40em) {
+  .services-cc-card {
+    flex: 1 0 290px;
+  }
 }
 
 /* split heading */
@@ -2887,16 +3006,16 @@ main {
   font-size: 1rem;
 }
 .services-tc-services .btn-chw-content {
-  padding: 13px 38px;
+  padding: 12.8px 38px;
 }
 
 .brands-il-services {
   padding-top: 70px;
   padding-bottom: 50px;
 }
-@media screen and (min-width: 30em) {
+@media screen and (min-width: 48em) {
   .brands-il-services {
-    padding-bottom: 50px;
+    padding-bottom: 70px;
   }
 }
 
