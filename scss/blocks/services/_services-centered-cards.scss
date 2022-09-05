@@ -6,55 +6,54 @@
 // split and normal heading
 
 @use '../../abstracts/variables' as var;
-@use '../../base/sitewide';
 @use '../../layout/layout-base';
 @use '../../components/card/card-center-round-icon';
 @use 'sass:color';
 
-.services-carousel {
+.services-centered-cards {
 	background-color: color.adjust(var.$bc-ternary-lighter, $hue: 15);
-	padding: 32px 0 50px;
+	padding-top: 40px;
+	padding-bottom: 30px;
 
 	@media screen and (min-width: var.$laptop-view) {
-		padding: 70px 0 80px;
+		padding-top: 70px;
+		padding-bottom: 70px;
 	}
 }
 
 /* normal heading */
-.sc-heading {
+.services-cc-heading {
 	text-align: center;
 	@extend %ffp-cp-xl-font;
 	@extend %base-500;
 }
 
-.sc-para {
+.services-cc-para {
 	text-align: center;
 	@extend %normal-300;
 	@extend %ffp-cs-s-font;
-	margin-bottom: 75px;
+	margin-bottom: 50px;
 }
 
-// carousel item
-.sc-carousel-item {
-	padding-left: 10px;
-	padding-right: 10px;
+.services-cc-cards-wr {
+	@extend %flex-dc-h-center;
+	row-gap: 30px;
+}
 
-	@media screen and (min-width: var.$tablet-view) {
-		padding-left: 20px;
-		padding-right: 20px;
-	}
+.services-cc-card {
+	padding: 30px 20px;
 }
 
 // Optional
 // ----------
 
 /* split heading */
-.sc-split-heading {
+.services-cc-split-heading {
 	text-align: center;
 }
 
 /* split heading first text */
-.sc-sh-first-txt {
+.services-cc-sh-first-txt {
 	@extend %ffp-cp-xl-font;
 	@extend %base-500;
 
@@ -64,7 +63,7 @@
 }
 
 /* split heading second text */
-.sc-sh-second-txt {
+.services-cc-sh-second-txt {
 	@extend %ffp-bcs-xl-font;
 	@extend %base-700;
 
@@ -74,16 +73,16 @@
 }
 
 /* layout margin fixed */
-.sc-lm-fixed {
+.services-cc-lm-fixed {
 	@extend %lm-fixed;
 }
 
 // Layout margin auto fixed width
-.sc-lm-auto-fw {
+.services-cc-lm-auto-fw {
 	@extend %lm-auto-fixed-width;
 }
 
-.sc-link-wrapper {
+.services-cc-link-wr {
 	@extend %link-wrapper-basic;
 	outline: none;
 }

@@ -17,10 +17,11 @@
 	@extend %base-500;
 }
 
-// Utilities
+// Optional
 // -------------
 
 .bc-center-site-link {
 	@extend %site-link-c-secondary;
 	text-decoration: none;
+	outline: none;
 }

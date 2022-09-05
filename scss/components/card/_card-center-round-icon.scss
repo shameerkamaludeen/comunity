@@ -2,6 +2,7 @@
    ========================================================================== */
 // Dependencies - icon-rounded-bg
 
+@use '../../abstracts/variables' as var;
 @use '../../abstracts/mixins' as mx;
 @use '../../base/typography';
 @use '../../base/sitewide';
@@ -12,14 +13,13 @@
 
 .card-cri-icon {
 	@include mx.fixed-img-icon($width: 70px,
-	$height: 70px,
-	$img-icon-placeholder: '%img-icon-contain-center')
+		$height: 70px,
+		$img-icon-placeholder: '%img-icon-contain-center')
 }
 
 .card-cri-heading {
 	@extend %ffp-cp-m-font;
 	@extend %base-500;
-	text-align: center;
 	margin: 1.2em 0 0;
 }
 
@@ -27,4 +27,18 @@
 	text-align: center;
 	@extend %normal-300;
 	@extend %ffp-cs-s-font;
+}
+
+.card-cri-read-more {
+	display: block;
+	@extend %base-500;
+	@extend %ffp-bcs-s-font;
+	padding: 12px 25px;
+	@include mx.link-no-underline ($outline: 2px solid var.$bc-secondary,
+		$color: var.$bc-secondary,
+		$visited-color: false,
+		$focus-hover-color: var.$c-secondary,
+		$active-color: var.$c-primary,
+		$transition: color 0.3s ease,
+		$cursor: pointer);
 }
