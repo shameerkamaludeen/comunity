@@ -38,10 +38,26 @@
 .services-cc-cards-wr {
 	@extend %flex-dc-h-center;
 	row-gap: 30px;
+
+	@media screen and (min-width: var.$mobile-landscape-view) {
+		column-gap: 10px;
+		flex-flow: row wrap;
+		justify-content: center;
+		align-items: flex-start;
+	}
+
+	@media screen and (min-width: var.$mobile-landscape-view) {
+		column-gap: 20px;
+	}
 }
 
 .services-cc-card {
 	padding: 30px 20px;
+	max-width: 400px;
+
+	@media screen and (min-width: var.$mobile-landscape-view) {
+		flex: 1 0 290px;
+	}
 }
 
 // Optional

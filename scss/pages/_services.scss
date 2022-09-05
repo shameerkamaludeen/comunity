@@ -14,7 +14,7 @@
 	}
 
 	.btn-chw-content {
-		padding: 13px 38px;
+		padding: 12.8px 38px;
 	}
 }
 
@@ -22,7 +22,7 @@
 	padding-top: 70px;
 	padding-bottom: 50px;
 
-	@media screen and (min-width: var.$mobile-portrait-view) {
-		padding-bottom: 50px;
+	@media screen and (min-width: var.$tablet-view) {
+		padding-bottom: 70px;
 	}
 }
