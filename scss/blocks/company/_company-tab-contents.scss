@@ -26,12 +26,8 @@
 	}
 }
 
-.ctc-img-column {
-	@media screen and (min-width: var.$tablet-view) {
-		// for left side image smooth
-		position: relative;
-	}
-}
+// Don't remove this as it use in some pages at least not from HTML
+.ctc-img-column {}
 
 .ctc-desc-column {
 	margin-top: 33px;
@@ -39,9 +35,6 @@
 	@media screen and (min-width: var.$tablet-view) {
 		flex: 1 0 50%;
 		margin-top: 0;
-		// for left side image smooth
-		position: relative;
-		box-shadow: -15px 0px 10px -11px white;
 	}
 }
 
@@ -52,6 +45,10 @@
 
 	@media screen and (min-width: var.$tablet-view) {
 		text-align: initial;
+	}
+
+	@media screen and (min-width: var.$pc-view) {
+		font-size: var.$fs-xl + 0.3rem;
 	}
 }
 
@@ -71,6 +68,7 @@
 }
 
 // Optional
+// ------------
 
 /* split heading */
 .ctc-split-heading {
@@ -124,4 +122,8 @@
 
 .ctc-img-animate {
 	animation: slide-in-left 1.25s;
+}
+
+.ctc-lcp-right-pcv-normal {
+	@extend %lcp-right-pcv-normal;
 }

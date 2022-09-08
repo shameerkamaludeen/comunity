@@ -1,0 +1,96 @@
+/* || Block - Projects multi column layout
+   ========================================================================== */
+
+@use '../../abstracts/variables' as var;
+@use '../../abstracts/variables';
+@use '../../base/typography';
+@use '../../layout/layout-base';
+@use '../../components/image/image-fg-icon-desc';
+@use 'sass:color';
+
+
+.projects-multi-column {
+	background-color: color.adjust(var.$bc-ternary-lighter, $hue: 15);
+	padding: 32px 0 50px;
+
+	@media screen and (min-width: var.$laptop-view) {
+		padding: 70px 0 80px;
+	}
+}
+
+/* normal heading */
+.projects-mc-heading {
+	text-align: center;
+	@extend %ffp-cp-xl-font;
+	@extend %base-500;
+}
+
+.projects-mc-para {
+	text-align: center;
+	@extend %normal-300;
+	@extend %ffp-cs-s-font;
+}
+
+.projects-mc-projects-wr {
+	margin-top: 26px;
+	transition: column-count 0.3s ease;
+
+	@media screen and (min-width: var.$mobile-landscape-view) {
+		column-count: 2;
+		column-gap: 20px;
+	}
+
+	@media screen and (min-width: var.$laptop-view) {
+		column-count: 3;
+		column-gap: 30px;
+	}
+}
+
+.projects-mc-project-item {
+	&:not(:last-child) {
+		margin-bottom: 36px;
+	}
+
+	break-inside: avoid;
+	// break-inside and page-break-inside same, one is deprecated and another for 
+	// support in older browser
+	page-break-inside: avoid;
+}
+
+// Optional
+// ----------
+
+/* split heading */
+.projects-mc-split-heading {
+	text-align: center;
+}
+
+/* split heading first text */
+.projects-mc-sh-first-txt {
+	@extend %ffp-cp-xl-font;
+	@extend %base-500;
+
+	@media screen and (min-width: var.$pc-view) {
+		font-size: var.$fs-xl + 0.2rem;
+	}
+}
+
+/* split heading second text */
+.projects-mc-sh-second-txt {
+	@extend %ffp-bcs-xl-font;
+	@extend %base-700;
+
+	@media screen and (min-width: var.$pc-view) {
+		font-size: var.$fs-xl + 0.2rem;
+	}
+}
+
+/* layout margin fixed */
+.projects-mc-lm-fixed {
+	@extend %lm-fixed;
+}
+
+// Layout margin auto fixed width
+.projects-mc-lm-auto-fw {
+	@extend %lm-auto-fixed-width;
+}

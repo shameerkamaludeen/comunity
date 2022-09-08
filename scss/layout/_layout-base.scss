@@ -226,3 +226,12 @@
 		padding-left: var.$lp-wide;
 	}
 }
+
+// Layout content padding right
+
+// PC view
+%lcp-right-pcv-normal {
+	@media screen and (min-width: var.$pc-view) {
+		padding-right: var.$lcp-normal;
+	}
+}

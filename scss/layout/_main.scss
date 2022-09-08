@@ -3,6 +3,7 @@
 
 @use '../abstracts/variables' as var;
 @use '../abstracts/mixins' as mx;
+@use '../components/scroll-to-top/scroll-to-top-btn';
 
 main {
 	background-color: var.$bc-primary;

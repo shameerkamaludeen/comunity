@@ -341,9 +341,14 @@ img {
    ========================================================================== */
 /* || Base - Typography
    ========================================================================== */
-.card-cp-heading, .lead-bg-lead, .img-fd-tag, .form-rd-submit-btn {
+.img-fg-id-heading, .card-cp-heading, .lead-bg-lead, .img-fd-tag, .form-rd-submit-btn {
   word-spacing: 0.8px;
   letter-spacing: 0.4px;
+}
+
+.img-fg-id-tag {
+  word-spacing: 2px;
+  letter-spacing: 1px;
 }
 
 .img-fd-heading {
@@ -357,7 +362,7 @@ img {
   font-family: "Poppins", sans-serif;
 }
 
-.contact-mf-heading, .contact-mf-sh-first-text, .tc-heading-normal, .tc-sh-first-txt, .price-occ-heading, .price-occ-sh-first-text, .team-dg-heading, .team-dg-sh-first-text, .ctc-heading, .ctc-sh-first-text, .services-cc-heading, .services-cc-sh-first-txt, .sc-heading, .sc-sh-first-txt {
+.projects-mc-heading, .projects-mc-sh-first-txt, .contact-mf-heading, .contact-mf-sh-first-text, .tc-heading-normal, .tc-sh-first-txt, .price-occ-heading, .price-occ-sh-first-text, .team-dg-heading, .team-dg-sh-first-text, .ctc-heading, .ctc-sh-first-text, .services-cc-heading, .services-cc-sh-first-txt, .sc-heading, .sc-sh-first-txt {
   font-size: 1.875rem;
   color: hsl(226deg, 13%, 19%);
   font-family: "Poppins", sans-serif;
@@ -369,7 +374,7 @@ img {
   font-family: "Poppins", sans-serif;
 }
 
-.card-cri-heading {
+.img-fg-id-heading, .card-cri-heading {
   font-size: 1.125rem;
   color: hsl(226deg, 13%, 19%);
   font-family: "Poppins", sans-serif;
@@ -394,8 +399,14 @@ h3 {
   font-family: "Poppins", sans-serif;
 }
 
-.services-tc-para, .ol-cnu-para, .contact-mf-para, .card-cp-para, .tc-para, .price-occ-para, .team-dg-para, .row-fwt-para, .ctc-para, .btn-no-bgb-content, .card-cri-para, .services-cc-para, .sc-para, .hero-id-para, button, label, p, h4 {
+.projects-mc-para, .services-tc-para, .ol-cnu-para, .contact-mf-para, .card-cp-para, .tc-para, .price-occ-para, .team-dg-para, .row-fwt-para, .ctc-para, .btn-no-bgb-content, .card-cri-para, .services-cc-para, .sc-para, .hero-id-para, button, label, p, h4 {
   font-size: 1rem;
+  color: hsl(0deg, 0%, 47%);
+  font-family: "Poppins", sans-serif;
+}
+
+.img-fg-id-tag {
+  font-size: 0.75rem;
   color: hsl(0deg, 0%, 47%);
   font-family: "Poppins", sans-serif;
 }
@@ -418,7 +429,7 @@ h3 {
   font-family: "Poppins", sans-serif;
 }
 
-.card-cs-lead, .team-dg-read-more, .img-fd-tag {
+.card-cs-lead, .img-fd-tag {
   font-size: 1rem;
   color: hsl(0deg, 0%, 100%);
   font-family: "Poppins", sans-serif;
@@ -436,7 +447,7 @@ h3 {
   font-family: "Poppins", sans-serif;
 }
 
-.contact-mf-sh-second-text, .tc-sh-second-txt, .price-occ-sh-second-text, .team-dg-sh-second-text, .ctc-sh-second-text, .services-cc-sh-second-txt, .sc-sh-second-txt {
+.projects-mc-sh-second-txt, .contact-mf-sh-second-text, .tc-sh-second-txt, .price-occ-sh-second-text, .team-dg-sh-second-text, .ctc-sh-second-text, .services-cc-sh-second-txt, .sc-sh-second-txt {
   font-size: 1.875rem;
   color: hsl(228deg, 61%, 53%);
   font-family: "Poppins", sans-serif;
@@ -502,7 +513,7 @@ h3 {
   font-weight: 400;
 }
 
-.services-tc-heading, .services-tc-subheading, .services-tc-sh-first-text, .ol-cnu-li::marker, .ol-cnu-heading, .bc-center-content, .contact-mf-heading, .contact-mf-sh-first-text, .contact-mf-dc-desc, .card-cp-heading, .tc-heading-normal, .tc-sh-first-txt, .lead-bgh-first-text, .price-occ-heading, .price-occ-sh-first-text, .card-cs-heading, .card-cs-tag-light, .team-dg-heading, .team-dg-sh-first-text, .ctc-heading, .ctc-sh-first-text, .card-cri-heading, .card-cri-read-more, .services-cc-heading, .services-cc-sh-first-txt, .sc-heading, .sc-sh-first-txt, .hero-id-heading, .hero-id-sh-first-text {
+.projects-mc-heading, .projects-mc-sh-first-txt, .img-fg-id-heading, .img-fg-id-tag, .services-tc-heading, .services-tc-subheading, .services-tc-sh-first-text, .ol-cnu-li::marker, .ol-cnu-heading, .bc-center-content, .contact-mf-heading, .contact-mf-sh-first-text, .contact-mf-dc-desc, .card-cp-heading, .tc-heading-normal, .tc-sh-first-txt, .lead-bgh-first-text, .price-occ-heading, .price-occ-sh-first-text, .card-cs-heading, .card-cs-tag-light, .team-dg-heading, .team-dg-sh-first-text, .ctc-heading, .ctc-sh-first-text, .card-cri-heading, .card-cri-read-more, .services-cc-heading, .services-cc-sh-first-txt, .sc-heading, .sc-sh-first-txt, .hero-id-heading, .hero-id-sh-first-text {
   line-height: 1.2;
   font-weight: 500;
 }
@@ -512,12 +523,12 @@ h3 {
   font-weight: 600;
 }
 
-.services-tc-sh-second-text, .contact-mf-sh-second-text, .tc-sh-second-txt, .price-occ-sh-second-text, .team-dg-sh-second-text, .cst-counter, .ctc-sh-second-text, .services-cc-sh-second-txt, .sc-sh-second-txt, .hero-id-sh-second-text, h4, h3, h2, h1 {
+.projects-mc-sh-second-txt, .services-tc-sh-second-text, .contact-mf-sh-second-text, .tc-sh-second-txt, .price-occ-sh-second-text, .team-dg-sh-second-text, .cst-counter, .ctc-sh-second-text, .services-cc-sh-second-txt, .sc-sh-second-txt, .hero-id-sh-second-text, h4, h3, h2, h1 {
   line-height: 1.2;
   font-weight: 700;
 }
 
-.contact-mf-para, .card-cp-para, .tc-para, .lead-bg-tag, .price-occ-para, .team-dg-para, .row-fwt-para, .card-cri-para, .services-cc-para, .sc-para {
+.projects-mc-para, .contact-mf-para, .card-cp-para, .tc-para, .lead-bg-tag, .price-occ-para, .team-dg-para, .row-fwt-para, .card-cri-para, .services-cc-para, .sc-para {
   line-height: 1.65;
   font-weight: 300;
 }
@@ -577,7 +588,9 @@ button {
   list-style-type: none;
 }
 
-.img-fd-figcaption {
+/* || Abstracts - Sitewide
+   ========================================================================== */
+.img-fg-id-icon-wr, .img-fd-figcaption {
   position: absolute;
   left: 0;
   right: 0;
@@ -585,9 +598,7 @@ button {
   bottom: 0;
 }
 
-/* || Abstracts - Sitewide
-   ========================================================================== */
-.icon-rounded-bg, .img-fd-figcaption {
+.img-fg-id-icon-wr, .icon-rounded-bg, .img-fd-figcaption {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -647,11 +658,11 @@ button {
   object-position: top;
 }
 
-.brands-il-link-wr, .gq-image-wr-link, .sc-link-wrapper, .services-cc-link-wr, .logo-il-link-wr {
+.brands-il-link-wr, .gq-link-wr-basic, .sc-link-wrapper, .services-cc-link-wr, .logo-il-link-wr {
   text-decoration: none;
   cursor: pointer;
 }
-.brands-il-link-wr:link, .gq-image-wr-link:link, .sc-link-wrapper:link, .services-cc-link-wr:link, .logo-il-link-wr:link, .brands-il-link-wr:visited, .gq-image-wr-link:visited, .sc-link-wrapper:visited, .services-cc-link-wr:visited, .logo-il-link-wr:visited, .brands-il-link-wr:focus, .gq-image-wr-link:focus, .sc-link-wrapper:focus, .services-cc-link-wr:focus, .logo-il-link-wr:focus, .brands-il-link-wr:hover, .gq-image-wr-link:hover, .sc-link-wrapper:hover, .services-cc-link-wr:hover, .logo-il-link-wr:hover, .brands-il-link-wr:active, .gq-image-wr-link:active, .sc-link-wrapper:active, .services-cc-link-wr:active, .logo-il-link-wr:active {
+.brands-il-link-wr:link, .gq-link-wr-basic:link, .sc-link-wrapper:link, .services-cc-link-wr:link, .logo-il-link-wr:link, .brands-il-link-wr:visited, .gq-link-wr-basic:visited, .sc-link-wrapper:visited, .services-cc-link-wr:visited, .logo-il-link-wr:visited, .brands-il-link-wr:focus, .gq-link-wr-basic:focus, .sc-link-wrapper:focus, .services-cc-link-wr:focus, .logo-il-link-wr:focus, .brands-il-link-wr:hover, .gq-link-wr-basic:hover, .sc-link-wrapper:hover, .services-cc-link-wr:hover, .logo-il-link-wr:hover, .brands-il-link-wr:active, .gq-link-wr-basic:active, .sc-link-wrapper:active, .services-cc-link-wr:active, .logo-il-link-wr:active {
   color: transparent;
 }
 
@@ -966,24 +977,24 @@ button {
 
 /* || Layout - Layout base
    ========================================================================== */
-.services-cc-lm-fixed, .services-tc-lm-fixed, .brands-il-lm-fixed, .contact-mf-lm-fixed, .tc-lm-fixed, .lead-bg-lm-fixed, .price-occ-lm-fixed, .team-dg-lm-fixed, .ctc-lm-fixed, .sc-lm-fixed, .hero-id-lm-fixed, .attr-slu-lm-fixed, .fng-lmc-lm-fixed, .navbar-rrm-lm-fixed {
+.projects-mc-lm-fixed, .services-cc-lm-fixed, .services-tc-lm-fixed, .brands-il-lm-fixed, .contact-mf-lm-fixed, .tc-lm-fixed, .lead-bg-lm-fixed, .price-occ-lm-fixed, .team-dg-lm-fixed, .ctc-lm-fixed, .sc-lm-fixed, .hero-id-lm-fixed, .attr-slu-lm-fixed, .fng-lmc-lm-fixed, .navbar-rrm-lm-fixed {
   margin-right: 15px;
   margin-left: 15px;
 }
 @media screen and (min-width: 30em) {
-  .services-cc-lm-fixed, .services-tc-lm-fixed, .brands-il-lm-fixed, .contact-mf-lm-fixed, .tc-lm-fixed, .lead-bg-lm-fixed, .price-occ-lm-fixed, .team-dg-lm-fixed, .ctc-lm-fixed, .sc-lm-fixed, .hero-id-lm-fixed, .attr-slu-lm-fixed, .fng-lmc-lm-fixed, .navbar-rrm-lm-fixed {
+  .projects-mc-lm-fixed, .services-cc-lm-fixed, .services-tc-lm-fixed, .brands-il-lm-fixed, .contact-mf-lm-fixed, .tc-lm-fixed, .lead-bg-lm-fixed, .price-occ-lm-fixed, .team-dg-lm-fixed, .ctc-lm-fixed, .sc-lm-fixed, .hero-id-lm-fixed, .attr-slu-lm-fixed, .fng-lmc-lm-fixed, .navbar-rrm-lm-fixed {
     margin-right: 25px;
     margin-left: 25px;
   }
 }
 @media screen and (min-width: 48em) {
-  .services-cc-lm-fixed, .services-tc-lm-fixed, .brands-il-lm-fixed, .contact-mf-lm-fixed, .tc-lm-fixed, .lead-bg-lm-fixed, .price-occ-lm-fixed, .team-dg-lm-fixed, .ctc-lm-fixed, .sc-lm-fixed, .hero-id-lm-fixed, .attr-slu-lm-fixed, .fng-lmc-lm-fixed, .navbar-rrm-lm-fixed {
+  .projects-mc-lm-fixed, .services-cc-lm-fixed, .services-tc-lm-fixed, .brands-il-lm-fixed, .contact-mf-lm-fixed, .tc-lm-fixed, .lead-bg-lm-fixed, .price-occ-lm-fixed, .team-dg-lm-fixed, .ctc-lm-fixed, .sc-lm-fixed, .hero-id-lm-fixed, .attr-slu-lm-fixed, .fng-lmc-lm-fixed, .navbar-rrm-lm-fixed {
     margin-right: 45px;
     margin-left: 45px;
   }
 }
 @media screen and (min-width: 75em) {
-  .services-cc-lm-fixed, .services-tc-lm-fixed, .brands-il-lm-fixed, .contact-mf-lm-fixed, .tc-lm-fixed, .lead-bg-lm-fixed, .price-occ-lm-fixed, .team-dg-lm-fixed, .ctc-lm-fixed, .sc-lm-fixed, .hero-id-lm-fixed, .attr-slu-lm-fixed, .fng-lmc-lm-fixed, .navbar-rrm-lm-fixed {
+  .projects-mc-lm-fixed, .services-cc-lm-fixed, .services-tc-lm-fixed, .brands-il-lm-fixed, .contact-mf-lm-fixed, .tc-lm-fixed, .lead-bg-lm-fixed, .price-occ-lm-fixed, .team-dg-lm-fixed, .ctc-lm-fixed, .sc-lm-fixed, .hero-id-lm-fixed, .attr-slu-lm-fixed, .fng-lmc-lm-fixed, .navbar-rrm-lm-fixed {
     margin-right: 65px;
     margin-left: 65px;
   }
@@ -1001,7 +1012,7 @@ button {
   }
 }
 
-.contact-mf-lm-auto-fw, .row-fwt-lm-auto, .main-lm-auto-fw, .services-cc-lm-auto-fw, .tc-lm-auto-fw, .price-occ-lm-auto-fw, .sc-lm-auto-fw {
+.contact-mf-lm-auto-fw, .row-fwt-lm-auto, .main-lm-auto-fw, .projects-mc-lm-auto-fw, .services-cc-lm-auto-fw, .tc-lm-auto-fw, .price-occ-lm-auto-fw, .sc-lm-auto-fw {
   margin-left: auto;
   margin-right: auto;
 }
@@ -1013,7 +1024,7 @@ button {
   }
 }
 
-.services-cc-lm-auto-fw, .tc-lm-auto-fw, .price-occ-lm-auto-fw, .sc-lm-auto-fw {
+.projects-mc-lm-auto-fw, .services-cc-lm-auto-fw, .tc-lm-auto-fw, .price-occ-lm-auto-fw, .sc-lm-auto-fw {
   max-width: 560px;
 }
 
@@ -1046,6 +1057,12 @@ button {
 @media screen and (min-width: 75em) {
   .services-tc-lp-left-tv, .ctc-lp-left-tv {
     padding-left: 60px;
+  }
+}
+
+@media screen and (min-width: 75em) {
+  .ctc-lcp-right-pcv-normal {
+    padding-right: 70px;
   }
 }
 
@@ -1269,6 +1286,46 @@ header {
 
 /* || Abstracts - Navigation
    ========================================================================== */
+/* || Component - Scroll to top button
+   ========================================================================== */
+.scroll-to-top-btn {
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.scroll-tt-btn-active {
+  z-index: 9;
+  opacity: 0.7;
+}
+
+.scroll-tt-btn-button {
+  border: none;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+  background-color: hsl(208deg, 100%, 96%);
+  cursor: pointer;
+}
+.scroll-tt-btn-button:hover {
+  background-color: gray;
+}
+.scroll-tt-btn-button:active {
+  background-color: hsl(208deg, 100%, 96%);
+}
+
+.scroll-tt-btn-icon {
+  width: 20px;
+  height: 20px;
+  fill: hsl(228deg, 61%, 53%);
+}
+
 /* || Layout - Main
    ========================================================================== */
 main {
@@ -1837,12 +1894,6 @@ main {
   }
 }
 
-@media screen and (min-width: 48em) {
-  .ctc-img-column {
-    position: relative;
-  }
-}
-
 .ctc-desc-column {
   margin-top: 33px;
 }
@@ -1850,8 +1901,6 @@ main {
   .ctc-desc-column {
     flex: 1 0 50%;
     margin-top: 0;
-    position: relative;
-    box-shadow: -15px 0px 10px -11px white;
   }
 }
 
@@ -1861,6 +1910,11 @@ main {
 @media screen and (min-width: 48em) {
   .ctc-heading {
     text-align: initial;
+  }
+}
+@media screen and (min-width: 75em) {
+  .ctc-heading {
+    font-size: 2.175rem;
   }
 }
 
@@ -2075,16 +2129,16 @@ main {
   }
 }
 
-.gq-image-wr:not(:first-child) {
-  margin-top: 10px;
+.gq-image-wr:not(:last-child) {
+  margin-bottom: 15px;
 }
 @media screen and (min-width: 30em) {
   .gq-image-wr {
     flex: 0 1 auto;
     height: 350px;
   }
-  .gq-image-wr:not(:first-child) {
-    margin-top: 0;
+  .gq-image-wr:not(:last-child) {
+    margin-bottom: 0;
   }
 }
 @media screen and (min-width: 48em) {
@@ -2094,7 +2148,7 @@ main {
   }
 }
 
-.gq-image-wr-link {
+.gq-link-wr-basic {
   display: block;
   outline: none;
 }
@@ -2143,7 +2197,6 @@ main {
 
 .team-dg-read-more {
   margin-top: 13px;
-  height: 44px;
 }
 
 .team-dg-split-heading {
@@ -2610,60 +2663,32 @@ main {
   }
 }
 
-/* || Component - Scroll to top button
-   ========================================================================== */
-.scroll-to-top-btn {
-  width: 40px;
-  height: 40px;
-  position: fixed;
-  right: 30px;
-  bottom: 30px;
-  z-index: -1;
-  opacity: 0;
-  transition: opacity 0.2s;
-}
-
-.scroll-tt-btn-active {
-  z-index: 9;
-  opacity: 0.7;
-}
-
-.scroll-tt-btn-button {
-  border: none;
-  width: 100%;
-  height: 100%;
-  border-radius: 4px;
-  transition: background-color 0.2s ease;
-  background-color: hsl(208deg, 100%, 96%);
-  cursor: pointer;
-}
-.scroll-tt-btn-button:hover {
-  background-color: gray;
-}
-.scroll-tt-btn-button:active {
-  background-color: hsl(208deg, 100%, 96%);
-}
-
-.scroll-tt-btn-icon {
-  width: 20px;
-  height: 20px;
-  fill: hsl(228deg, 61%, 53%);
-}
-
 /* || Pages - Home
    ========================================================================== */
-.form-rd-home .form-rd-ul {
-  margin-bottom: 0;
+@media screen and (min-width: 48em) {
+  .ctc-home .ctc-img-column {
+    position: relative;
+  }
 }
 @media screen and (min-width: 48em) {
-  .form-rd-home .form-rd-ul {
-    margin-top: 0;
+  .ctc-home .ctc-desc-column {
+    position: relative;
+    box-shadow: -15px 0px 10px -11px white;
   }
 }
 
 @media screen and (min-width: 64em) {
   .price-occ-home .ul-ci-icon-li {
     margin-bottom: 10px;
+  }
+}
+
+.form-rd-home .form-rd-ul {
+  margin-bottom: 0;
+}
+@media screen and (min-width: 48em) {
+  .form-rd-home .form-rd-ul {
+    margin-top: 0;
   }
 }
 
@@ -2895,7 +2920,7 @@ main {
 }
 
 .services-tc-read-more {
-  margin-top: 5px;
+  margin-top: 10px;
 }
 
 .services-tc-split-heading {
@@ -3001,20 +3026,150 @@ main {
 
 /* || Page - Services
    ========================================================================== */
-.services-tc-services .btn-capsule-hover-wipe {
-  height: 45px;
-  font-size: 1rem;
-}
-.services-tc-services .btn-chw-content {
-  padding: 12.8px 38px;
-}
-
 .brands-il-services {
   padding-top: 70px;
   padding-bottom: 50px;
 }
 @media screen and (min-width: 48em) {
   .brands-il-services {
+    padding-bottom: 70px;
+  }
+}
+
+/* || Component - Image foreground icon with description as caption
+   ========================================================================== */
+.image-fg-icon-desc {
+  width: 100%;
+  position: relative;
+  margin: 0;
+  cursor: pointer;
+}
+
+.img-fg-id-image {
+  width: 100%;
+  display: flex;
+}
+
+.img-fg-id-icon-wr {
+  background-color: rgba(62, 91, 208, 0.8);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  bottom: 67px;
+}
+.image-fg-icon-desc:hover .img-fg-id-icon-wr, .image-fg-icon-desc:focus .img-fg-id-icon-wr {
+  z-index: initial;
+  opacity: 1;
+}
+
+.img-fg-id-icon {
+  transition: width 0.3s ease, height 0.3s ease;
+  width: 12.5px;
+  height: 12.5px;
+  fill: hsl(0deg, 0%, 100%);
+}
+.image-fg-icon-desc:hover .img-fg-id-icon, .image-fg-icon-desc:focus .img-fg-id-icon {
+  width: 25px;
+  height: 25px;
+}
+
+.img-fg-id-figcaption {
+  padding: 13px 0 10px;
+}
+
+.img-fg-id-heading {
+  margin: 0;
+}
+
+.img-fg-id-tag {
+  text-transform: uppercase;
+  margin-top: 0.7em;
+  margin-bottom: 0;
+}
+
+/* || Block - Projects multi column layout
+   ========================================================================== */
+.projects-multi-column {
+  background-color: #fafbff;
+  padding: 32px 0 50px;
+}
+@media screen and (min-width: 64em) {
+  .projects-multi-column {
+    padding: 70px 0 80px;
+  }
+}
+
+/* normal heading */
+.projects-mc-heading {
+  text-align: center;
+}
+
+.projects-mc-para {
+  text-align: center;
+}
+
+.projects-mc-projects-wr {
+  margin-top: 26px;
+  transition: column-count 0.3s ease;
+}
+@media screen and (min-width: 40em) {
+  .projects-mc-projects-wr {
+    column-count: 2;
+    column-gap: 20px;
+  }
+}
+@media screen and (min-width: 64em) {
+  .projects-mc-projects-wr {
+    column-count: 3;
+    column-gap: 30px;
+  }
+}
+
+.projects-mc-project-item {
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.projects-mc-project-item:not(:last-child) {
+  margin-bottom: 36px;
+}
+
+/* split heading */
+.projects-mc-split-heading {
+  text-align: center;
+}
+
+/* split heading first text */
+@media screen and (min-width: 75em) {
+  .projects-mc-sh-first-txt {
+    font-size: 2.075rem;
+  }
+}
+
+/* split heading second text */
+@media screen and (min-width: 75em) {
+  .projects-mc-sh-second-txt {
+    font-size: 2.075rem;
+  }
+}
+
+/* layout margin fixed */
+/* || Page - Projects
+   ========================================================================== */
+.projects-mc-projects {
+  padding-top: 0;
+  background-color: initial;
+}
+.projects-mc-projects .projects-mc-split-heading,
+.projects-mc-projects .projects-mc-heading {
+  margin-top: 0;
+}
+
+.brands-il-projects {
+  padding-top: 70px;
+  padding-bottom: 50px;
+}
+@media screen and (min-width: 48em) {
+  .brands-il-projects {
     padding-bottom: 70px;
   }
 }
@@ -3053,6 +3208,18 @@ body {
 /* || Store Pages */
 .breadcrumbs-center {
   margin-top: 3px;
+}
+
+.team-desc-gallery .btn-capsule-hover-wipe,
+.company-tab-contents .btn-capsule-hover-wipe,
+.services-three-column .btn-capsule-hover-wipe {
+  height: 44.5px;
+  font-size: 1rem;
+}
+.team-desc-gallery .btn-chw-content,
+.company-tab-contents .btn-chw-content,
+.services-three-column .btn-chw-content {
+  padding: 12.8px 38px;
 }
 
 /*# sourceMappingURL=style.css.map */
