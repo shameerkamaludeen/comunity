@@ -83,6 +83,12 @@
 	font-family: var.$ff-primary;
 }
 
+%ffp-cs-xxs-font {
+	font-size: var.$fs-xxs;
+	color: var.$c-secondary;
+	font-family: var.$ff-primary;
+}
+
 // || FFP-CT fonts (ff-primary c-ternary fonts)
 
 %ffp-ct-xs-font {

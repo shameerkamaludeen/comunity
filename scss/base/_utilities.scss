@@ -21,15 +21,6 @@
 	outline: none;
 }
 
-// absolute element cover its container
-%position-absolute-cover {
-	position: absolute;
-	left: 0;
-	right: 0;
-	top: 0;
-	bottom: 0;
-}
-
 // Remove field set default style
 %fieldset-no-style {
 	padding: 0;

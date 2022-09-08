@@ -1,0 +1,31 @@
+/* || Page - Projects
+   ========================================================================== */
+
+@use '../abstracts/variables' as var;
+@use '../blocks/project/projects-multi-column';
+@use '../blocks/company/company-tab-contents';
+@use '../blocks/team/team-desc-gallery';
+@use '../blocks/brand/brands-img-list';
+@use '../blocks/contact/contact-map-form';
+
+// || Projects
+
+.projects-mc-projects {
+	padding-top: 0;
+	background-color: initial;
+
+	.projects-mc-split-heading,
+	.projects-mc-heading {
+		margin-top: 0;
+	}
+}
+
+// || Brands
+.brands-il-projects {
+	padding-top: 70px;
+	padding-bottom: 50px;
+
+	@media screen and (min-width: var.$tablet-view) {
+		padding-bottom: 70px;
+	}
+}

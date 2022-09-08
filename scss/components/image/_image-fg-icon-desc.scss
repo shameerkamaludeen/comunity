@@ -1,0 +1,74 @@
+/* || Component - Image foreground icon with description as caption
+   ========================================================================== */
+// Features
+// Image height will be auto
+
+@use '../../abstracts/variables' as var;
+@use '../../abstracts/mixins' as mx;
+@use '../../base/typography';
+@use '../../base/sitewide';
+@use 'sass:color';
+
+.image-fg-icon-desc {
+	width: 100%;
+	position: relative;
+	margin: 0;
+	cursor: pointer;
+}
+
+.img-fg-id-image {
+	width: 100%;
+	display: flex;
+}
+
+.img-fg-id-icon-wr {
+	background-color: color.adjust(var.$bc-secondary, $alpha: -0.2);
+	@extend %position-absolute-cover;
+	@extend %flex-vh-center;
+	z-index: -1;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+	bottom: 67px;
+
+	@at-root .image-fg-icon-desc:hover &,
+	.image-fg-icon-desc:focus & {
+		z-index: initial;
+		opacity: 1;
+	}
+}
+
+.img-fg-id-icon {
+	transition: width 0.3s ease, height 0.3s ease;
+
+	@include mx.svg-fixed-size ($color: false,
+		$width: 12.5px,
+		$height: 12.5px,
+		$stroke: false,
+		$fill: var.$bc-primary);
+
+	@at-root .image-fg-icon-desc:hover &,
+	.image-fg-icon-desc:focus & {
+		width: 25px;
+		height: 25px;
+	}
+}
+
+.img-fg-id-figcaption {
+	padding: 13px 0 10px;
+}
+
+.img-fg-id-heading {
+	@extend %ffp-cp-m-font;
+	@extend %base-500;
+	@extend %base-spacing;
+	margin: 0;
+}
+
+.img-fg-id-tag {
+	@extend %ffp-cs-xxs-font;
+	@extend %base-500;
+	text-transform: uppercase;
+	@extend %normal-spacing;
+	margin-top: 0.7em;
+	margin-bottom: 0;
+}

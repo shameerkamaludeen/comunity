@@ -27,8 +27,8 @@
 }
 
 .gq-image-wr {
-	&:not(:first-child) {
-		margin-top: 10px;
+	&:not(:last-child) {
+		margin-bottom: 15px;
 	}
 
 	@media screen and (min-width: var.$mobile-portrait-view) {
@@ -36,8 +36,8 @@
 		flex: 0 1 auto;
 		height: 350px;
 
-		&:not(:first-child) {
-			margin-top: 0;
+		&:not(:last-child) {
+			margin-bottom: 0;
 		}
 	}
 
@@ -47,7 +47,7 @@
 	}
 }
 
-.gq-image-wr-link {
+.gq-link-wr-basic {
 	display: block;
 	@extend %link-wrapper-basic;
 	outline: none;

@@ -6,6 +6,17 @@
 @use '../abstracts/variables' as var;
 @use 'sass:color';
 
+// || General
+
+// absolute element cover its container
+%position-absolute-cover {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+
 // || Flex
 
 // Flexible vertically center(vc) and horizontally space between(hsb)

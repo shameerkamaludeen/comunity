@@ -48,4 +48,17 @@ body {
 	@extend %hide-visually;
 }
 
+.team-desc-gallery,
+.company-tab-contents,
+.services-three-column {
+	.btn-capsule-hover-wipe {
+		height: 44.5px;
+		font-size: var.$fs-s;
+	}
+
+	.btn-chw-content {
+		padding: 12.8px 38px;
+	}
+}
+
 // || Footer
