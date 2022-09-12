@@ -75,7 +75,7 @@
 		flex: 1;
 	}
 
-	&:nth-of-type() {
+	&:nth-of-type(1) {
 		@media screen and (min-width: var.$laptop-view) {
 			margin-right: -8px;
 		}

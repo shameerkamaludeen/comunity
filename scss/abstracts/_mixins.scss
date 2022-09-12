@@ -126,11 +126,15 @@
 	cursor: $cursor;
 
 	&:link {
-		color: $color;
+		@if $color {
+			color: $color;
+		}
 	}
 
 	&:visited {
-		color: $visited-color;
+		@if $visited-color {
+			color: $visited-color;
+		}
 	}
 
 	&:focus {
@@ -141,11 +145,15 @@
 
 	&:focus,
 	&:hover {
-		color: $focus-hover-color;
+		@if $focus-hover-color {
+			color: $focus-hover-color;
+		}
 	}
 
 	&:active {
-		color: $active-color;
+		@if $active-color {
+			color: $active-color;
+		}
 	}
 }
 

@@ -1789,9 +1789,6 @@ main {
 .card-cri-read-more:link {
   color: hsl(228deg, 61%, 53%);
 }
-.card-cri-read-more:visited {
-  color: false;
-}
 .card-cri-read-more:focus {
   outline: 2px solid hsl(228deg, 61%, 53%);
 }
@@ -2368,7 +2365,7 @@ main {
   }
 }
 @media screen and (min-width: 64em) {
-  .price-occ-price:nth-of-type() {
+  .price-occ-price:nth-of-type(1) {
     margin-right: -8px;
   }
 }
@@ -3244,10 +3241,10 @@ main {
   }
 }
 .modal-fwc-active .modal-fwc-img-wr {
-  animation-name: inline-ujcga2m;
+  animation-name: inline-u1fjso3;
   animation-duration: 0.5s;
 }
-@keyframes inline-ujcga2m {
+@keyframes inline-u1fjso3 {
   from {
     transform: scale(0.8);
     opacity: 0;
