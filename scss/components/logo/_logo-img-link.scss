@@ -18,9 +18,12 @@
 
 .logo-il-link-wr {
 	display: inline-block;
-	outline: none;
 	@extend %ffp-cp-l-font;
 	@extend %link-wrapper-basic;
+
+	&:focus {
+		outline: none;
+	}
 }
 
 .logo-il-link-wr-fixed {

@@ -1286,6 +1286,8 @@ header {
 
 .logo-il-link-wr {
   display: inline-block;
+}
+.logo-il-link-wr:focus {
   outline: none;
 }
 
@@ -3242,10 +3244,10 @@ main {
   }
 }
 .modal-fwc-active .modal-fwc-img-wr {
-  animation-name: inline-u3w61ah;
+  animation-name: inline-ujcga2m;
   animation-duration: 0.5s;
 }
-@keyframes inline-u3w61ah {
+@keyframes inline-ujcga2m {
   from {
     transform: scale(0.8);
     opacity: 0;
