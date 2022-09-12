@@ -1,0 +1,88 @@
+/* || Page - Contacts
+   ========================================================================== */
+
+@use '../abstracts/variables' as var;
+@use 'sass:color';
+
+.contact-mf-contacts {
+	margin-top: -73px;
+	background-color: color.adjust(var.$bc-ternary-lighter, $lightness: -1%);
+
+	.contact-mf-wr {
+		display: block;
+	}
+
+	.contact-mf-split-heading,
+	.contact-mf-para {
+		text-align: center;
+	}
+
+	.contact-mf-para {
+		&.contact-mf-lm-auto-fw {
+			max-width: 750px;
+		}
+	}
+
+	.contact-mf-details-wr {
+
+		@media screen and (min-width: var.$tablet-view) {
+			display: flex;
+			flex-flow: column;
+			justify-content: center;
+			gap: 40px 30px;
+			display: flex;
+			flex-flow: row wrap;
+			align-items: center;
+		}
+
+		@media screen and (min-width: var.$tablet-view) {
+			column-gap: 38px;
+		}
+	}
+
+	.contact-mf-detail {
+		@media screen and (min-width: var.$tablet-view) {
+			flex: 0 0 300px;
+		}
+
+		@media screen and (min-width: var.$laptop-view) {
+			max-width: 270px;
+			flex: 0 0 auto;
+		}
+	}
+
+	.contact-mf-dc-heading {
+		font-weight: 600;
+	}
+
+	.contact-mf-map-wr {
+		@media screen and (min-width: var.$tablet-view) {
+			margin-top: 40px;
+		}
+	}
+
+	.contact-mf-form {
+		margin-top: 35px;
+
+		@media screen and (min-width: var.$tablet-view) {
+			margin-top: 50px;
+		}
+
+		&.contact-mf-lm-auto-fw {
+			max-width: 600px;
+		}
+	}
+
+	.form-rd-li-submit {
+		text-align: center;
+
+		@media screen and (min-width: var.$tablet-view) {
+			margin-top: 25px;
+		}
+	}
+
+	.form-rd-submit-btn {
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+}
