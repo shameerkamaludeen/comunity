@@ -1,0 +1,26 @@
+/* || Component - Close button
+   ========================================================================== */
+
+@use '../../abstracts/variables' as var;
+@use '../../abstracts/mixins' as mx;
+@use '../../base/utilities';
+
+.close-btn {
+	margin: 10px;
+	@include mx.btn-icon-compatible($bg-color: transparent,
+		$border: none,
+		$width: 35px,
+		$height: 35px,
+		$border-radius: false,
+		$outline: 2px solid var.$bc-ternary,
+		$outline-offset: false,
+		$transition: false);
+}
+
+.close-btn-icon {
+	@include mx.svg-fixed-size($color: false,
+		$width: 10px,
+		$height: 10px,
+		$stroke: false,
+		$fill: var.$bc-ternary);
+}

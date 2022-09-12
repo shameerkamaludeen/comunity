@@ -23,6 +23,8 @@ $(function () {
 	addFullWidthTabsEvents();
 	animationOnScrollLoad();
 	$('#contactUsForm').attr('novalidate', '');
+	addProjectsViewClickEvents();
+	addModalFWCEvents();
 });
 
 // click event for hamburger or close button
@@ -108,6 +110,12 @@ function initCarouselElements() {
 				}
 			}
 		]
+	});
+
+	$('#modalFWCCarousel').slick({
+		arrows: true,
+		slidesToShow: 1,
+		slidesToScroll: 1
 	});
 }
 
@@ -298,5 +306,30 @@ const scrollToTopElem = $('#scrollToTop');
 if (scrollToTopElem.length) {
 	scrollToTopElem.on('click', () => {
 		window.scrollTo({ top: 0, behavior: 'smooth' });
+	});
+}
+
+function addProjectsViewClickEvents() {
+	$('#projects').find('.img-fg-id-tab-wr').each(function () {
+		const projctItemTabElem = $(this);
+		projctItemTabElem.on('click', () => {
+			$('html').toggleClass('overflow-hidden');
+			$('#modalFWCCarousel').slick('getSlick').slickGoTo(projctItemTabElem.attr('data-prject-item'));
+			$('#modalFWC').toggleClass('modal-fwc-active');
+		});
+	});
+}
+
+function addModalFWCEvents() {
+	const modalFWCElem = $('#modalFWC');
+	// closeing element
+	modalFWCElem.on('click', function () {
+		$(this).toggleClass('modal-fwc-active');
+		$('html').toggleClass('overflow-hidden');
+	});
+
+	// to not affect modal close on click on the modal body
+	modalFWCElem.find('.modal-fwc-carousel').on('click', e => {
+		e.stopPropagation();
 	});
 }

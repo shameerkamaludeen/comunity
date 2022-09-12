@@ -598,7 +598,15 @@ button {
   bottom: 0;
 }
 
-.img-fg-id-icon-wr, .icon-rounded-bg, .img-fd-figcaption {
+.modal-full-window-carousel {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.modal-fwc-content-wr, .img-fg-id-icon-wr, .icon-rounded-bg, .img-fd-figcaption {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -631,13 +639,13 @@ button {
   justify-content: center;
 }
 
-.scroll-tt-btn-button, .hamburger-close-btn {
+.close-btn, .scroll-tt-btn-button, .hamburger-close-btn {
   display: inline-flex;
   justify-content: center;
   align-items: center;
 }
 
-.brands-il-img, .card-cri-icon-raster {
+.modal-fwc-img, .brands-il-img, .card-cri-icon-raster {
   width: 100%;
   height: 100%;
   object-fit: contain;
@@ -662,7 +670,13 @@ button {
   text-decoration: none;
   cursor: pointer;
 }
-.brands-il-link-wr:link, .gq-link-wr-basic:link, .sc-link-wrapper:link, .services-cc-link-wr:link, .logo-il-link-wr:link, .brands-il-link-wr:visited, .gq-link-wr-basic:visited, .sc-link-wrapper:visited, .services-cc-link-wr:visited, .logo-il-link-wr:visited, .brands-il-link-wr:focus, .gq-link-wr-basic:focus, .sc-link-wrapper:focus, .services-cc-link-wr:focus, .logo-il-link-wr:focus, .brands-il-link-wr:hover, .gq-link-wr-basic:hover, .sc-link-wrapper:hover, .services-cc-link-wr:hover, .logo-il-link-wr:hover, .brands-il-link-wr:active, .gq-link-wr-basic:active, .sc-link-wrapper:active, .services-cc-link-wr:active, .logo-il-link-wr:active {
+.brands-il-link-wr:link, .gq-link-wr-basic:link, .sc-link-wrapper:link, .services-cc-link-wr:link, .logo-il-link-wr:link, .brands-il-link-wr:visited, .gq-link-wr-basic:visited, .sc-link-wrapper:visited, .services-cc-link-wr:visited, .logo-il-link-wr:visited {
+  color: transparent;
+}
+.brands-il-link-wr:focus, .gq-link-wr-basic:focus, .sc-link-wrapper:focus, .services-cc-link-wr:focus, .logo-il-link-wr:focus {
+  outline: 2px solid hsl(228deg, 61%, 53%);
+}
+.brands-il-link-wr:hover, .gq-link-wr-basic:hover, .sc-link-wrapper:hover, .services-cc-link-wr:hover, .logo-il-link-wr:hover, .brands-il-link-wr:active, .gq-link-wr-basic:active, .sc-link-wrapper:active, .services-cc-link-wr:active, .logo-il-link-wr:active {
   color: transparent;
 }
 
@@ -1961,6 +1975,10 @@ main {
   animation: slide-in-left 1.25s;
 }
 
+.ctc-read-more {
+  margin-top: 10px;
+}
+
 /* || Components - Counters with splitter and tag
    ========================================================================== */
 .counters-splitter-tag {
@@ -3047,7 +3065,7 @@ main {
 
 .img-fg-id-image {
   width: 100%;
-  display: flex;
+  display: block;
 }
 
 .img-fg-id-icon-wr {
@@ -3055,11 +3073,13 @@ main {
   z-index: -1;
   opacity: 0;
   transition: opacity 0.3s ease;
-  bottom: 67px;
+  bottom: 62px;
 }
-.image-fg-icon-desc:hover .img-fg-id-icon-wr, .image-fg-icon-desc:focus .img-fg-id-icon-wr {
-  z-index: initial;
-  opacity: 1;
+@media screen and (min-width: 40em) {
+  .image-fg-icon-desc:hover .img-fg-id-icon-wr, .image-fg-icon-desc:focus .img-fg-id-icon-wr {
+    z-index: initial;
+    opacity: 1;
+  }
 }
 
 .img-fg-id-icon {
@@ -3068,13 +3088,15 @@ main {
   height: 12.5px;
   fill: hsl(0deg, 0%, 100%);
 }
-.image-fg-icon-desc:hover .img-fg-id-icon, .image-fg-icon-desc:focus .img-fg-id-icon {
-  width: 25px;
-  height: 25px;
+@media screen and (min-width: 40em) {
+  .image-fg-icon-desc:hover .img-fg-id-icon, .image-fg-icon-desc:focus .img-fg-id-icon {
+    width: 25px;
+    height: 25px;
+  }
 }
 
 .img-fg-id-figcaption {
-  padding: 13px 0 10px;
+  padding: 13px 0 5px;
 }
 
 .img-fg-id-heading {
@@ -3085,6 +3107,10 @@ main {
   text-transform: uppercase;
   margin-top: 0.7em;
   margin-bottom: 0;
+}
+
+.img-fg-id-tab-wr:focus {
+  outline: 2px solid hsl(228deg, 61%, 53%);
 }
 
 /* || Block - Projects multi column layout
@@ -3130,7 +3156,7 @@ main {
   page-break-inside: avoid;
 }
 .projects-mc-project-item:not(:last-child) {
-  margin-bottom: 36px;
+  margin-bottom: 41px;
 }
 
 /* split heading */
@@ -3153,15 +3179,90 @@ main {
 }
 
 /* layout margin fixed */
+/* || Component - Close button
+   ========================================================================== */
+.close-btn {
+  margin: 10px;
+  border: none;
+  width: 35px;
+  height: 35px;
+  background-color: transparent;
+  cursor: pointer;
+}
+.close-btn:focus, .close-btn:hover {
+  outline: 2px solid hsl(208deg, 100%, 96%);
+}
+.close-btn-icon {
+  width: 10px;
+  height: 10px;
+  fill: hsl(208deg, 100%, 96%);
+}
+
+/* || Component - Modal full window carousel
+   ========================================================================== */
+.modal-full-window-carousel {
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 10;
+  display: none;
+}
+
+.modal-fwc-active {
+  display: block;
+}
+
+.modal-fwc-close-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.modal-fwc-content-wr {
+  width: 100vw;
+  height: 100vh;
+}
+
+.modal-fwc-carousel {
+  width: 80vw;
+  height: 60vh;
+}
+
+.modal-fwc-img-wr {
+  width: 100%;
+  height: 60vh;
+  padding: 0 15px;
+}
+.modal-fwc-active .modal-fwc-img-wr {
+  animation-name: inline-ujg8s4g;
+  animation-duration: 0.5s;
+}
+@keyframes inline-ujg8s4g {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
 /* || Page - Projects
    ========================================================================== */
 .projects-mc-projects {
   padding-top: 0;
+  padding-bottom: 20px;
   background-color: initial;
 }
 .projects-mc-projects .projects-mc-split-heading,
 .projects-mc-projects .projects-mc-heading {
   margin-top: 0;
+}
+.projects-mc-projects .close-btn {
+  margin: 15px;
+}
+.projects-mc-projects .close-btn-icon {
+  width: 28px;
+  height: 28px;
 }
 
 .brands-il-projects {
@@ -3205,6 +3306,10 @@ body {
 /* || Header and Main Navigation */
 /* || Utilitites */
 /* || Sitewiede */
+.overflow-hidden {
+  overflow: hidden;
+}
+
 /* || Store Pages */
 .breadcrumbs-center {
   margin-top: 3px;
