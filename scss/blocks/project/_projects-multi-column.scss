@@ -71,7 +71,7 @@
 	@extend %base-500;
 
 	@media screen and (min-width: var.$pc-view) {
-		font-size: var.$fs-xl + 0.2rem;
+		font-size: var.$fs-xl + 0.3rem;
 	}
 }
 
@@ -81,7 +81,7 @@
 	@extend %base-700;
 
 	@media screen and (min-width: var.$pc-view) {
-		font-size: var.$fs-xl + 0.2rem;
+		font-size: var.$fs-xl + 0.3rem;
 	}
 }
 

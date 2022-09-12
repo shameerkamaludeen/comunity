@@ -4,6 +4,7 @@
 // Background semi-transparent
 
 @use '../../abstracts/mixins' as mx;
+@use '../../abstracts/variables' as var;
 @use '../../base/sitewide';
 @use '../../layout/layout-base';
 @use '../button/close-btn';
@@ -34,6 +35,10 @@
 .modal-fwc-carousel {
 	width: 80vw;
 	height: 60vh;
+
+	@media screen and (min-width: var.$laptop-view) {
+		height: 75vh;
+	}
 }
 
 .modal-fwc-carousel-item {}
@@ -42,6 +47,10 @@
 	width: 100%;
 	height: 60vh;
 	padding: 0 15px;
+
+	@media screen and (min-width: var.$laptop-view) {
+		height: 75vh;
+	}
 
 	@at-root .modal-fwc-active & {
 		@include mx.inline-animation ($duration: 0.5s) {
