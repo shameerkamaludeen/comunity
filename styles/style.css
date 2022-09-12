@@ -513,7 +513,7 @@ h3 {
   font-weight: 400;
 }
 
-.projects-mc-heading, .projects-mc-sh-first-txt, .img-fg-id-heading, .img-fg-id-tag, .services-tc-heading, .services-tc-subheading, .services-tc-sh-first-text, .ol-cnu-li::marker, .ol-cnu-heading, .bc-center-content, .contact-mf-heading, .contact-mf-sh-first-text, .contact-mf-dc-desc, .card-cp-heading, .tc-heading-normal, .tc-sh-first-txt, .lead-bgh-first-text, .price-occ-heading, .price-occ-sh-first-text, .card-cs-heading, .card-cs-tag-light, .team-dg-heading, .team-dg-sh-first-text, .ctc-heading, .ctc-sh-first-text, .card-cri-heading, .card-cri-read-more, .services-cc-heading, .services-cc-sh-first-txt, .sc-heading, .sc-sh-first-txt, .hero-id-heading, .hero-id-sh-first-text {
+.projects-mc-heading, .projects-mc-sh-first-txt, .img-fg-id-heading, .img-fg-id-tag, .services-tc-heading, .services-tc-subheading, .services-tc-sh-first-text, .ol-cnu-li::marker, .ol-cnu-heading, .bc-center-content, .contact-mf-heading, .contact-mf-dc-desc, .contact-mf-sh-first-text, .card-cp-heading, .tc-heading-normal, .tc-sh-first-txt, .lead-bgh-first-text, .price-occ-heading, .price-occ-sh-first-text, .card-cs-heading, .card-cs-tag-light, .team-dg-heading, .team-dg-sh-first-text, .ctc-heading, .ctc-sh-first-text, .card-cri-heading, .card-cri-read-more, .services-cc-heading, .services-cc-sh-first-txt, .sc-heading, .sc-sh-first-txt, .hero-id-heading, .hero-id-sh-first-text {
   line-height: 1.2;
   font-weight: 500;
 }
@@ -2574,10 +2574,6 @@ main {
   }
 }
 
-.contact-mf-lm-auto-fw {
-  max-width: 800px;
-}
-
 @media screen and (min-width: 48em) {
   .contact-mf-wr {
     display: grid;
@@ -2595,22 +2591,6 @@ main {
 
 .contact-mf-heading {
   margin: 0;
-}
-
-.contact-mf-split-heading {
-  margin: 0;
-}
-
-@media screen and (min-width: 75em) {
-  .contact-mf-sh-first-text {
-    font-size: 2.175rem;
-  }
-}
-
-@media screen and (min-width: 75em) {
-  .contact-mf-sh-second-text {
-    font-size: 2.175rem;
-  }
 }
 
 .contact-mf-details-wr {
@@ -2679,6 +2659,26 @@ main {
     grid-column: 2;
     grid-row: 1;
   }
+}
+
+.contact-mf-split-heading {
+  margin: 0;
+}
+
+@media screen and (min-width: 75em) {
+  .contact-mf-sh-first-text {
+    font-size: 2.175rem;
+  }
+}
+
+@media screen and (min-width: 75em) {
+  .contact-mf-sh-second-text {
+    font-size: 2.175rem;
+  }
+}
+
+.contact-mf-lm-auto-fw {
+  max-width: 800px;
 }
 
 /* || Pages - Home
@@ -3242,10 +3242,10 @@ main {
   }
 }
 .modal-fwc-active .modal-fwc-img-wr {
-  animation-name: inline-ufgok2v;
+  animation-name: inline-u3w61ah;
   animation-duration: 0.5s;
 }
-@keyframes inline-ufgok2v {
+@keyframes inline-u3w61ah {
   from {
     transform: scale(0.8);
     opacity: 0;
@@ -3294,6 +3294,81 @@ main {
   .brands-il-projects {
     padding-bottom: 70px;
   }
+}
+
+/* || Page - Contacts
+   ========================================================================== */
+.contact-mf-contacts {
+  margin-top: -73px;
+  background-color: #f5faff;
+}
+.contact-mf-contacts .contact-mf-wr {
+  display: block;
+}
+.contact-mf-contacts .contact-mf-split-heading,
+.contact-mf-contacts .contact-mf-para {
+  text-align: center;
+}
+.contact-mf-contacts .contact-mf-para.contact-mf-lm-auto-fw {
+  max-width: 750px;
+}
+@media screen and (min-width: 48em) {
+  .contact-mf-contacts .contact-mf-details-wr {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    gap: 40px 30px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 48em) {
+  .contact-mf-contacts .contact-mf-details-wr {
+    column-gap: 38px;
+  }
+}
+@media screen and (min-width: 48em) {
+  .contact-mf-contacts .contact-mf-detail {
+    flex: 0 0 300px;
+  }
+}
+@media screen and (min-width: 64em) {
+  .contact-mf-contacts .contact-mf-detail {
+    max-width: 270px;
+    flex: 0 0 auto;
+  }
+}
+.contact-mf-contacts .contact-mf-dc-heading {
+  font-weight: 600;
+}
+@media screen and (min-width: 48em) {
+  .contact-mf-contacts .contact-mf-map-wr {
+    margin-top: 40px;
+  }
+}
+.contact-mf-contacts .contact-mf-form {
+  margin-top: 35px;
+}
+@media screen and (min-width: 48em) {
+  .contact-mf-contacts .contact-mf-form {
+    margin-top: 50px;
+  }
+}
+.contact-mf-contacts .contact-mf-form.contact-mf-lm-auto-fw {
+  max-width: 600px;
+}
+.contact-mf-contacts .form-rd-li-submit {
+  text-align: center;
+}
+@media screen and (min-width: 48em) {
+  .contact-mf-contacts .form-rd-li-submit {
+    margin-top: 25px;
+  }
+}
+.contact-mf-contacts .form-rd-submit-btn {
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 /* || Themes - Default theme

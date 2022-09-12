@@ -22,14 +22,6 @@
 	}
 }
 
-.contact-mf-lm-fixed {
-	@extend %lm-fixed;
-}
-
-.contact-mf-lm-auto-fw {
-	@include mx.lm-auto-fixed-width($max-width: 800px);
-}
-
 .contact-mf-wr {
 	@media screen and (min-width: var.$tablet-view) {
 		display: grid;
@@ -49,28 +41,6 @@
 	margin: 0;
 	@extend %ffp-cp-xl-font;
 	@extend %base-500;
-}
-
-.contact-mf-split-heading {
-	margin: 0;
-}
-
-.contact-mf-sh-first-text {
-	@extend %ffp-cp-xl-font;
-	@extend %base-500;
-
-	@media screen and (min-width: var.$pc-view) {
-		font-size: var.$fs-xl + 0.3rem;
-	}
-}
-
-.contact-mf-sh-second-text {
-	@extend %ffp-bcs-xl-font;
-	@extend %base-700;
-
-	@media screen and (min-width: var.$pc-view) {
-		font-size: var.$fs-xl + 0.3rem;
-	}
 }
 
 .contact-mf-para {
@@ -147,4 +117,37 @@
 		grid-column: 2;
 		grid-row: 1;
 	}
+}
+
+// || Optional
+// ------------
+
+.contact-mf-split-heading {
+	margin: 0;
+}
+
+.contact-mf-sh-first-text {
+	@extend %ffp-cp-xl-font;
+	@extend %base-500;
+
+	@media screen and (min-width: var.$pc-view) {
+		font-size: var.$fs-xl + 0.3rem;
+	}
+}
+
+.contact-mf-sh-second-text {
+	@extend %ffp-bcs-xl-font;
+	@extend %base-700;
+
+	@media screen and (min-width: var.$pc-view) {
+		font-size: var.$fs-xl + 0.3rem;
+	}
+}
+
+.contact-mf-lm-fixed {
+	@extend %lm-fixed;
+}
+
+.contact-mf-lm-auto-fw {
+	@include mx.lm-auto-fixed-width($max-width: 800px);
 }
