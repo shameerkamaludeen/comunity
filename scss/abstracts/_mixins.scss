@@ -5,6 +5,7 @@
 @use '../base/sitewide';
 @use '../layout/layout-base';
 @use 'sass:color';
+@use 'sass:string';
 
 // || Utilities
 
@@ -470,20 +471,16 @@
 }
 
 // || Animation
-// refer https://sass-lang.com/documentation/interpolation#in-sassscript
 
-@mixin animation-keyframes($animation-name: animation-#{unique-id()},
-	$animation-duration: .5s,
-	$animation-timing-function: ease,
-	$animation-fill-mode: both) {
-	@keyframes #{$animation-name} {
+@mixin inline-animation($duration: 0.5s) {
+	$name: inline-#{unique-id()};
+
+	@keyframes #{$name} {
 		@content;
 	}
 
-	animation-name: $animation-name;
-	animation-timing-function: $animation-timing-function;
-	animation-duration: $animation-duration;
-	animation-fill-mode: $animation-fill-mode;
+	animation-name: $name;
+	animation-duration: $duration;
 }
 
 // || Images

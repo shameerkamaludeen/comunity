@@ -18,7 +18,7 @@
 
 .img-fg-id-image {
 	width: 100%;
-	display: flex;
+	display: block;
 }
 
 .img-fg-id-icon-wr {
@@ -28,12 +28,14 @@
 	z-index: -1;
 	opacity: 0;
 	transition: opacity 0.3s ease;
-	bottom: 67px;
+	bottom: 62px;
 
 	@at-root .image-fg-icon-desc:hover &,
 	.image-fg-icon-desc:focus & {
-		z-index: initial;
-		opacity: 1;
+		@media screen and (min-width: var.$mobile-landscape-view) {
+			z-index: initial;
+			opacity: 1;
+		}
 	}
 }
 
@@ -48,13 +50,15 @@
 
 	@at-root .image-fg-icon-desc:hover &,
 	.image-fg-icon-desc:focus & {
-		width: 25px;
-		height: 25px;
+		@media screen and (min-width: var.$mobile-landscape-view) {
+			width: 25px;
+			height: 25px;
+		}
 	}
 }
 
 .img-fg-id-figcaption {
-	padding: 13px 0 10px;
+	padding: 13px 0 5px;
 }
 
 .img-fg-id-heading {
@@ -71,4 +75,13 @@
 	@extend %normal-spacing;
 	margin-top: 0.7em;
 	margin-bottom: 0;
+}
+
+// || Optional
+// ---------------
+
+.img-fg-id-tab-wr {
+	&:focus {
+		outline: 2px solid var.$bc-secondary;
+	}
 }

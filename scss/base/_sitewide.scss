@@ -17,6 +17,15 @@
 	bottom: 0;
 }
 
+// Fixed element cover its container
+%position-fixed-cover {
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+
 // || Flex
 
 // Flexible vertically center(vc) and horizontally space between(hsb)
@@ -253,8 +262,14 @@
 	cursor: pointer;
 
 	&:link,
-	&:visited,
-	&:focus,
+	&:visited {
+		color: transparent;
+	}
+
+	&:focus {
+		outline: 2px solid var.$bc-secondary;
+	}
+
 	&:hover,
 	&:active {
 		color: transparent;
@@ -302,6 +317,25 @@
 
 	&:active {
 		color: color.adjust(var.$bc-secondary, $lightness: 20%);
+	}
+}
+
+// || Buttons
+
+%button-wrapper-basic {
+	cursor: pointer;
+	display: block;
+	padding: 0;
+	background-color: transparent;
+	border: none;
+
+	&:focus {
+		outline: 2px solid var.$bc-secondary;
+	}
+
+	&:hover,
+	&:active {
+		color: transparent;
 	}
 }
 

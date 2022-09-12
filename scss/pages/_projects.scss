@@ -3,6 +3,7 @@
 
 @use '../abstracts/variables' as var;
 @use '../blocks/project/projects-multi-column';
+@use '../components/modal/modal-full-window-carousel';
 @use '../blocks/company/company-tab-contents';
 @use '../blocks/team/team-desc-gallery';
 @use '../blocks/brand/brands-img-list';
@@ -12,11 +13,21 @@
 
 .projects-mc-projects {
 	padding-top: 0;
+	padding-bottom: 20px;
 	background-color: initial;
 
 	.projects-mc-split-heading,
 	.projects-mc-heading {
 		margin-top: 0;
+	}
+
+	.close-btn {
+		margin: 15px;
+	}
+
+	.close-btn-icon {
+		width: 28px;
+		height: 28px;
 	}
 }
 
