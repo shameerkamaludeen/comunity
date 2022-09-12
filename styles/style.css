@@ -3167,14 +3167,14 @@ main {
 /* split heading first text */
 @media screen and (min-width: 75em) {
   .projects-mc-sh-first-txt {
-    font-size: 2.075rem;
+    font-size: 2.175rem;
   }
 }
 
 /* split heading second text */
 @media screen and (min-width: 75em) {
   .projects-mc-sh-second-txt {
-    font-size: 2.075rem;
+    font-size: 2.175rem;
   }
 }
 
@@ -3225,17 +3225,27 @@ main {
   width: 80vw;
   height: 60vh;
 }
+@media screen and (min-width: 64em) {
+  .modal-fwc-carousel {
+    height: 75vh;
+  }
+}
 
 .modal-fwc-img-wr {
   width: 100%;
   height: 60vh;
   padding: 0 15px;
 }
+@media screen and (min-width: 64em) {
+  .modal-fwc-img-wr {
+    height: 75vh;
+  }
+}
 .modal-fwc-active .modal-fwc-img-wr {
-  animation-name: inline-ujg8s4g;
+  animation-name: inline-ufgok2v;
   animation-duration: 0.5s;
 }
-@keyframes inline-ujg8s4g {
+@keyframes inline-ufgok2v {
   from {
     transform: scale(0.8);
     opacity: 0;
@@ -3253,6 +3263,11 @@ main {
   padding-bottom: 20px;
   background-color: initial;
 }
+@media screen and (min-width: 64em) {
+  .projects-mc-projects {
+    padding-bottom: 40px;
+  }
+}
 .projects-mc-projects .projects-mc-split-heading,
 .projects-mc-projects .projects-mc-heading {
   margin-top: 0;
@@ -3263,6 +3278,12 @@ main {
 .projects-mc-projects .close-btn-icon {
   width: 28px;
   height: 28px;
+}
+
+@media screen and (min-width: 48em) {
+  .ctc-projects .ctc-img {
+    object-position: center;
+  }
 }
 
 .brands-il-projects {
