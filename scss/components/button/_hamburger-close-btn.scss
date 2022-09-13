@@ -17,14 +17,15 @@ $background-color: var.$bc-secondary;
 		$outline: 2px solid var.$c-primary,
 		$outline-offset: -2px,
 		$transition: (background-color 0.2s ease, outline 0.2s ease));
+	padding: 0;
 }
 
 .hc-btn-icon {
 	@include mx.svg-fixed-size($color: false,
-	$width: 10px,
-	$height: 10px,
-	$stroke: false,
-	$fill: var.$bc-primary);
+		$width: 10px,
+		$height: 10px,
+		$stroke: false,
+		$fill: var.$bc-primary);
 
 	opacity: 1;
 	transition: opacity 0.3s ease;

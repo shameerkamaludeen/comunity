@@ -1098,6 +1098,7 @@ header {
   transition: background-color 0.2s ease, outline 0.2s ease;
   background-color: hsl(228deg, 61%, 53%);
   cursor: pointer;
+  padding: 0;
 }
 .hamburger-close-btn:focus, .hamburger-close-btn:hover {
   outline: 2px solid hsl(226deg, 13%, 19%);
@@ -3187,6 +3188,7 @@ main {
   height: 35px;
   background-color: transparent;
   cursor: pointer;
+  padding: 0;
 }
 .close-btn:focus, .close-btn:hover {
   outline: 2px solid hsl(208deg, 100%, 96%);
@@ -3241,10 +3243,10 @@ main {
   }
 }
 .modal-fwc-active .modal-fwc-img-wr {
-  animation-name: inline-u1fjso3;
+  animation-name: inline-umy64jx;
   animation-duration: 0.5s;
 }
-@keyframes inline-u1fjso3 {
+@keyframes inline-umy64jx {
   from {
     transform: scale(0.8);
     opacity: 0;
