@@ -23,8 +23,7 @@ $(function () {
 	addFullWidthTabsEvents();
 	animationOnScrollLoad();
 	$('#contactUsForm').attr('novalidate', '');
-	addProjectsViewClickEvents();
-	addModalFWCEvents();
+	addProjectsEvents();
 });
 
 // click event for hamburger or close button
@@ -289,12 +288,9 @@ function contactUsFormValidation(contactUsFormElem) {
 
 function activateScrollToTop() {
 	const scrollToTopElem = $('#scrollToTop');
-	if (clientWidth > mobileLandscapeView && scrollToTopElem.length) {
-		if (document.body.scrollTop > 700 || document.documentElement.scrollTop > 700) {
-			scrollToTopElem.addClass('scroll-tt-btn-active');
-		} else {
-			scrollToTopElem.removeClass('scroll-tt-btn-active');
-		}
+	if (!scrollToTopElem.length || clientWidth < mobileLandscapeView) return;
+	if (document.body.scrollTop > 700 || document.documentElement.scrollTop > 700) {
+		scrollToTopElem.addClass('scroll-tt-btn-active');
 	}
 }
 
@@ -309,33 +305,29 @@ if (scrollToTopElem.length) {
 	});
 }
 
-function addProjectsViewClickEvents() {
-	if (clientWidth >= mobileLandscapeView) {
-		$('#projects').find('.img-fg-id-tab-wr').each(function () {
-			const projctItemTabElem = $(this);
-			projctItemTabElem.attr('tabindex', '0');
-			projctItemTabElem.on('click', () => {
-				$('html').toggleClass('overflow-hidden');
-				$('#modalFWCCarousel').slick('getSlick').slickGoTo(projctItemTabElem.attr('data-prject-item'));
-				$('#modalFWC').toggleClass('modal-fwc-active');
-			});
-		});
-	}
-}
+function addProjectsEvents() {
+	const projectsElem = $('#projects');
+	if (!projectsElem.length || clientWidth < mobileLandscapeView) return;
+	const modalFWCElem = $('#modalFWC');
+	// close btn click event
+	modalFWCElem.on('click', function () {
+		$(this).toggleClass('modal-fwc-active');
+		$('html').toggleClass('overflow-hidden');
+	});
 
-function addModalFWCEvents() {
-	if (clientWidth >= mobileLandscapeView) {
+	// to not affect modal close on click on the modal body
+	modalFWCElem.find('.modal-fwc-carousel').on('click', e => {
+		e.stopPropagation();
+	});
 
-		const modalFWCElem = $('#modalFWC');
-		// closeing element
-		modalFWCElem.on('click', function () {
-			$(this).toggleClass('modal-fwc-active');
+	// Projects items click event
+	projectsElem.find('.img-fg-id-tab-wr').each(function () {
+		const projctItemTabElem = $(this);
+		projctItemTabElem.attr('tabindex', '0');
+		projctItemTabElem.on('click', () => {
 			$('html').toggleClass('overflow-hidden');
+			modalFWCElem.find('#modalFWCCarousel').slick('getSlick').slickGoTo(projctItemTabElem.attr('data-prject-item'));
+			modalFWCElem.toggleClass('modal-fwc-active');
 		});
-
-		// to not affect modal close on click on the modal body
-		modalFWCElem.find('.modal-fwc-carousel').on('click', e => {
-			e.stopPropagation();
-		});
-	}
+	});
 }
