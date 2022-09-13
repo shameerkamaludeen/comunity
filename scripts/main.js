@@ -310,26 +310,32 @@ if (scrollToTopElem.length) {
 }
 
 function addProjectsViewClickEvents() {
-	$('#projects').find('.img-fg-id-tab-wr').each(function () {
-		const projctItemTabElem = $(this);
-		projctItemTabElem.on('click', () => {
-			$('html').toggleClass('overflow-hidden');
-			$('#modalFWCCarousel').slick('getSlick').slickGoTo(projctItemTabElem.attr('data-prject-item'));
-			$('#modalFWC').toggleClass('modal-fwc-active');
+	if (clientWidth >= mobileLandscapeView) {
+		$('#projects').find('.img-fg-id-tab-wr').each(function () {
+			const projctItemTabElem = $(this);
+			projctItemTabElem.attr('tabindex', '0');
+			projctItemTabElem.on('click', () => {
+				$('html').toggleClass('overflow-hidden');
+				$('#modalFWCCarousel').slick('getSlick').slickGoTo(projctItemTabElem.attr('data-prject-item'));
+				$('#modalFWC').toggleClass('modal-fwc-active');
+			});
 		});
-	});
+	}
 }
 
 function addModalFWCEvents() {
-	const modalFWCElem = $('#modalFWC');
-	// closeing element
-	modalFWCElem.on('click', function () {
-		$(this).toggleClass('modal-fwc-active');
-		$('html').toggleClass('overflow-hidden');
-	});
+	if (clientWidth >= mobileLandscapeView) {
 
-	// to not affect modal close on click on the modal body
-	modalFWCElem.find('.modal-fwc-carousel').on('click', e => {
-		e.stopPropagation();
-	});
+		const modalFWCElem = $('#modalFWC');
+		// closeing element
+		modalFWCElem.on('click', function () {
+			$(this).toggleClass('modal-fwc-active');
+			$('html').toggleClass('overflow-hidden');
+		});
+
+		// to not affect modal close on click on the modal body
+		modalFWCElem.find('.modal-fwc-carousel').on('click', e => {
+			e.stopPropagation();
+		});
+	}
 }
