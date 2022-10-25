@@ -43,7 +43,6 @@ This is a website design made with the help of a design inspired by one of the [
 ## Author
 
 - Github - [Shameer Kamaludeen](https://github.com/shameerkamaludeen)
-- Twitter - [@ShameerKamalud1](https://twitter.com/ShameerKamalud1)
 
 ## Acknowledgments
 
