@@ -44,7 +44,7 @@
 	}
 }
 
-// Mobile tablet view
+// tablet view
 %lm-fixed-tv {
 
 	@media screen and (min-width: var.$tablet-view) {
@@ -58,7 +58,7 @@
 	}
 }
 
-// Mobile pc view
+// pc view
 %lm-fixed-pcv {
 
 	@media screen and (min-width: var.$pc-view) {
