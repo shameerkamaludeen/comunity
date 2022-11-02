@@ -1,0 +1,49 @@
+/* || Component - Navbar responsive right menu
+   ========================================================================== */
+// Features:
+// 
+
+@use '../../../abstracts/variables' as var;
+@use '../../../base/utilities';
+@use '../../../layout/layout-base';
+@use '../../navigation/nav-menu-fixed-side/nav-menu-fixed-side';
+
+.navbar-responsive-right-menu {
+	padding-top: 20px;
+	padding-bottom: 10px;
+
+	@media screen and (min-width: var.$tablet-view) {
+		padding-top: 25px;
+	}
+
+	@media screen and (min-width: var.$pc-view) {
+		padding-top: 30px;
+	}
+}
+
+.navbar-rrm-lm-fixed {
+	@extend %lm-fixed;
+}
+
+.navbar-rrm-wr {
+	@media screen and (min-width: var.$tablet-view) {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+
+.navbar-rrm-wr-ul {
+	@extend %ul-no-style;
+	margin: 0;
+}
+
+.navbar-rrm-logo {
+	@media screen and (min-width: var.$mobile-landscape-view) {
+		margin-bottom: 15px;
+	}
+
+	@media screen and (min-width: var.$tablet-view) {
+		margin-bottom: 0;
+	}
+}

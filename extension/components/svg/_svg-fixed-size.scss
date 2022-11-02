@@ -1,0 +1,28 @@
+/* || Component - SVG fixed size
+   ========================================================================== */
+
+// icon properties
+$color: var.$bc-primary;
+$icon-color: $color  !default;
+$icon-width: 10px !default;
+$icon-height: 10px !default;
+$stroke: $color  !default;
+$fill: $color  !default;
+
+
+.svg-fixed-size {
+	width: $icon-width;
+	height: $icon-height;
+
+	@if $icon-color {
+		color: $icon-color;
+	}
+
+	@if $stroke {
+		stroke: $stroke;
+	}
+
+	@if $fill {
+		fill: $fill;
+	}
+}

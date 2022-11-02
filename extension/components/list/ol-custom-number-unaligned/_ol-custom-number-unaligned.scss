@@ -1,0 +1,43 @@
+/* || Component - Ordered list with custom number style
+   ========================================================================== */
+// list item content will not be aligned, conter will be inside content
+
+@use '../../../base/typography';
+
+.ol-custom-number-unaligned {
+	list-style-type: none;
+	// reference: https://developer.mozilla.org/en-US/docs/Web/CSS/counters
+	counter-reset: listCounter;
+	list-style-position: inside;
+	padding-left: 0;
+}
+
+.ol-cnu-li {
+	&:not(:last-child) {
+		margin-bottom: 28px;
+	}
+
+	&::marker {
+		@extend %ffp-bcs-s-font;
+		@extend %base-500;
+		content: counters(listCounter, '', decimal-leading-zero)".";
+	}
+
+	counter-increment: listCounter;
+
+	:first-child {
+		display: inline-block;
+	}
+}
+
+.ol-cnu-heading {
+	@extend %ffp-cp-s-font;
+	@extend %base-500;
+	margin: 0;
+}
+
+.ol-cnu-para {
+	@extend %ffp-cs-s-font;
+	@extend %normal-400;
+	margin-top: 0.2em;
+}

@@ -1,0 +1,133 @@
+/* || Block - company with tab contents
+   ========================================================================== */
+// Features:
+// two column block with margin less image
+// split heading and normal heading
+// 
+
+@use '../../../abstracts/variables' as var;
+@use '../../../base/typography';
+@use '../../../base/sitewide';
+@use '../../../layout/layout-base';
+@use '../../../components/button/btn-no-bg-border';
+@use '../../../components/button/btn-capsule-hover-wipe/btn-capsule-hover-wipe';
+
+.company-tab-contents {
+	padding-top: 60px;
+	padding-bottom: 60px;
+
+	@media screen and (min-width: var.$tablet-view) {
+		display: flex;
+	}
+
+	@media screen and (min-width: var.$laptop-view) {
+		padding-top: 70px;
+		padding-bottom: 70px;
+	}
+}
+
+// Don't remove this as it use in some pages at least not from HTML
+.ctc-img-column {}
+
+.ctc-desc-column {
+	margin-top: 33px;
+
+	@media screen and (min-width: var.$tablet-view) {
+		flex: 1 0 50%;
+		margin-top: 0;
+	}
+}
+
+.ctc-heading {
+	text-align: center;
+	@extend %ffp-cp-xl-font;
+	@extend %base-500;
+
+	@media screen and (min-width: var.$tablet-view) {
+		text-align: initial;
+	}
+
+	@media screen and (min-width: var.$pc-view) {
+		font-size: var.$fs-xl + 0.3rem;
+	}
+}
+
+.ctc-para {
+	@extend %ffp-cs-s-font;
+	@extend %normal-400;
+}
+
+.ctc-img {
+	width: 100%;
+
+	@media screen and (min-width: var.$tablet-view) {
+		height: 100%;
+		object-fit: cover;
+		object-position: left bottom;
+	}
+}
+
+// Optional
+// ------------
+
+/* split heading */
+.ctc-split-heading {
+	text-align: center;
+
+	@media screen and (min-width: var.$tablet-view) {
+		text-align: initial;
+	}
+}
+
+/* split heading first text */
+.ctc-sh-first-text {
+	@extend %ffp-cp-xl-font;
+	@extend %base-500;
+
+	@media screen and (min-width: var.$pc-view) {
+		font-size: var.$fs-xl + 0.3rem;
+	}
+}
+
+/* split heading second text */
+.ctc-sh-second-text {
+	@extend %ffp-bcs-xl-font;
+	@extend %base-700;
+
+	@media screen and (min-width: var.$pc-view) {
+		font-size: var.$fs-xl + 0.3rem;
+	}
+}
+
+.ctc-lm-fixed {
+	@extend %lm-fixed;
+}
+
+.ctc-lm-fixed-r-tv {
+	@extend %lm-fixed-right-tv;
+}
+
+.ctc-lm-fixed-l-tv {
+	@extend %lm-fixed-left-tv;
+}
+
+.ctc-lp-left-tv {
+	@extend %lp-left-tv;
+}
+
+.ctc-site-link-bcs {
+	@extend %site-link-bc-secondary;
+	text-decoration: none;
+}
+
+.ctc-img-animate {
+	animation: slide-in-left 1.25s;
+}
+
+.ctc-lcp-right-pcv-normal {
+	@extend %lcp-right-pcv-normal;
+}
+
+.ctc-read-more {
+	margin-top: 10px;
+}

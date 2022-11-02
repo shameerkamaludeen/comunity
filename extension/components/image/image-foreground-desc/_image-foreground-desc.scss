@@ -1,0 +1,46 @@
+/* || Component - Image foreground description
+   -------------------------------------------------------------------------- */
+// normally an image in which show foreground description on hover
+
+@use '../../../abstracts/variables' as var;
+@use '../../../base/typography';
+@use '../../../base/sitewide';
+@use 'sass:color';
+
+.image-foreground-desc {
+	display: block;
+	margin: 0;
+	position: relative;
+}
+
+.img-fd-image {
+	display: block;
+}
+
+.img-fd-figcaption {
+	@extend %position-absolute-cover;
+	z-index: -1;
+	background-color: color.adjust(var.$bc-secondary, $alpha: -0.2);
+	@extend %flex-vh-center;
+}
+
+.image-foreground-desc:hover .img-fd-figcaption,
+.image-foreground-desc:focus .img-fd-figcaption {
+	z-index: initial;
+}
+
+.img-fd-heading {
+	@extend %base-600;
+	@extend %ffp-bcp-m-font;
+	margin: 0;
+	@extend %wide-spacing;
+	text-align: center;
+}
+
+.img-fd-tag {
+	@extend %base-300;
+	@extend %ffp-bcp-s-font;
+	margin-top: 0.3em;
+	@extend %base-spacing;
+	text-align: center;
+}
