@@ -6,7 +6,7 @@ import * as ctc from '../extension/blocks/company/company-tab-contents/company-t
 import animateHeroIDImage from '../extension/blocks/hero/hero-img-desc/hero-img-desc.js';
 import animateTeamGallery from '../extension/blocks/team/team-desc-gallery/team-desc-gallery.js';
 import animatePrices from '../extension/blocks/price/price-overlap-card-center/price-overlap-card-center.js';
-import addFormRadiusedEvents from '../extension/components/form/form-radiused/form-radiused.js';
+import addFormRadiusedEvents from '../extension/blocks/contact/contact-map-form/contact-map-form.js';
 import addProjectsEvents from '../extension/blocks/project/projects-multi-column/projects-multi-column.js';
 import activateScrollToTop from '../extension/components/scroll-to-top/scroll-to-top-btn/scroll-to-top-btn.js';
 import addNavbarResponsiveRMEvents from '../extension/components/navigation/navbar-responsive-right-menu/navbar-responsive-right-menu.js';
