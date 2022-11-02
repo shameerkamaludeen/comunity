@@ -1,13 +1,13 @@
 /* || Component - Form radiused
 	 ========================================================================== */
 
-const contactUsForm = $('#contactUsForm');
+const contactMFForm = $('#contactMFForm');
 
 export default function addFormRadiusedEvents() {
-	contactUsForm.attr('novalidate', '');
+	contactMFForm.attr('novalidate', '');
 
-	contactUsForm.on('submit', function (event) {
-		if (!contactUsFormValidation($(this))) {
+	contactMFForm.on('submit', function (event) {
+		if (!contactMFFormValidation($(this))) {
 			const globalErrorMsgElem = $(this).find('.form-rd-global-errormsg');
 			globalErrorMsgElem.addClass('form-rd-g-errormsg-active');
 			globalErrorMsgElem[0].textContent = 'Some error occured, please check and try again.';
@@ -16,24 +16,24 @@ export default function addFormRadiusedEvents() {
 	});
 }
 
-function contactUsFormValidation(contactUsFormElem) {
-	let isContactUsFormValid = true;
+function contactMFFormValidation(contactMFFormElem) {
+	let isContactMFFormValid = true;
 	// Name (text)
-	const nameElem = contactUsFormElem.find('#name');
+	const nameElem = contactMFFormElem.find('#name');
 	if (!nameElem[0].validity.valid) {
 		if (nameElem[0].validity.valueMissing || nameElem.value.trim() === '') {
 			nameElem.next()[0].textContent = 'Name required!';
 		}
 		nameElem.next().addClass('form-rd-errormsg-active');
 		nameElem.addClass('form-rd-input-text-error');
-		isContactUsFormValid = false;
+		isContactMFFormValid = false;
 	} else {
 		nameElem.next().removeClass('form-rd-errormsg-active');
 		nameElem.removeClass('form-rd-input-text-error');
 	}
 
 	// email (email)
-	const emailElem = contactUsFormElem.find('#email');
+	const emailElem = contactMFFormElem.find('#email');
 	if (!emailElem[0].validity.valid) {
 		if (emailElem[0].validity.valueMissing || emailElem.value.trim() === '') {
 			emailElem.next()[0].textContent = 'Email required!';
@@ -42,11 +42,11 @@ function contactUsFormValidation(contactUsFormElem) {
 		}
 		emailElem.next().addClass('form-rd-errormsg-active');
 		emailElem.addClass('form-rd-input-email-error');
-		isContactUsFormValid = false;
+		isContactMFFormValid = false;
 	} else {
 		nameElem.next().removeClass('form-rd-errormsg-active');
 		nameElem.removeClass('form-rd-input-email-error');
 	}
 
-	return isContactUsFormValid;
+	return isContactMFFormValid;
 }

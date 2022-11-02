@@ -1,3 +1,6 @@
+/* || Components - Counters with splitter and tag
+   ========================================================================== */
+
 import { animateOnScroll, animateValue } from '../../../../scripts/utilities.js';
 
 // counter

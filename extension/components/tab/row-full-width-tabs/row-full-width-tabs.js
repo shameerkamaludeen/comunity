@@ -1,6 +1,5 @@
-/* -----------------------------------------------------------------------------
-	|| Components - Row direction full width tabs
-	========================================================================== */
+/* || Components - Row direction full width tabs
+	 ========================================================================== */
 
 // Add tab events
 export default function addRowFullWidthTabsEvents() {

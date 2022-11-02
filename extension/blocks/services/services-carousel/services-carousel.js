@@ -1,9 +1,9 @@
 /* || Block - Services with carousel
 	 ========================================================================== */
 
-// Initialize services-carousel
 import { laptopView, mobileLandscapeView } from '../../../../scripts/variables.js';
 
+// Initialize services-carousel
 export default function () {
 	$('#scCarousel').slick({
 		dots: true,
