@@ -1,0 +1,35 @@
+/* || Components - Unordered list with centered content and inside icon
+   ========================================================================== */
+// Features:
+// list item centered
+// icon inside list item (first and second line text not aligned)
+
+@use '../../../abstracts/variables' as var;
+@use '../../../abstracts/mixins' as mx;
+@use '../../../base/typography';
+@use '../../../base/sitewide';
+
+.ul-center-inside-icon {
+	list-style-type: none;
+	@extend %flex-dc-h-center;
+	padding: 0;
+}
+
+.ul-ci-icon-li {}
+
+.ul-ci-icon-icon {
+	display: inline-block;
+	position: relative;
+	bottom: -2px;
+	margin-right: 7px;
+	@include mx.svg-fixed-size ($color: false,
+		$width: 14px,
+		$height: 14px,
+		$stroke: false,
+		$fill: var.$bc-secondary)
+}
+
+.ul-ci-icon-content {
+	@extend %base-300;
+	@extend %ffp-cp-xs-font;
+}

@@ -1,0 +1,148 @@
+/* || Block - Price overlaped cards with centered content
+   ========================================================================== */
+// Features:
+// overlaped styled cards with centered content
+// only suitable for 3 cards(price)
+// Buy now button
+
+@use '../../../abstracts/variables' as var;
+@use '../../../base/typography';
+@use '../../../layout/layout-base';
+@use '../../../components/card/card-center-shadow/card-center-shadow';
+
+.price-overlap-card-center {
+	padding-top: 48px;
+	padding-bottom: 48px;
+	background-color: var.$bc-primary;
+
+	@media screen and (min-width: var.$laptop-view) {
+		padding-top: 70px;
+		padding-bottom: 80px;
+	}
+
+	@media screen and (min-width: var.$pc-view) {
+		padding-bottom: 90px;
+	}
+}
+
+.price-occ-heading {
+	margin: 0;
+	@extend %ffp-cp-xl-font;
+	@extend %base-500;
+}
+
+.price-occ-para {
+	@extend %ffp-cs-s-font;
+	@extend %normal-300;
+	text-align: center;
+}
+
+.price-occ-price-wr {
+	padding-top: 25px;
+
+	@media screen and (min-width: var.$tablet-view) {
+		display: flex;
+		gap: 20px 25px;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	@media screen and (min-width: var.$laptop-view) {
+		flex-wrap: nowrap;
+		gap: initial;
+	}
+}
+
+.price-occ-price {
+	min-width: 275px;
+	max-width: 350px;
+	margin: 0 auto;
+	background-color: var.$bc-primary;
+
+	&:not(:first-child) {
+		margin-top: 16px;
+	}
+
+	@media screen and (min-width: var.$tablet-view) {
+		min-width: 300px;
+
+		&:not(:first-child) {
+			margin-top: 0;
+		}
+
+		align-self: flex-start;
+		margin: 0;
+		flex: 1;
+	}
+
+	&:nth-of-type(1) {
+		@media screen and (min-width: var.$laptop-view) {
+			margin-right: -8px;
+		}
+	}
+
+	&:nth-of-type(2) {
+		@media screen and (min-width: var.$laptop-view) {
+			position: relative;
+			z-index: 2;
+			margin-left: -4px;
+			margin-right: -4px;
+			top: 17px;
+		}
+	}
+
+	&:nth-of-type(3) {
+		@media screen and (min-width: var.$laptop-view) {
+			position: relative;
+			z-index: 1;
+			margin-left: -8px;
+		}
+	}
+}
+
+// Optional
+// ---------------
+
+.price-occ-lm-fixed {
+	@extend %lm-fixed;
+}
+
+.price-occ-lm-auto-fw {
+	@extend %lm-auto-fixed-width;
+}
+
+
+.price-occ-split-heading {
+	margin: 0;
+	text-align: center;
+}
+
+.price-occ-sh-first-text {
+	@extend %ffp-cp-xl-font;
+	@extend %base-500;
+
+	@media screen and (min-width: var.$pc-view) {
+		font-size: var.$fs-xl + 0.3rem;
+	}
+}
+
+.price-occ-sh-second-text {
+	@extend %ffp-bcs-xl-font;
+	@extend %base-700;
+
+	@media screen and (min-width: var.$pc-view) {
+		font-size: var.$fs-xl + 0.3rem;
+	}
+}
+
+.price-occ-price:nth-of-type(1).price-occ-price-animate {
+	animation: slide-in-left 1.25s;
+}
+
+.price-occ-price:nth-of-type(2).price-occ-price-animate {
+	animation: slide-in-bottom 1.25s;
+}
+
+.price-occ-price:nth-of-type(3).price-occ-price-animate {
+	animation: slide-in-right 1.25s;
+}

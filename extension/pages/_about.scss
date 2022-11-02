@@ -1,0 +1,65 @@
+/* || Page - about
+   ========================================================================== */
+
+@use '../abstracts/variables' as var;
+@use '../components/breadcrumbs/breadcrumbs-center/breadcrumbs-center';
+@use '../blocks/company/company-tab-contents/company-tab-contents';
+@use '../blocks/lead/lead-background/lead-background';
+@use '../blocks/services/services-carousel/services-carousel';
+@use '../blocks/brand/brands-img-list/brands-img-list';
+@use '../blocks/team/team-desc-gallery/team-desc-gallery';
+@use '../blocks/testimonial/testimonial-carousel/testimonial-carousel';
+@use '../blocks/contact/contact-map-form/contact-map-form';
+
+// || Company first section
+
+.ctc-about-first-sec {
+	padding-top: 0;
+
+	.ctc-desc-column,
+	.ctc-split-heading {
+		margin-top: -0;
+	}
+
+	.ctc-split-heading {
+		text-align: center;
+	}
+
+	.row-fwt-tab-hr {
+		max-width: 450px;
+	}
+
+	.row-fwt-body {
+		max-width: 650px;
+	}
+
+	.row-fwt-tabs-wr,
+	.row-fwt-para {
+		text-align: center;
+	}
+
+	.row-fwt-content {
+		min-height: initial;
+	}
+
+	.row-fwt-content[data-fwt-content=solution] {
+		.counters-splitter-tag {
+			max-width: 600px;
+		}
+	}
+}
+
+.ctc-about-last-sec {
+
+	.ctc-img {
+		@media screen and (min-width: var.$tablet-view) {
+			object-position: center;
+		}
+	}
+
+	.ctc-para {
+		&:first-of-type {
+			font-style: italic;
+		}
+	}
+}

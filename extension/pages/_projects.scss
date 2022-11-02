@@ -1,0 +1,56 @@
+/* || Page - Projects
+   ========================================================================== */
+
+@use '../abstracts/variables' as var;
+@use '../blocks/project/projects-multi-column/projects-multi-column';
+@use '../components/modal/modal-full-window-carousel/modal-full-window-carousel';
+@use '../blocks/company/company-tab-contents/company-tab-contents';
+@use '../blocks/team/team-desc-gallery/team-desc-gallery';
+@use '../blocks/brand/brands-img-list/brands-img-list';
+@use '../blocks/contact/contact-map-form/contact-map-form';
+
+// || Projects
+
+.projects-mc-projects {
+	padding-top: 0;
+	padding-bottom: 20px;
+	background-color: initial;
+
+	@media screen and (min-width: var.$laptop-view) {
+		padding-bottom: 40px;
+	}
+
+	.projects-mc-split-heading,
+	.projects-mc-heading {
+		margin-top: 0;
+	}
+
+	.close-btn {
+		margin: 15px;
+	}
+
+	.close-btn-icon {
+		width: 28px;
+		height: 28px;
+	}
+}
+
+// || Company 
+
+.ctc-projects {
+	.ctc-img {
+		@media screen and (min-width: var.$tablet-view) {
+			object-position: center;
+		}
+	}
+}
+
+// || Brands
+.brands-il-projects {
+	padding-top: 70px;
+	padding-bottom: 50px;
+
+	@media screen and (min-width: var.$tablet-view) {
+		padding-bottom: 70px;
+	}
+}

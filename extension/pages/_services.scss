@@ -1,0 +1,17 @@
+/* || Page - Services
+   ========================================================================== */
+
+@use '../abstracts/variables' as var;
+@use '../blocks/services/services-three-column/services-three-column';
+@use '../blocks/services/services-centered-cards/services-centered-cards';
+@use '../blocks/brand/brands-img-list/brands-img-list';
+@use '../blocks/lead/lead-background/lead-background';
+
+.brands-il-services {
+	padding-top: 70px;
+	padding-bottom: 50px;
+
+	@media screen and (min-width: var.$tablet-view) {
+		padding-bottom: 70px;
+	}
+}

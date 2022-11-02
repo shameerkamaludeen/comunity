@@ -1,0 +1,62 @@
+/* || Components - Card centered with shadow
+   ========================================================================== */
+// Features:
+// list with custom icon
+// lead button
+// Heading, upper and lower tag along the header
+// card styled to seperate using shadow with radius
+
+@use '../../../abstracts/variables' as var;
+@use '../../../abstracts/mixins' as mx;
+@use '../../../base/typography';
+@use '../../list/ul-center-inside-icon/ul-center-inside-icon';
+@use 'sass:color';
+
+.card-center-shadow {
+	text-align: center;
+	box-shadow: 0px 0px 20px 0px color.adjust(var.$bc-secondary, $alpha: -0.93);
+	border-radius: 10px;
+	padding: 40px 20px;
+}
+
+.card-cs-heading {
+	@extend %base-500;
+	@extend %ffp-cp-l-font;
+	margin-top: 0.3em;
+	margin-bottom: 0.4em;
+}
+
+.card-cs-tag-light {
+	display: block;
+	@extend %base-500;
+	@extend %ffp-ct-xs-font;
+	text-transform: uppercase;
+}
+
+.card-cs-tag-bright {
+	display: block;
+	@extend %base-600;
+	@extend %ffn-bcs-s-font;
+}
+
+.card-cs-list {
+	margin-top: 50px;
+}
+
+.card-cs-lead {
+	margin: 4px 0 7px;
+	text-decoration: none;
+	display: inline-block;
+	@extend %base-400;
+	@extend %ffp-bcp-s-font;
+	@include mx.link-capsule($background-color: var.$bc-secondary,
+		$color: false,
+		$width: false,
+		$outline: 2px solid var.$bc-secondary,
+		$hover-bg-color: var.$c-primary,
+		$hover-color: false,
+		$padding: 13px 35px,
+		$border-radius: 200px,
+		$active-bg-color: color.adjust(var.$c-primary, $lightness: 15%),
+		$active-color: false)
+}

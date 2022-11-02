@@ -1,0 +1,95 @@
+/* -----------------------------------------------------------------------------
+	|| Components - Row direction full width tabs
+	========================================================================== */
+
+@use '../../../abstracts/variables' as var;
+@use '../../../abstracts/mixins' as mx;
+@use '../../../base/sitewide';
+@use '../../../layout/layout-base';
+@use '../../counter/conters-splitter-tag/conters-splitter-tag';
+@use 'sass:color';
+
+$hr-color: color.adjust(var.$c-primary, $lightness: 60%);
+$tab-active-color: var.$c-primary;
+
+.row-full-width-tabs {
+	margin-top: 21px;
+}
+
+.row-fwt-tabs-wr {}
+
+.row-fwt-tab {
+	margin-right: 10px;
+
+	&:last-of-type {
+		margin-right: 0;
+	}
+
+	@media screen and (min-width: var.$mobile-landscape-view) {
+		margin-right: 25px;
+	}
+}
+
+.row-fwt-tab-active {
+	color: $tab-active-color;
+}
+
+.row-fwt-tab-hr {
+	@include mx.hr-full-width($hr-color, 1px);
+}
+
+// for fixed height or width
+.row-fwt-body {
+	margin-top: 24px;
+}
+
+// active or inactive element
+.row-fwt-content {
+	position: relative;
+	display: none;
+
+	@media screen and (min-width: var.$tablet-view) {
+		min-height: 333px;
+	}
+
+	@media screen and (min-width: var.$laptop-view) {
+		min-height: 228px;
+	}
+}
+
+.row-fwt-content-active {
+	display: block;
+	animation: animate-row-fwt 0.3s ease;
+}
+
+@keyframes animate-row-fwt {
+	0% {
+		opacity: 0;
+		top: 30px;
+	}
+
+	100% {
+		opacity: 1;
+		top: 0;
+	}
+}
+
+.row-fwt-para {
+	@extend %ffp-cs-s-font;
+	@extend %normal-300;
+
+	&:last-of-type {
+		margin-bottom: 0;
+	}
+}
+
+// Optional
+// -----------
+
+.row-fwt-lm-auto {
+	@extend %lm-auto;
+}
+
+.row-fwt-lm-auto-mlv {
+	@extend %lm-auto-mlv;
+}
