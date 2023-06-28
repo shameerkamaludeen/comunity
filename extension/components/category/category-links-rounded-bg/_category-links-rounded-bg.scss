@@ -13,7 +13,7 @@
 
 .cl-rb-link {
 	text-decoration: none;
-	@include mx.link-capsule($background-color: var.$bc-ternary,
+	@include mx.link-capsule($background-color: var.$bc-tertiary,
 		$color: var.$bc-secondary,
 		$width: false,
 		$outline: none,

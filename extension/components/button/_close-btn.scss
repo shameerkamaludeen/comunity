@@ -12,7 +12,7 @@
 		$width: 35px,
 		$height: 35px,
 		$border-radius: false,
-		$outline: 2px solid var.$bc-ternary,
+		$outline: 2px solid var.$bc-tertiary,
 		$outline-offset: false,
 		$transition: false);
 	padding: 0;
@@ -23,5 +23,5 @@
 		$width: 10px,
 		$height: 10px,
 		$stroke: false,
-		$fill: var.$bc-ternary);
+		$fill: var.$bc-tertiary);
 }

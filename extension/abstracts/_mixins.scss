@@ -71,7 +71,7 @@
 	$border-bottom-width: 1.5px,
 	$border-bottom-style: solid,
 	$visited-color: color.adjust(var.$bc-primary, $lightness: -20%),
-	$focus-hover-color: var.$bc-ternary-lighter,
+	$focus-hover-color: var.$bc-tertiary-lighter,
 	$active-color: var.$bc-secondary,
 	$transition: (color 0.3s ease, border-bottom-color 0.3s ease),
 	$cursor: pointer) {
