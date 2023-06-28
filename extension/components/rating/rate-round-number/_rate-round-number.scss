@@ -14,7 +14,7 @@
 
 .rate-rn-label {
 	border-radius: 50%;
-	background-color: color.adjust(var.$bc-ternary, $alpha: -0.9);
+	background-color: color.adjust(var.$bc-tertiary, $alpha: -0.9);
 	padding: 5px;
 	width: 42px;
 	height: 42px;
@@ -37,7 +37,7 @@
 	@extend %hide-visually;
 
 	&:checked+label {
-		background-color: color.adjust(var.$bc-ternary, $alpha: -0.5);
+		background-color: color.adjust(var.$bc-tertiary, $alpha: -0.5);
 		color: var.$c-primary;
 	}
 }
