@@ -22,8 +22,8 @@
 }
 
 .scroll-tt-btn-button {
-	@include mx.btn-icon-compatible($bg-color: var.$bc-ternary,
-		$bg-active-color: var.$bc-ternary,
+	@include mx.btn-icon-compatible($bg-color: var.$bc-tertiary,
+		$bg-active-color: var.$bc-tertiary,
 		$width: 100%,
 		$height: 100%,
 		$border-radius: 4px,

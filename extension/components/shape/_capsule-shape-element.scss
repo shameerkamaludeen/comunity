@@ -5,7 +5,7 @@
 @use 'sass:color';
 
 $border-radius: 200px !default;
-$background-color: color.adjust(var.$bc-ternary, $alpha: -0.9) !default;
+$background-color: color.adjust(var.$bc-tertiary, $alpha: -0.9) !default;
 
 .shape-capsule {
 	display: inline-block;

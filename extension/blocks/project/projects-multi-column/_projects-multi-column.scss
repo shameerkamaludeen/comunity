@@ -10,7 +10,7 @@
 
 
 .projects-multi-column {
-	background-color: color.adjust(var.$bc-ternary-lighter, $hue: 15);
+	background-color: color.adjust(var.$bc-tertiary-lighter, $hue: 15);
 	padding: 32px 0 50px;
 
 	@media screen and (min-width: var.$laptop-view) {
